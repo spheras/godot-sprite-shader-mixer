@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bg8kbwgdx0c41"]
+[gd_scene load_steps=30 format=3 uid="uid://bg8kbwgdx0c41"]
 
 [ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/shader.gdshader" id="1_tkt3d"]
 [ext_resource type="Texture2D" uid="uid://dglrgpdar5s5f" path="res://demo/assets/supergodot/supergodot-0000.png" id="2_d8c7d"]
@@ -29,14 +29,14 @@
 shader = ExtResource("1_tkt3d")
 shader_parameter/RAINBOW_active = false
 shader_parameter/RAINBOW_speed = 1.0
-shader_parameter/RAINBOW_redFactor = 3.0
+shader_parameter/RAINBOW_redFactor = 3.984
 shader_parameter/RAINBOW_greenFactor = 2.0
 shader_parameter/RAINBOW_blueFactor = 5.0
-shader_parameter/GLITCH_active = false
-shader_parameter/GLITCH_offset = 0.0
-shader_parameter/GLITCH_speed = 1.0
-shader_parameter/GLITCH_size = 0.75
-shader_parameter/GLITCH_amount = 10.0
+shader_parameter/GLITCH_active = true
+shader_parameter/GLITCH_offset = 19.171
+shader_parameter/GLITCH_speed = 8.239
+shader_parameter/GLITCH_size = 2.409
+shader_parameter/GLITCH_amount = 0.922
 shader_parameter/GREYSCALE_active = false
 shader_parameter/GREYSCALE_TintColor = Color(1, 1, 1, 1)
 shader_parameter/GREYSCALE_Luminosity = 0.0
@@ -48,12 +48,35 @@ shader_parameter/CROSSFADE_CIRCLE_dissolveColor = Color(0, 0, 0, 0)
 shader_parameter/CROSSFADE_CIRCLE_circleSize = null
 shader_parameter/BLUR_active = false
 shader_parameter/BLUR_radius = 1.953
-shader_parameter/OUTLINE_active = false
+shader_parameter/OUTLINE_active = true
 shader_parameter/OUTLINE_thickness = 14.192
 shader_parameter/OUTLINE_color = Color(0, 0.886275, 0, 1)
 shader_parameter/EMPTYOUTLINE_active = false
-shader_parameter/EMPTYOUTLINE_lineColor = Color(1, 1, 1, 1)
-shader_parameter/EMPTYOUTLINE_lineThickness = 3.0
+shader_parameter/EMPTYOUTLINE_lineColor = Color(1, 0.478431, 1, 1)
+shader_parameter/EMPTYOUTLINE_lineThickness = 14.658
+shader_parameter/SHADOW_active = true
+shader_parameter/SHADOW_deform = Vector2(-1.565, 2)
+shader_parameter/SHADOW_offset = Vector2(-330, 440)
+shader_parameter/SHADOW_modulate = Color(0, 0, 0, 0.584314)
+shader_parameter/GOLD_active = false
+shader_parameter/GOLD_offset = 0.0
+shader_parameter/GOLD_speed = 1.0
+shader_parameter/METAL_active = false
+shader_parameter/METAL_offset = 0.0
+shader_parameter/METAL_speed = 1.0
+shader_parameter/FREEZE_active = false
+shader_parameter/FREEZE_offset = 0.0
+shader_parameter/FREEZE_speed = 1.0
+shader_parameter/BURN_active = false
+shader_parameter/BURN_offset = 0.0
+shader_parameter/BURN_speed = 1.0
+shader_parameter/BURN_burnValue = 1.0
+shader_parameter/SHINY_active = false
+shader_parameter/SHINY_processValue = 0.0
+shader_parameter/SHINY_size = -0.1
+shader_parameter/SHINY_smoothLight = 0.25
+shader_parameter/SHINY_intensity = 0.75
+shader_parameter/SHINY_angle = 100.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7eb5u"]
 animations = [{
@@ -134,6 +157,59 @@ outline_width = 2
 outline_color = Color(0, 0, 0, 1)
 test = true
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t5m6v"]
+shader = ExtResource("1_tkt3d")
+shader_parameter/RAINBOW_active = false
+shader_parameter/RAINBOW_speed = 0.275
+shader_parameter/RAINBOW_redFactor = 3.984
+shader_parameter/RAINBOW_greenFactor = 2.0
+shader_parameter/RAINBOW_blueFactor = 5.0
+shader_parameter/GLITCH_active = false
+shader_parameter/GLITCH_offset = 19.171
+shader_parameter/GLITCH_speed = 8.239
+shader_parameter/GLITCH_size = 2.409
+shader_parameter/GLITCH_amount = 0.922
+shader_parameter/GREYSCALE_active = false
+shader_parameter/GREYSCALE_TintColor = Color(1, 1, 1, 1)
+shader_parameter/GREYSCALE_Luminosity = 0.0
+shader_parameter/GREYSCALE_Blend = 1.0
+shader_parameter/CROSSFADE_CIRCLE_active = false
+shader_parameter/CROSSFADE_CIRCLE_transparency = 1.0
+shader_parameter/CROSSFADE_CIRCLE_position = null
+shader_parameter/CROSSFADE_CIRCLE_dissolveColor = Color(0, 0, 0, 0)
+shader_parameter/CROSSFADE_CIRCLE_circleSize = null
+shader_parameter/BLUR_active = false
+shader_parameter/BLUR_radius = 2.839
+shader_parameter/OUTLINE_active = false
+shader_parameter/OUTLINE_thickness = 10.772
+shader_parameter/OUTLINE_color = Color(0.8, 0.0196078, 0.92549, 1)
+shader_parameter/EMPTYOUTLINE_active = false
+shader_parameter/EMPTYOUTLINE_lineColor = Color(1, 0.478431, 1, 1)
+shader_parameter/EMPTYOUTLINE_lineThickness = 14.658
+shader_parameter/SHADOW_active = true
+shader_parameter/SHADOW_deform = Vector2(0, 0)
+shader_parameter/SHADOW_offset = Vector2(10, 50)
+shader_parameter/SHADOW_modulate = Color(0, 0, 0, 1)
+shader_parameter/GOLD_active = false
+shader_parameter/GOLD_offset = 56.995
+shader_parameter/GOLD_speed = 5.44
+shader_parameter/METAL_active = false
+shader_parameter/METAL_offset = 24.352
+shader_parameter/METAL_speed = 0.622
+shader_parameter/FREEZE_active = true
+shader_parameter/FREEZE_offset = 26.425
+shader_parameter/FREEZE_speed = 1.0
+shader_parameter/BURN_active = false
+shader_parameter/BURN_offset = 33.679
+shader_parameter/BURN_speed = 0.326
+shader_parameter/BURN_burnValue = 1.0
+shader_parameter/SHINY_active = true
+shader_parameter/SHINY_processValue = 0.57
+shader_parameter/SHINY_size = -0.00699995
+shader_parameter/SHINY_smoothLight = 0.058
+shader_parameter/SHINY_intensity = 0.284
+shader_parameter/SHINY_angle = 126.114
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jpn56"]
 shader = ExtResource("1_tkt3d")
 shader_parameter/RAINBOW_active = true
@@ -163,6 +239,29 @@ shader_parameter/OUTLINE_color = null
 shader_parameter/EMPTYOUTLINE_active = false
 shader_parameter/EMPTYOUTLINE_lineColor = Color(1, 1, 1, 1)
 shader_parameter/EMPTYOUTLINE_lineThickness = 3.0
+shader_parameter/SHADOW_active = false
+shader_parameter/SHADOW_deform = Vector2(2, 2)
+shader_parameter/SHADOW_offset = Vector2(0, 0)
+shader_parameter/SHADOW_modulate = null
+shader_parameter/GOLD_active = false
+shader_parameter/GOLD_offset = 0.0
+shader_parameter/GOLD_speed = 1.0
+shader_parameter/METAL_active = false
+shader_parameter/METAL_offset = 0.0
+shader_parameter/METAL_speed = 1.0
+shader_parameter/FREEZE_active = false
+shader_parameter/FREEZE_offset = 0.0
+shader_parameter/FREEZE_speed = 1.0
+shader_parameter/BURN_active = false
+shader_parameter/BURN_offset = 0.0
+shader_parameter/BURN_speed = 1.0
+shader_parameter/BURN_burnValue = 1.0
+shader_parameter/SHINY_active = false
+shader_parameter/SHINY_processValue = 0.0
+shader_parameter/SHINY_size = -0.1
+shader_parameter/SHINY_smoothLight = 0.25
+shader_parameter/SHINY_intensity = 0.75
+shader_parameter/SHINY_angle = 100.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -174,6 +273,16 @@ color = Color(0.196078, 0.247059, 0.309804, 1)
 [node name="SuperGodot-AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_is0c0")
 position = Vector2(576, 288)
+scale = Vector2(0.4375, 0.4375)
+sprite_frames = SubResource("SpriteFrames_7eb5u")
+autoplay = "default"
+frame_progress = 0.263426
+script = ExtResource("22_mt3nd")
+shaderMixer = SubResource("Resource_5alna")
+
+[node name="SuperGodot-AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_t5m6v")
+position = Vector2(1598, 297)
 scale = Vector2(0.4375, 0.4375)
 sprite_frames = SubResource("SpriteFrames_7eb5u")
 autoplay = "default"
