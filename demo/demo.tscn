@@ -1,13 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://bg8kbwgdx0c41"]
+[gd_scene load_steps=29 format=3 uid="uid://bg8kbwgdx0c41"]
 
 [ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/shader.gdshader" id="1_tkt3d"]
-[ext_resource type="Texture2D" uid="uid://cempar8e2ab6r" path="res://demo/assets/robot.png" id="2_7se4b"]
-[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/SpriteShaderMixer.gd" id="3_27xoy"]
+[ext_resource type="Texture2D" uid="uid://dglrgpdar5s5f" path="res://demo/assets/supergodot/supergodot-0000.png" id="2_d8c7d"]
+[ext_resource type="Texture2D" uid="uid://cjeayem3gvydj" path="res://demo/assets/supergodot/supergodot-0001.png" id="3_jdpkp"]
 [ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/ShaderMixer.gd" id="4_4gp7x"]
+[ext_resource type="Texture2D" uid="uid://0ssrhvjgqypl" path="res://demo/assets/supergodot/supergodot-0002.png" id="4_oh6bi"]
+[ext_resource type="Texture2D" uid="uid://76khhn0s8mjt" path="res://demo/assets/supergodot/supergodot-0003.png" id="5_4cr3g"]
+[ext_resource type="Texture2D" uid="uid://dsxixubmnrabt" path="res://demo/assets/supergodot/supergodot-0004.png" id="6_ky42y"]
+[ext_resource type="Texture2D" uid="uid://c21nq58yhbupd" path="res://demo/assets/supergodot/supergodot-0005.png" id="7_yjda1"]
+[ext_resource type="Texture2D" uid="uid://da7qsv1b7ar6o" path="res://demo/assets/supergodot/supergodot-0006.png" id="8_7oopi"]
+[ext_resource type="Texture2D" uid="uid://b66ei025jd8od" path="res://demo/assets/supergodot/supergodot-0007.png" id="9_1pxwa"]
+[ext_resource type="Texture2D" uid="uid://cv7swyoc1k0tf" path="res://demo/assets/supergodot/supergodot-0008.png" id="10_kls0v"]
+[ext_resource type="Texture2D" uid="uid://d1ytl0qjuj4nr" path="res://demo/assets/supergodot/supergodot-0009.png" id="11_awnx5"]
+[ext_resource type="Texture2D" uid="uid://dxttps4a4q6qi" path="res://demo/assets/supergodot/supergodot-0010.png" id="12_g410n"]
+[ext_resource type="Texture2D" uid="uid://cpcm08y8vcsb4" path="res://demo/assets/supergodot/supergodot-0011.png" id="13_usj3w"]
+[ext_resource type="Texture2D" uid="uid://blh567x4genwe" path="res://demo/assets/supergodot/supergodot-0012.png" id="14_aj2ki"]
+[ext_resource type="Texture2D" uid="uid://cqm374d8oypkb" path="res://demo/assets/supergodot/supergodot-0013.png" id="15_6h82v"]
+[ext_resource type="Texture2D" uid="uid://d0vnscrlfngj4" path="res://demo/assets/supergodot/supergodot-0014.png" id="16_8p4p1"]
+[ext_resource type="Texture2D" uid="uid://cp06d56eyr8uc" path="res://demo/assets/supergodot/supergodot-0015.png" id="17_gppj1"]
+[ext_resource type="Texture2D" uid="uid://bxmk3depwti3g" path="res://demo/assets/supergodot/supergodot-0016.png" id="18_6y5vl"]
+[ext_resource type="Texture2D" uid="uid://ba8nog2oec7k8" path="res://demo/assets/supergodot/supergodot-0017.png" id="19_ftjid"]
+[ext_resource type="Texture2D" uid="uid://dl8y26n80dd26" path="res://demo/assets/supergodot/supergodot-0018.png" id="20_rqqvl"]
+[ext_resource type="Texture2D" uid="uid://bj3led5ufh7tr" path="res://demo/assets/supergodot/supergodot-0019.png" id="21_10ntl"]
+[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/AnimatedSpriteShaderMixer.gd" id="22_mt3nd"]
+[ext_resource type="Texture2D" uid="uid://bqt4kbnhslaga" path="res://demo/assets/godot-text.png" id="24_oasa3"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vic3b"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_is0c0"]
 shader = ExtResource("1_tkt3d")
-shader_parameter/TEST_active = false
+shader_parameter/RAINBOW_active = false
+shader_parameter/RAINBOW_speed = 1.0
+shader_parameter/RAINBOW_redFactor = 3.0
+shader_parameter/RAINBOW_greenFactor = 2.0
+shader_parameter/RAINBOW_blueFactor = 5.0
 shader_parameter/GLITCH_active = false
 shader_parameter/GLITCH_offset = 0.0
 shader_parameter/GLITCH_speed = 1.0
@@ -23,15 +47,83 @@ shader_parameter/CROSSFADE_CIRCLE_position = null
 shader_parameter/CROSSFADE_CIRCLE_dissolveColor = Color(0, 0, 0, 0)
 shader_parameter/CROSSFADE_CIRCLE_circleSize = null
 shader_parameter/BLUR_active = false
-shader_parameter/BLUR_radius = 2.0
-shader_parameter/OUTLINE_active = true
-shader_parameter/OUTLINE_thickness = 5.591
-shader_parameter/OUTLINE_color = null
+shader_parameter/BLUR_radius = 1.953
+shader_parameter/OUTLINE_active = false
+shader_parameter/OUTLINE_thickness = 14.192
+shader_parameter/OUTLINE_color = Color(0, 0.886275, 0, 1)
 shader_parameter/EMPTYOUTLINE_active = false
 shader_parameter/EMPTYOUTLINE_lineColor = Color(1, 1, 1, 1)
 shader_parameter/EMPTYOUTLINE_lineThickness = 3.0
 
-[sub_resource type="Resource" id="Resource_hc5xx"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_7eb5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d8c7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jdpkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oh6bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4cr3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ky42y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yjda1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7oopi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1pxwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kls0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_awnx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g410n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_usj3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_aj2ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6h82v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8p4p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gppj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6y5vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ftjid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rqqvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_10ntl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 21.0
+}]
+
+[sub_resource type="Resource" id="Resource_5alna"]
 script = ExtResource("4_4gp7x")
 greyscale = false
 greyscale_tintColor = Color(0, 0, 0, 1)
@@ -40,13 +132,57 @@ greyscale_blend = 1.0
 outline = false
 outline_width = 2
 outline_color = Color(0, 0, 0, 1)
-test = false
+test = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jpn56"]
+shader = ExtResource("1_tkt3d")
+shader_parameter/RAINBOW_active = true
+shader_parameter/RAINBOW_speed = 0.182
+shader_parameter/RAINBOW_redFactor = 5.0
+shader_parameter/RAINBOW_greenFactor = 1.078
+shader_parameter/RAINBOW_blueFactor = 3.29
+shader_parameter/GLITCH_active = true
+shader_parameter/GLITCH_offset = 0.0
+shader_parameter/GLITCH_speed = 0.793001
+shader_parameter/GLITCH_size = 0.284
+shader_parameter/GLITCH_amount = 1.544
+shader_parameter/GREYSCALE_active = false
+shader_parameter/GREYSCALE_TintColor = Color(1, 1, 1, 1)
+shader_parameter/GREYSCALE_Luminosity = 0.0
+shader_parameter/GREYSCALE_Blend = 1.0
+shader_parameter/CROSSFADE_CIRCLE_active = false
+shader_parameter/CROSSFADE_CIRCLE_transparency = 1.0
+shader_parameter/CROSSFADE_CIRCLE_position = null
+shader_parameter/CROSSFADE_CIRCLE_dissolveColor = Color(0, 0, 0, 0)
+shader_parameter/CROSSFADE_CIRCLE_circleSize = null
+shader_parameter/BLUR_active = false
+shader_parameter/BLUR_radius = 1.0
+shader_parameter/OUTLINE_active = false
+shader_parameter/OUTLINE_thickness = 3.0
+shader_parameter/OUTLINE_color = null
+shader_parameter/EMPTYOUTLINE_active = false
+shader_parameter/EMPTYOUTLINE_lineColor = Color(1, 1, 1, 1)
+shader_parameter/EMPTYOUTLINE_lineThickness = 3.0
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite2DShaderMixer" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_vic3b")
-position = Vector2(556, 478)
-texture = ExtResource("2_7se4b")
-script = ExtResource("3_27xoy")
-shaderMixer = SubResource("Resource_hc5xx")
+[node name="background" type="ColorRect" parent="."]
+offset_right = 1170.0
+offset_bottom = 655.0
+color = Color(0.196078, 0.247059, 0.309804, 1)
+
+[node name="SuperGodot-AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_is0c0")
+position = Vector2(576, 288)
+scale = Vector2(0.4375, 0.4375)
+sprite_frames = SubResource("SpriteFrames_7eb5u")
+autoplay = "default"
+frame_progress = 0.263426
+script = ExtResource("22_mt3nd")
+shaderMixer = SubResource("Resource_5alna")
+
+[node name="Godot-Text-With-Material" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_jpn56")
+position = Vector2(591, 560)
+scale = Vector2(0.478166, 0.478166)
+texture = ExtResource("24_oasa3")

@@ -1,11 +1,16 @@
 shader_type canvas_item;
 
-//TES0T
-uniform bool  TEST_active  = false;
+//TEST
+uniform bool  RAINBOW_active  = false;
+uniform float RAINBOW_speed : hint_range(0, 5) = 1;
+uniform float RAINBOW_redFactor : hint_range(0, 5) = 3;
+uniform float RAINBOW_greenFactor : hint_range(0, 5) = 2;
+uniform float RAINBOW_blueFactor : hint_range(0, 5) = 5;
+
 //GLITCH
 uniform bool  GLITCH_active  = false;
 uniform float GLITCH_offset: hint_range(0, 100) = 0;
-uniform float GLITCH_speed : hint_range(-10, 10) = 1;
+uniform float GLITCH_speed : hint_range(0, 10) = 1;
 uniform float GLITCH_size : hint_range(0.0, 10.0) = 0.75;
 uniform float GLITCH_amount : hint_range(0.0, 24.0) = 10.0;
 
@@ -25,16 +30,16 @@ uniform bool  BLUR_active  = false;
 uniform float BLUR_radius : hint_range(1, 10.0) = 2.0;
 //OUTLINE
 uniform bool  OUTLINE_active  = false;
-uniform float OUTLINE_thickness : hint_range(0, 20) = 3.0;
+uniform float OUTLINE_thickness : hint_range(0, 30) = 3.0;
 uniform vec4  OUTLINE_color : source_color;
 //EMPTY OUTLINE
 uniform bool  EMPTYOUTLINE_active  = false;
 uniform vec4  EMPTYOUTLINE_lineColor : source_color = vec4(1);
-uniform float EMPTYOUTLINE_lineThickness : hint_range(0, 20) = 3.0;
+uniform float EMPTYOUTLINE_lineThickness : hint_range(0, 30) = 3.0;
 
-//TEST
-void test(vec2 uv, inout vec4 color) {
-	color=vec4(color.r+sin(TIME*3.), color.g+sin(TIME*2.), color.b+sin(TIME*5.), color.a);
+//RAINBOW
+void rainbow(vec2 uv, inout vec4 color) {
+	color=vec4(color.r+sin(TIME*RAINBOW_redFactor*RAINBOW_speed), color.g+sin(TIME*RAINBOW_greenFactor*RAINBOW_speed), color.b+sin(TIME*RAINBOW_blueFactor*RAINBOW_speed), color.a);
 }
 
 //CROSSFADE_CIRCLE
@@ -140,7 +145,7 @@ void fragment() {
 	vec2 uv = UV;
 
 	if(GLITCH_active) glitch(uv, TEXTURE, color);
-	if(TEST_active) test(uv, color);	
+	if(RAINBOW_active) rainbow(uv, color);	
 	if(BLUR_active) blur(uv, TEXTURE, size, color);
 	if(CROSSFADE_CIRCLE_active) crossfadeCircle(uv, color);
 	if(GREYSCALE_active) grayscale(color);
