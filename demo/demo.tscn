@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg8kbwgdx0c41"]
+
+[ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/dropshadow.gdshader" id="1_hkxw7"]
+[ext_resource type="Texture2D" uid="uid://d2vx3g2et82ci" path="res://demo/assets/0001.png" id="1_yclcq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l44q7"]
+shader = ExtResource("1_hkxw7")
+shader_parameter/deform = Vector2(-0.375, 0.485)
+shader_parameter/offset = Vector2(20, 60)
+shader_parameter/modulate = null
+
+[node name="Node2D" type="Node2D"]
+
+[node name="0001" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_l44q7")
+position = Vector2(608, 569)
+scale = Vector2(1.02315, 0.980556)
+texture = ExtResource("1_yclcq")

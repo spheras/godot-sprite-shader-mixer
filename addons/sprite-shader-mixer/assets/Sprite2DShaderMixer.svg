@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="16"
+   viewBox="0 0 16 16"
+   width="16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Sprite2DShaderMixer.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#8da5f3;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#14bca2;stop-opacity:1;"
+         offset="0.11684784"
+         id="stop2" />
+      <stop
+         style="stop-color:#13b618;stop-opacity:1;"
+         offset="0.23913044"
+         id="stop3" />
+      <stop
+         style="stop-color:#d8e318;stop-opacity:1;"
+         offset="0.48097825"
+         id="stop4" />
+      <stop
+         style="stop-color:#e3181e;stop-opacity:1;"
+         offset="0.70108694"
+         id="stop5" />
+      <stop
+         style="stop-color:#f38df2;stop-opacity:1;"
+         offset="0.92391306"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="1"
+       y1="8"
+       x2="15"
+       y2="8"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="48.5625"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zM3 7a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0zm10 2a1 1 0 0 1-2 0V7a1 1 0 0 1 2 0zm-2.172 3.828a4 4 0 0 1-5.656 0 1 1 0 0 1 1.414-1.414 2 2 0 0 0 2.828 0 1 1 0 0 1 1.414 1.414z"
+     fill="#8da5f3"
+     id="path1"
+     style="fill:url(#linearGradient2)" />
+</svg>

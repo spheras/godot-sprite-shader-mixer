@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="16"
+   viewBox="0 0 16 16"
+   width="16"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="AnimatedSprite2DShaderMixer.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3">
+    <linearGradient
+       id="linearGradient3"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#26aae9;stop-opacity:1;"
+         offset="0"
+         id="stop3" />
+      <stop
+         style="stop-color:#00c416;stop-opacity:1;"
+         offset="0.28260869"
+         id="stop5" />
+      <stop
+         style="stop-color:#def114;stop-opacity:1;"
+         offset="0.51086956"
+         id="stop6" />
+      <stop
+         style="stop-color:#f01c1c;stop-opacity:1;"
+         offset="0.74728262"
+         id="stop7" />
+      <stop
+         style="stop-color:#ec57e7;stop-opacity:1;"
+         offset="1"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3"
+       id="linearGradient4"
+       x1="1"
+       y1="9.5"
+       x2="12"
+       y2="9.5"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="12.140625"
+     inkscape:cx="-9.1016731"
+     inkscape:cy="18.944659"
+     inkscape:window-width="1554"
+     inkscape:window-height="1020"
+     inkscape:window-x="318"
+     inkscape:window-y="353"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3" />
+  <path
+     d="M 7,0 A 2,2 0 0 0 5,2 h 7 a 2,2 0 0 1 2,2 v 6 A 2,2 0 0 0 16,8 V 2 A 2,2 0 0 0 14,0 Z"
+     fill-opacity="0.4"
+     id="path1"
+     style="fill:#73007d;fill-opacity:0.75432527" />
+  <path
+     d="M 5,2 A 2,2 0 0 0 3,4 h 7 a 2,2 0 0 1 2,2 v 7 a 2,2 0 0 0 2,-2 V 4 A 2,2 0 0 0 12,2 Z"
+     fill-opacity="0.6"
+     id="path2"
+     style="fill:#e83ceb;fill-opacity:1" />
+  <path
+     d="M 3,4 A 2,2 0 0 0 1,6 v 7 a 2,2 0 0 0 2,2 h 7 a 2,2 0 0 0 2,-2 V 6 A 2,2 0 0 0 10,4 Z M 2,9 a 1,1 0 0 1 2,0 v 1 a 1,1 0 0 1 -2,0 z m 7,0 a 1,1 0 0 1 2,0 v 1 a 1,1 0 0 1 -2,0 z m 0,3 a 2.5,2 0 0 1 -5,0 z"
+     id="path3"
+     style="fill:url(#linearGradient4);fill-opacity:1" />
+</svg>
