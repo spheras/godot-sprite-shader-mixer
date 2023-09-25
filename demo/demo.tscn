@@ -1,18 +1,52 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg8kbwgdx0c41"]
+[gd_scene load_steps=7 format=3 uid="uid://bg8kbwgdx0c41"]
 
-[ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/dropshadow.gdshader" id="1_hkxw7"]
-[ext_resource type="Texture2D" uid="uid://d2vx3g2et82ci" path="res://demo/assets/0001.png" id="1_yclcq"]
+[ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/shader.gdshader" id="1_tkt3d"]
+[ext_resource type="Texture2D" uid="uid://cempar8e2ab6r" path="res://demo/assets/robot.png" id="2_7se4b"]
+[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/SpriteShaderMixer.gd" id="3_27xoy"]
+[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/ShaderMixer.gd" id="4_4gp7x"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_l44q7"]
-shader = ExtResource("1_hkxw7")
-shader_parameter/deform = Vector2(-0.375, 0.485)
-shader_parameter/offset = Vector2(20, 60)
-shader_parameter/modulate = null
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vic3b"]
+shader = ExtResource("1_tkt3d")
+shader_parameter/TEST_active = false
+shader_parameter/GLITCH_active = false
+shader_parameter/GLITCH_offset = 0.0
+shader_parameter/GLITCH_speed = 1.0
+shader_parameter/GLITCH_size = 0.75
+shader_parameter/GLITCH_amount = 10.0
+shader_parameter/GREYSCALE_active = false
+shader_parameter/GREYSCALE_TintColor = Color(1, 1, 1, 1)
+shader_parameter/GREYSCALE_Luminosity = 0.0
+shader_parameter/GREYSCALE_Blend = 1.0
+shader_parameter/CROSSFADE_CIRCLE_active = false
+shader_parameter/CROSSFADE_CIRCLE_transparency = 1.0
+shader_parameter/CROSSFADE_CIRCLE_position = null
+shader_parameter/CROSSFADE_CIRCLE_dissolveColor = Color(0, 0, 0, 0)
+shader_parameter/CROSSFADE_CIRCLE_circleSize = null
+shader_parameter/BLUR_active = false
+shader_parameter/BLUR_radius = 2.0
+shader_parameter/OUTLINE_active = true
+shader_parameter/OUTLINE_thickness = 5.591
+shader_parameter/OUTLINE_color = null
+shader_parameter/EMPTYOUTLINE_active = false
+shader_parameter/EMPTYOUTLINE_lineColor = Color(1, 1, 1, 1)
+shader_parameter/EMPTYOUTLINE_lineThickness = 3.0
+
+[sub_resource type="Resource" id="Resource_hc5xx"]
+script = ExtResource("4_4gp7x")
+greyscale = false
+greyscale_tintColor = Color(0, 0, 0, 1)
+greyscale_luminosity = 0.0
+greyscale_blend = 1.0
+outline = false
+outline_width = 2
+outline_color = Color(0, 0, 0, 1)
+test = false
 
 [node name="Node2D" type="Node2D"]
 
-[node name="0001" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_l44q7")
-position = Vector2(608, 569)
-scale = Vector2(1.02315, 0.980556)
-texture = ExtResource("1_yclcq")
+[node name="Sprite2DShaderMixer" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_vic3b")
+position = Vector2(556, 478)
+texture = ExtResource("2_7se4b")
+script = ExtResource("3_27xoy")
+shaderMixer = SubResource("Resource_hc5xx")
