@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bglmssvn1eiqd"]
+
+[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension_view.gd" id="1_bw6lk"]
+[ext_resource type="Texture2D" uid="uid://eeq6pbjncxg5" path="res://addons/sprite-shader-mixer/assets/Sprite2DShaderMixer.svg" id="1_mgt7v"]
+
+[node name="main" type="CenterContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_bw6lk")
+
+[node name="create_container" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="button_create" type="Button" parent="create_container"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+text = "Create Shader Mixer"
+
+[node name="icon" type="Sprite2D" parent="create_container/button_create"]
+texture = ExtResource("1_mgt7v")
+offset = Vector2(15, 16)

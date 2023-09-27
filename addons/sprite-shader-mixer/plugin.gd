@@ -1,12 +1,12 @@
 @tool
 extends EditorPlugin
 
+var tool_create_plugin = preload("res://addons/sprite-shader-mixer/src/InspectorCreatePlugin.gd")
 
 func _enter_tree():
-	# Initialization of the plugin goes here.
-	pass
+	tool_create_plugin = tool_create_plugin.new()
+	add_inspector_plugin(tool_create_plugin)
 
 
 func _exit_tree():
-	# Clean-up of the plugin goes here.
-	pass
+	remove_inspector_plugin(tool_create_plugin)
