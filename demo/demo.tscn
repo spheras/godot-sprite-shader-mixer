@@ -1,9 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://bg8kbwgdx0c41"]
+[gd_scene load_steps=32 format=3 uid="uid://bg8kbwgdx0c41"]
 
-[ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/shader.gdshader" id="1_tkt3d"]
+[ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/shaders/shader.gdshader" id="1_dku36"]
 [ext_resource type="Texture2D" uid="uid://dglrgpdar5s5f" path="res://demo/assets/supergodot/supergodot-0000.png" id="2_d8c7d"]
 [ext_resource type="Texture2D" uid="uid://cjeayem3gvydj" path="res://demo/assets/supergodot/supergodot-0001.png" id="3_jdpkp"]
-[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/ShaderMixer.gd" id="4_4gp7x"]
 [ext_resource type="Texture2D" uid="uid://0ssrhvjgqypl" path="res://demo/assets/supergodot/supergodot-0002.png" id="4_oh6bi"]
 [ext_resource type="Texture2D" uid="uid://76khhn0s8mjt" path="res://demo/assets/supergodot/supergodot-0003.png" id="5_4cr3g"]
 [ext_resource type="Texture2D" uid="uid://dsxixubmnrabt" path="res://demo/assets/supergodot/supergodot-0004.png" id="6_ky42y"]
@@ -22,11 +21,13 @@
 [ext_resource type="Texture2D" uid="uid://ba8nog2oec7k8" path="res://demo/assets/supergodot/supergodot-0017.png" id="19_ftjid"]
 [ext_resource type="Texture2D" uid="uid://dl8y26n80dd26" path="res://demo/assets/supergodot/supergodot-0018.png" id="20_rqqvl"]
 [ext_resource type="Texture2D" uid="uid://bj3led5ufh7tr" path="res://demo/assets/supergodot/supergodot-0019.png" id="21_10ntl"]
-[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/AnimatedSpriteShaderMixer.gd" id="22_mt3nd"]
+[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/nodes/AnimatedSpriteShaderMixer.gd" id="22_j6cnj"]
+[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/nodes/ShaderMixer.gd" id="23_87gfo"]
 [ext_resource type="Texture2D" uid="uid://bqt4kbnhslaga" path="res://demo/assets/godot-text.png" id="24_oasa3"]
+[ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/shaders/empty.gdshader" id="25_1ahdj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_is0c0"]
-shader = ExtResource("1_tkt3d")
+shader = ExtResource("1_dku36")
 shader_parameter/RAINBOW_active = false
 shader_parameter/RAINBOW_speed = 1.0
 shader_parameter/RAINBOW_redFactor = 3.984
@@ -171,7 +172,7 @@ animations = [{
 }]
 
 [sub_resource type="Resource" id="Resource_5alna"]
-script = ExtResource("4_4gp7x")
+script = ExtResource("23_87gfo")
 greyscale = false
 greyscale_tintColor = Color(0, 0, 0, 1)
 greyscale_luminosity = 0.0
@@ -182,7 +183,7 @@ outline_color = Color(0, 0, 0, 1)
 test = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_daea1"]
-shader = ExtResource("1_tkt3d")
+shader = ExtResource("1_dku36")
 shader_parameter/RAINBOW_active = false
 shader_parameter/RAINBOW_speed = 1.0
 shader_parameter/RAINBOW_redFactor = 3.0
@@ -259,7 +260,7 @@ shader_parameter/MATRIX_tint_color = Color(0.12, 0.62, 0.92, 1)
 shader_parameter/MATRIX_line_thickness = 5.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jpn56"]
-shader = ExtResource("1_tkt3d")
+shader = ExtResource("1_dku36")
 shader_parameter/RAINBOW_active = true
 shader_parameter/RAINBOW_speed = 0.182
 shader_parameter/RAINBOW_redFactor = 5.0
@@ -335,6 +336,9 @@ shader_parameter/MATRIX_number_column_char_texture = 3.0
 shader_parameter/MATRIX_tint_color = Color(0.12, 0.62, 0.92, 1)
 shader_parameter/MATRIX_line_thickness = 5.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ns6vm"]
+shader = ExtResource("25_1ahdj")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="background" type="ColorRect" parent="."]
@@ -349,7 +353,7 @@ scale = Vector2(0.4375, 0.4375)
 sprite_frames = SubResource("SpriteFrames_7eb5u")
 autoplay = "default"
 frame_progress = 0.263426
-script = ExtResource("22_mt3nd")
+script = ExtResource("22_j6cnj")
 shaderMixer = SubResource("Resource_5alna")
 
 [node name="SuperGodot-AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
@@ -359,7 +363,7 @@ scale = Vector2(0.4375, 0.4375)
 sprite_frames = SubResource("SpriteFrames_7eb5u")
 autoplay = "default"
 frame_progress = 0.263426
-script = ExtResource("22_mt3nd")
+script = ExtResource("22_j6cnj")
 shaderMixer = SubResource("Resource_5alna")
 
 [node name="Godot-Text-With-Material" type="Sprite2D" parent="."]
@@ -369,3 +373,4 @@ scale = Vector2(0.478166, 0.478166)
 texture = ExtResource("24_oasa3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ns6vm")

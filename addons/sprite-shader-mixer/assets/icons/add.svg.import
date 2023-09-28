@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccjmj2rn8h4wn"
-path="res://.godot/imported/AnimatedSprite2DShaderMixer.svg-a62fe3490b9dd8fdf7b3a5779270d41d.ctex"
+uid="uid://cshtdxw6ns3f1"
+path="res://.godot/imported/add.svg-ed6add9a0a2481bf64200f55eb05f0cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/sprite-shader-mixer/assets/AnimatedSprite2DShaderMixer.svg"
-dest_files=["res://.godot/imported/AnimatedSprite2DShaderMixer.svg-a62fe3490b9dd8fdf7b3a5779270d41d.ctex"]
+source_file="res://addons/sprite-shader-mixer/assets/icons/add.svg"
+dest_files=["res://.godot/imported/add.svg-ed6add9a0a2481bf64200f55eb05f0cd.ctex"]
 
 [params]
 

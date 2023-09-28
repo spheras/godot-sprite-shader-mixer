@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eeq6pbjncxg5"
-path="res://.godot/imported/Sprite2DShaderMixer.svg-d9a6663558825623a27f1383e5ea9599.ctex"
+uid="uid://ctngy3lyqpm8p"
+path="res://.godot/imported/right.svg-1ab3cf0d3b8f634ba24184a11184f4f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/sprite-shader-mixer/assets/Sprite2DShaderMixer.svg"
-dest_files=["res://.godot/imported/Sprite2DShaderMixer.svg-d9a6663558825623a27f1383e5ea9599.ctex"]
+source_file="res://addons/sprite-shader-mixer/assets/icons/right.svg"
+dest_files=["res://.godot/imported/right.svg-1ab3cf0d3b8f634ba24184a11184f4f7.ctex"]
 
 [params]
 
@@ -19,13 +19,13 @@ compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=2
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
