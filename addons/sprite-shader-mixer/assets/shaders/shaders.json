@@ -1,0 +1,29 @@
+[
+	{
+		"name": "Glitch",
+		"group":"General",
+		"description": "Glitch effect",
+		"author":"Unknown",
+		"version":"1.0",
+		"filename":"glitch.gdshader",
+		"function":"glitch"
+	},
+	{
+		"name": "Greyscale",
+		"group": "General",
+		"description": "Replace colors with a grayscale. Posibility to set the tone.",
+		"author":"Unknown",
+		"version":"1.0",
+		"filename":"greyscale.gdshader",
+		"function":"greyscale"
+	},
+	{
+		"name": "Rainbow",
+		"group": "General",
+		"description": "Change color tone during the time.",
+		"author":"spheras",
+		"version":"1.0",
+		"filename":"rainbow.gdshader",
+		"function":"rainbow"
+	}
+]

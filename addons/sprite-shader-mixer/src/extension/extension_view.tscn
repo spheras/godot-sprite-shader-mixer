@@ -57,30 +57,30 @@ text = "Select Shader to Add"
 layout_mode = 2
 
 [node name="option_shaders" type="OptionButton" parent="marginContainer/shader_container/HBoxContainer"]
+custom_minimum_size = Vector2(150, 25)
 layout_mode = 2
-item_count = 3
-selected = 0
-popup/item_0/text = "select"
+item_count = 1
+popup/item_0/text = ""
 popup/item_0/id = 0
-popup/item_1/text = "Shader de Prueba"
-popup/item_1/id = 1
-popup/item_2/text = "Otro Shader"
-popup/item_2/id = 2
-
-[node name="Container" type="Container" parent="marginContainer/shader_container/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
 
 [node name="button_addShader" type="Button" parent="marginContainer/shader_container/HBoxContainer"]
+visible = false
 layout_mode = 2
-disabled = true
+theme_override_colors/icon_normal_color = Color(0, 0.764706, 0, 1)
 text = "add"
 icon = ExtResource("3_0ho1l")
 
 [node name="HSeparator" type="HSeparator" parent="marginContainer/shader_container"]
 layout_mode = 2
 
+[node name="Label2" type="Label" parent="marginContainer/shader_container"]
+layout_mode = 2
+text = "Current List of Shaders Added can be manipulated at the Material->Shader exported properties"
+autowrap_mode = 3
+max_lines_visible = 3
+
 [node name="HFlowContainer" type="VBoxContainer" parent="marginContainer/shader_container"]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="marginContainer/shader_container/HFlowContainer"]
