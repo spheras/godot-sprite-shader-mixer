@@ -1,7 +1,7 @@
 //GLITCH
-uniform bool  GLITCH_active  = false;
+uniform bool  GLITCH_active  = true;
 uniform float GLITCH_offset: hint_range(0, 100) = 0;
-uniform float GLITCH_speed : hint_range(0, 10) = 1;
+uniform float GLITCH_speed : hint_range(0, 10) = 3;
 uniform float GLITCH_size : hint_range(0.0, 10.0) = 0.75;
 uniform float GLITCH_amount : hint_range(0.0, 24.0) = 10.0;
 uniform float GLITCH_mix: hint_range(0.0, 1.0)=1.0;

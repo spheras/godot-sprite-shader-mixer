@@ -1,5 +1,5 @@
 //RAINBOW
-uniform bool  RAINBOW_active  = false;
+uniform bool  RAINBOW_active  = true;
 uniform float RAINBOW_speed : hint_range(0, 5) = 1;
 uniform float RAINBOW_redFactor : hint_range(0, 5) = 3;
 uniform float RAINBOW_greenFactor : hint_range(0, 5) = 2;

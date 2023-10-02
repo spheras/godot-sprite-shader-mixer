@@ -1,5 +1,5 @@
 //GREYSCALE
-uniform bool  GREYSCALE_active  = false;
+uniform bool  GREYSCALE_active  = true;
 uniform vec3  GREYSCALE_TintColor : source_color = vec3(1.0);
 uniform float GREYSCALE_Luminosity : hint_range(-1.0, 1.0) = 0.0;
 uniform float GREYSCALE_Blend : hint_range(0.0, 1.0) = 1.0;
