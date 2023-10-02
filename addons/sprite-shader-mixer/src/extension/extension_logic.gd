@@ -10,8 +10,8 @@ signal onShadersCalculated(shadersInserted:Array[ShaderInfo], shadersNotInserted
 const SHADERS_JSON_PATH="res://addons/sprite-shader-mixer/assets/shaders/shaders.json"
 
 #PROPERTIES
+static var NONE_SHADER:String="None"
 var parentSprite #The parent sprite to set the shaders. It can be a Sprite2D or an AnimatedSprite2D
-const NONE_SHADER:String="None"
 var ALL_SHADERS:Array[ShaderInfo]=[] #list of all available shaders
 var selectedShaders:Array[ShaderInfo]=[] #list of selected shaders in the sprite
 var pendingShaders:Array[ShaderInfo]=[] #list of pending available shaders
@@ -45,7 +45,6 @@ func shaderSelected(shaderName:String)->void:
 	self.onAddShaderButtonVisible.emit(!shaderName.match(NONE_SHADER))
 
 func onReorder(shader:ShaderInfo, after:bool)->void:
-	print_debug("reorder")
 	var currentIndex=self.selectedShaders.find(shader)
 	var flagModified:bool=false
 	if(!after && currentIndex>0):

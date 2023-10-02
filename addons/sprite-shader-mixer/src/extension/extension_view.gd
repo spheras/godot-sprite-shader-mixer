@@ -60,6 +60,7 @@ func _onAddButtonPressed()->void:
 #   shaders -> List of shaders which can be selected to be included
 func _onShadersCalculated(shadersInserted:Array[ShaderInfo], shadersNotInserted:Array[ShaderInfo])->void:
 	self.compOptionShaders.clear()
+	self.compOptionShaders.add_item("None")
 	for shader in shadersNotInserted:
 		self.compOptionShaders.add_item(shader.name)
 		
