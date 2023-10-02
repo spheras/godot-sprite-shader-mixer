@@ -1,228 +1,25 @@
-[gd_scene load_steps=36 format=3 uid="uid://bg8kbwgdx0c41"]
+[gd_scene load_steps=4 format=3 uid="uid://btvorthsuc7d1"]
 
-[ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/shaders/shader.gdshader" id="1_dku36"]
-[ext_resource type="Texture2D" uid="uid://dglrgpdar5s5f" path="res://demo/assets/supergodot/supergodot-0000.png" id="2_d8c7d"]
-[ext_resource type="Texture2D" uid="uid://cjeayem3gvydj" path="res://demo/assets/supergodot/supergodot-0001.png" id="3_jdpkp"]
-[ext_resource type="Texture2D" uid="uid://0ssrhvjgqypl" path="res://demo/assets/supergodot/supergodot-0002.png" id="4_oh6bi"]
-[ext_resource type="Texture2D" uid="uid://76khhn0s8mjt" path="res://demo/assets/supergodot/supergodot-0003.png" id="5_4cr3g"]
-[ext_resource type="Texture2D" uid="uid://dsxixubmnrabt" path="res://demo/assets/supergodot/supergodot-0004.png" id="6_ky42y"]
-[ext_resource type="Texture2D" uid="uid://c21nq58yhbupd" path="res://demo/assets/supergodot/supergodot-0005.png" id="7_yjda1"]
-[ext_resource type="Texture2D" uid="uid://da7qsv1b7ar6o" path="res://demo/assets/supergodot/supergodot-0006.png" id="8_7oopi"]
-[ext_resource type="Texture2D" uid="uid://b66ei025jd8od" path="res://demo/assets/supergodot/supergodot-0007.png" id="9_1pxwa"]
-[ext_resource type="Texture2D" uid="uid://cv7swyoc1k0tf" path="res://demo/assets/supergodot/supergodot-0008.png" id="10_kls0v"]
-[ext_resource type="Texture2D" uid="uid://d1ytl0qjuj4nr" path="res://demo/assets/supergodot/supergodot-0009.png" id="11_awnx5"]
-[ext_resource type="Texture2D" uid="uid://dxttps4a4q6qi" path="res://demo/assets/supergodot/supergodot-0010.png" id="12_g410n"]
-[ext_resource type="Texture2D" uid="uid://cpcm08y8vcsb4" path="res://demo/assets/supergodot/supergodot-0011.png" id="13_usj3w"]
-[ext_resource type="Texture2D" uid="uid://blh567x4genwe" path="res://demo/assets/supergodot/supergodot-0012.png" id="14_aj2ki"]
-[ext_resource type="Texture2D" uid="uid://cqm374d8oypkb" path="res://demo/assets/supergodot/supergodot-0013.png" id="15_6h82v"]
-[ext_resource type="Texture2D" uid="uid://d0vnscrlfngj4" path="res://demo/assets/supergodot/supergodot-0014.png" id="16_8p4p1"]
-[ext_resource type="Texture2D" uid="uid://cp06d56eyr8uc" path="res://demo/assets/supergodot/supergodot-0015.png" id="17_gppj1"]
-[ext_resource type="Texture2D" uid="uid://bxmk3depwti3g" path="res://demo/assets/supergodot/supergodot-0016.png" id="18_6y5vl"]
-[ext_resource type="Texture2D" uid="uid://ba8nog2oec7k8" path="res://demo/assets/supergodot/supergodot-0017.png" id="19_ftjid"]
-[ext_resource type="Texture2D" uid="uid://dl8y26n80dd26" path="res://demo/assets/supergodot/supergodot-0018.png" id="20_rqqvl"]
-[ext_resource type="Texture2D" uid="uid://bj3led5ufh7tr" path="res://demo/assets/supergodot/supergodot-0019.png" id="21_10ntl"]
-[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/nodes/AnimatedSpriteShaderMixer.gd" id="22_j6cnj"]
-[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/nodes/ShaderMixer.gd" id="23_87gfo"]
-[ext_resource type="Texture2D" uid="uid://bqt4kbnhslaga" path="res://demo/assets/godot-text.png" id="24_oasa3"]
-[ext_resource type="Shader" path="res://addons/sprite-shader-mixer/assets/shaders/empty.gdshader" id="25_1ahdj"]
+[ext_resource type="Texture2D" uid="uid://bqt4kbnhslaga" path="res://demo/assets/godot-text.png" id="1_eab62"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_is0c0"]
-shader = ExtResource("1_dku36")
-shader_parameter/RAINBOW_active = false
-shader_parameter/RAINBOW_speed = 1.0
-shader_parameter/RAINBOW_redFactor = 3.984
-shader_parameter/RAINBOW_greenFactor = 2.0
-shader_parameter/RAINBOW_blueFactor = 5.0
-shader_parameter/GLITCH_active = true
-shader_parameter/GLITCH_offset = 19.171
-shader_parameter/GLITCH_speed = 8.239
-shader_parameter/GLITCH_size = 2.409
-shader_parameter/GLITCH_amount = 0.922
-shader_parameter/GREYSCALE_active = false
-shader_parameter/GREYSCALE_TintColor = Color(1, 1, 1, 1)
-shader_parameter/GREYSCALE_Luminosity = 0.0
-shader_parameter/GREYSCALE_Blend = 1.0
-shader_parameter/CROSSFADE_CIRCLE_active = false
-shader_parameter/CROSSFADE_CIRCLE_transparency = 1.0
-shader_parameter/CROSSFADE_CIRCLE_position = null
-shader_parameter/CROSSFADE_CIRCLE_dissolveColor = Color(0, 0, 0, 0)
-shader_parameter/CROSSFADE_CIRCLE_circleSize = null
-shader_parameter/BLUR_active = false
-shader_parameter/BLUR_radius = 1.953
-shader_parameter/OUTLINE_active = true
-shader_parameter/OUTLINE_thickness = 14.192
-shader_parameter/OUTLINE_color = Color(0, 0.886275, 0, 1)
-shader_parameter/EMPTYOUTLINE_active = false
-shader_parameter/EMPTYOUTLINE_lineColor = Color(1, 0.478431, 1, 1)
-shader_parameter/EMPTYOUTLINE_lineThickness = 14.658
-shader_parameter/SHADOW_active = true
-shader_parameter/SHADOW_deform = Vector2(-1.565, 2)
-shader_parameter/SHADOW_offset = Vector2(-330, 440)
-shader_parameter/SHADOW_modulate = Color(0, 0, 0, 0.584314)
-shader_parameter/HOLOWAVE_active = false
-shader_parameter/HOLOWAVE_offset = 0.0
-shader_parameter/HOLOWAVE_speed = 1.0
-shader_parameter/HOLOWAVE_waveHeight = 0.12
-shader_parameter/HOLOWAVE_waveSpeed = 3.0
-shader_parameter/HOLOWAVE_waveFreq = 30.0
-shader_parameter/HOLOWAVE_waveWidth = 1.0
-shader_parameter/HOLOGRAM_active = false
-shader_parameter/HOLOGRAM_value = 0.75
-shader_parameter/HOLOGRAM_noiseX = 10.0
-shader_parameter/HOLOGRAM_speed = 1.0
-shader_parameter/SHINY_active = false
-shader_parameter/SHINY_processValue = 0.0
-shader_parameter/SHINY_size = -0.1
-shader_parameter/SHINY_smoothLight = 0.25
-shader_parameter/SHINY_intensity = 0.75
-shader_parameter/SHINY_angle = 100.0
-shader_parameter/BURN_active = false
-shader_parameter/BURN_offset = 0.0
-shader_parameter/BURN_speed = 1.0
-shader_parameter/BURN_burnValue = 1.0
-shader_parameter/METAL_active = false
-shader_parameter/METAL_offset = 0.0
-shader_parameter/METAL_speed = 1.0
-shader_parameter/FREEZE_active = false
-shader_parameter/FREEZE_offset = 0.0
-shader_parameter/FREEZE_speed = 1.0
-shader_parameter/GOLD_active = false
-shader_parameter/GOLD_offset = 0.0
-shader_parameter/GOLD_speed = 1.0
-shader_parameter/DISOLVEBURN_active = false
-shader_parameter/DISOLVEBURN_burn_color = Color(1, 0.3, 0.05, 1)
-shader_parameter/DISOLVEBURN_process_value = 0.0
-shader_parameter/MATRIX_active = false
-shader_parameter/MATRIX_direction = 0
-shader_parameter/MATRIX_velocity = 0.5
-shader_parameter/MATRIX_row = 12.0
-shader_parameter/MATRIX_column = 12.0
-shader_parameter/MATRIX_value = 20.0
-shader_parameter/MATRIX_number_row_char_texture = 3.0
-shader_parameter/MATRIX_number_column_char_texture = 3.0
-shader_parameter/MATRIX_tint_color = Color(0.12, 0.62, 0.92, 1)
-shader_parameter/MATRIX_line_thickness = 5.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7eb5u"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_d8c7d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_jdpkp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_oh6bi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_4cr3g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ky42y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_yjda1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_7oopi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_1pxwa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_kls0v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_awnx5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_g410n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_usj3w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_aj2ki")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_6h82v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_8p4p1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_gppj1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_6y5vl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_ftjid")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_rqqvl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_10ntl")
-}],
-"loop": true,
-"name": &"default",
-"speed": 21.0
-}]
-
-[sub_resource type="Resource" id="Resource_5alna"]
-script = ExtResource("23_87gfo")
-greyscale = false
-greyscale_tintColor = Color(0, 0, 0, 1)
-greyscale_luminosity = 0.0
-greyscale_blend = 1.0
-outline = false
-outline_width = 2
-outline_color = Color(0, 0, 0, 1)
-test = true
-
-[sub_resource type="Resource" id="Resource_egoge"]
-script = ExtResource("23_87gfo")
-greyscale = false
-greyscale_tintColor = Color(0, 0, 0, 1)
-greyscale_luminosity = 0.0
-greyscale_blend = 1.0
-outline = false
-outline_width = 2
-outline_color = Color(0, 0, 0, 1)
-test = false
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_daea1"]
-shader = ExtResource("25_1ahdj")
-
-[sub_resource type="Resource" id="Resource_yodne"]
-script = ExtResource("23_87gfo")
-greyscale = false
-greyscale_tintColor = Color(0, 0, 0, 1)
-greyscale_luminosity = 0.0
-greyscale_blend = 1.0
-outline = false
-outline_width = 2
-outline_color = Color(0, 0, 0, 1)
-test = false
-
-[sub_resource type="Shader" id="Shader_4hgnr"]
-code = "
-//ATTENTION:
-//THIS IS AN EMPTY SHADED AUTOGENERATED BY
-//THE ADDON SPRITE-SHADER-MIXER
-//YOUR MANUAL CHANGES WILL BE REMOVED WHEN THE ADDON
-//UPDATE THIS SHADER.
+[sub_resource type="Shader" id="Shader_3qvsr"]
+code = "//ATTENTION:
+//  THIS IS SHADE AUTOGENERATED BY
+//  THE ADDON SPRITE-SHADER-MIXER
+//  ANY MANUAL CHANGES WILL BE REMOVED WHEN THE ADDON
+//  UPDATES THIS SHADER.
+//  ANYWAY, YOU CAN SAVE THE CURRENT VERSION AS A RESOURCE FILE.
+//SHADERS:Glitch,Rainbow,
 shader_type canvas_item;
 
-	
+
 //GLITCH
 uniform bool  GLITCH_active  = false;
 uniform float GLITCH_offset: hint_range(0, 100) = 0;
 uniform float GLITCH_speed : hint_range(0, 10) = 1;
 uniform float GLITCH_size : hint_range(0.0, 10.0) = 0.75;
 uniform float GLITCH_amount : hint_range(0.0, 24.0) = 10.0;
+uniform float GLITCH_mix: hint_range(0.0, 1.0)=1.0;
 float rand1(vec2 co, float random_seed)
 {
     return fract(sin(dot(co.xy * random_seed, vec2(12.,85.5))) * 120.01);
@@ -232,7 +29,7 @@ float rand2(vec2 co, float random_seed)
     float r1 = fract(sin(dot(co.xy * random_seed ,vec2(12.9898, 78.233))) * 43758.5453);
     return fract(sin(dot(vec2(r1 + co.xy * 1.562) ,vec2(12.9898, 78.233))) * 43758.5453);
 }
-void glitch(in vec2 uv, in sampler2D tex, inout vec4 color) {
+void glitch(in vec2 uv, in sampler2D tex, vec2 texturePixelSize, inout vec4 color) {
 	float seed = floor(TIME * GLITCH_speed) / 20.0;
 	vec2 blockS = floor(uv * vec2 (GLITCH_offset, 50.) * GLITCH_size) * 2.0;
 	vec2  blockL = floor(uv * vec2 (GLITCH_offset, 50.) * GLITCH_size) * 1.3;
@@ -244,86 +41,53 @@ void glitch(in vec2 uv, in sampler2D tex, inout vec4 color) {
 	if(  random < 0.5 ){
 		negative=1.;
 	}	
-	color = texture(tex, uv + vec2 (line_noise * 0.02 * negative * rand1(vec2(2.0), seed), 0));
+	vec4 newColor=texture(tex, uv + vec2 (line_noise * 0.02 * negative * rand1(vec2(2.0), seed), 0));
+	color = mix(color,newColor, GLITCH_mix);
 }
+
+
+//RAINBOW
+uniform bool  RAINBOW_active  = false;
+uniform float RAINBOW_speed : hint_range(0, 5) = 1;
+uniform float RAINBOW_redFactor : hint_range(0, 5) = 3;
+uniform float RAINBOW_greenFactor : hint_range(0, 5) = 2;
+uniform float RAINBOW_blueFactor : hint_range(0, 5) = 5;
+void rainbow(vec2 uv, sampler2D txt, vec2 texturePixelSize, inout vec4 color) {
+	color=vec4(color.r+sin(TIME*RAINBOW_redFactor*RAINBOW_speed), color.g+sin(TIME*RAINBOW_greenFactor*RAINBOW_speed), color.b+sin(TIME*RAINBOW_blueFactor*RAINBOW_speed), color.a);
+}
+
 
 
 void fragment() {
 	vec4 color = texture(TEXTURE, UV);
 	vec2 size = vec2(textureSize(TEXTURE, 0));
-	vec2 uv = UV;
 
-	glitch(uv, TEXTURE, color);
+	if(GLITCH_active) glitch(UV, TEXTURE, TEXTURE_PIXEL_SIZE, color);
+	if(RAINBOW_active) rainbow(UV, TEXTURE, TEXTURE_PIXEL_SIZE, color);
+
 
 	COLOR=color;
 }	
-	"
+"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_40lcx"]
-shader = SubResource("Shader_4hgnr")
-shader_parameter/GLITCH_active = false
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_shvxl"]
+shader = SubResource("Shader_3qvsr")
+shader_parameter/GLITCH_active = true
 shader_parameter/GLITCH_offset = 0.0
-shader_parameter/GLITCH_speed = 10.0
-shader_parameter/GLITCH_size = 2.211
-shader_parameter/GLITCH_amount = 19.438
+shader_parameter/GLITCH_speed = 5.056
+shader_parameter/GLITCH_size = 0.75
+shader_parameter/GLITCH_amount = 10.0
+shader_parameter/GLITCH_mix = 1.0
+shader_parameter/RAINBOW_active = true
+shader_parameter/RAINBOW_speed = 1.0
+shader_parameter/RAINBOW_redFactor = 3.0
+shader_parameter/RAINBOW_greenFactor = 2.0
+shader_parameter/RAINBOW_blueFactor = 5.0
 
-[sub_resource type="Resource" id="Resource_aavpa"]
-script = ExtResource("23_87gfo")
-greyscale = false
-greyscale_tintColor = Color(0, 0, 0, 1)
-greyscale_luminosity = 0.0
-greyscale_blend = 1.0
-outline = false
-outline_width = 2
-outline_color = Color(0, 0, 0, 1)
-test = false
-
-[sub_resource type="Resource" id="Resource_yqkps"]
-script = ExtResource("23_87gfo")
-greyscale = false
-greyscale_tintColor = Color(0, 0, 0, 1)
-greyscale_luminosity = 0.0
-greyscale_blend = 1.0
-outline = false
-outline_width = 2
-outline_color = Color(0, 0, 0, 1)
-test = false
-
-[node name="Node2D" type="Node2D"]
-
-[node name="background" type="ColorRect" parent="."]
-offset_right = 1170.0
-offset_bottom = 655.0
-color = Color(0.196078, 0.247059, 0.309804, 1)
-
-[node name="SuperGodot-AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-material = SubResource("ShaderMaterial_is0c0")
-position = Vector2(576, 288)
-scale = Vector2(0.4375, 0.4375)
-sprite_frames = SubResource("SpriteFrames_7eb5u")
-autoplay = "default"
-frame_progress = 0.263426
-script = ExtResource("22_j6cnj")
-shaderMixer = SubResource("Resource_5alna")
-metadata/prueba = SubResource("Resource_egoge")
-
-[node name="SuperGodot-AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-material = SubResource("ShaderMaterial_daea1")
-position = Vector2(1598, 296)
-scale = Vector2(0.4375, 0.4375)
-sprite_frames = SubResource("SpriteFrames_7eb5u")
-autoplay = "default"
-frame_progress = 0.263426
-script = ExtResource("22_j6cnj")
-shaderMixer = SubResource("Resource_5alna")
-metadata/prueba = SubResource("Resource_yodne")
-
-[node name="Godot-Text-With-Material" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_40lcx")
-position = Vector2(591, 560)
-scale = Vector2(0.478166, 0.478166)
-texture = ExtResource("24_oasa3")
-metadata/prueba = SubResource("Resource_aavpa")
+[node name="Demo" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-metadata/prueba = SubResource("Resource_yqkps")
+material = SubResource("ShaderMaterial_shvxl")
+position = Vector2(566, 517)
+scale = Vector2(0.969432, 0.969432)
+texture = ExtResource("1_eab62")

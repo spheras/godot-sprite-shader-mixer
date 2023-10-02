@@ -9,4 +9,3 @@ func _parse_begin(object):
 	var view = ex_view.instantiate()
 	view.setParentSprite(object)
 	add_custom_control(view)
-	(object as Node).set_meta("prueba",ShaderMixer.new())

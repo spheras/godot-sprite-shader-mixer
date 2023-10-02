@@ -6,6 +6,7 @@
 		"author":"Unknown",
 		"version":"1.0",
 		"filename":"glitch.gdshader",
+		"activation":"GLITCH_active",
 		"function":"glitch"
 	},
 	{
@@ -15,6 +16,7 @@
 		"author":"Unknown",
 		"version":"1.0",
 		"filename":"greyscale.gdshader",
+		"activation":"GREYSCALE_active",
 		"function":"greyscale"
 	},
 	{
@@ -24,6 +26,7 @@
 		"author":"spheras",
 		"version":"1.0",
 		"filename":"rainbow.gdshader",
+		"activation":"RAINBOW_active",
 		"function":"rainbow"
 	}
 ]
