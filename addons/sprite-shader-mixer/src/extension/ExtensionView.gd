@@ -1,4 +1,5 @@
 @tool
+class_name ExtensionView
 extends VBoxContainer
 
 @onready var iconDown=preload("res://addons/sprite-shader-mixer/assets/icons/down.svg")
@@ -11,6 +12,8 @@ extends VBoxContainer
 @onready var compContainerShader:Control=$marginContainer/shader_container
 @onready var compContainerSelectedShaders:Control=$marginContainer/shader_container/shaders_selected_container
 @onready var compCurrentShadersTitle:Button=$marginContainer/shader_container/currentShadersTitle
+@onready var compButtonDownload:Button=$marginContainer/shader_container/HBoxContainer/button_download
+@onready var compButtonSync:Button=$marginContainer/shader_container/HBoxContainer/button_sync
 var logic:ExtensionLogic=ExtensionLogic.new()
 
 func setParentSprite(parent)->void:
@@ -22,10 +25,14 @@ func _ready()->void:
 	self.compOptionShaders.item_selected.connect(self._onShaderComboSelected)
 	self.compButtonAddShader.pressed.connect(self._onAddButtonPressed)
 	self.compCurrentShadersTitle.toggled.connect(self._onShadersButtonToogled)
+	self.compButtonDownload.pressed.connect(self._onDownloadPressed)
+	self.compButtonSync.pressed.connect(self.logic.onSyncShaderList)
 
 	#connecting logic events
 	logic.onCreateContainerVisible.connect(_onCreateContainerVisible)
 	logic.onAddShaderButtonVisible.connect(_onAddShadderButtonVisible)
+	logic.onDownloadButtonVisible.connect(_onDownloadButtonVisible)
+	logic.onSyncButtonVisible.connect(_onSyncButtonVisible)
 	logic.onShadersCalculated.connect(_onShadersCalculated)
 	
 	logic.onReady()
@@ -47,6 +54,10 @@ func _onShadersButtonToogled(toogled:bool)->void:
 	else:
 		compCurrentShadersTitle.icon=self.iconRight
 		compContainerSelectedShaders.visible=false
+
+func _onDownloadPressed()->void:
+	var selectedShaderName=self.compOptionShaders.get_item_text(self.compOptionShaders.get_selected_id())
+	self.logic.onDownloadShaderPressed(selectedShaderName)
 
 # Event produce when the add button is pressed from UI
 func _onAddButtonPressed()->void:
@@ -77,6 +88,16 @@ func _onShadersCalculated(shadersInserted:Array[ShaderInfo], shadersNotInserted:
 #   visible -> whether the button must be visible
 func _onAddShadderButtonVisible(visible:bool)->void:
 	self.compButtonAddShader.visible=visible
+
+# Logic Event to determine whether the download button must be visible
+#   visible -> whether the button must be visible
+func _onDownloadButtonVisible(visible:bool)->void:
+	self.compButtonDownload.visible=visible
+
+# Logic Event to determine whether the sync button must be visible
+#   visible -> whether the button must be visible
+func _onSyncButtonVisible(visible:bool)->void:
+	self.compButtonSync.visible=visible
 
 # Logic Event to determine whether the create container must be visible
 #   visible -> whether the container must be visible

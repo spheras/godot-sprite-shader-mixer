@@ -1,4 +1,5 @@
 @tool
+class_name Plugin
 extends EditorPlugin
 
 var tool_create_plugin = preload("res://addons/sprite-shader-mixer/src/plugins/InspectorCreatePlugin.gd")

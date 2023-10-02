@@ -1,6 +1,7 @@
 class_name ShaderInfo
 extends Object
 
+const SHADERS_BASE_PATH="res://addons/sprite-shader-mixer/assets/shaders/"
 const EMPTY_SHADER_FILE_PATH="res://addons/sprite-shader-mixer/assets/shaders/empty.gdshader"
 const EMPTY_SHADER_VARIABLE_SHADERS="%SHADERS%"
 const EMPTY_SHADER_VARIABLE_FUNCTIONS="//%FUNCTIONS%"
@@ -54,10 +55,13 @@ static func _replaceScriptVariables(shaders:String, functions:String, calls:Stri
 	contentOfEmptyShader=contentOfEmptyShader.replace(EMPTY_SHADER_VARIABLE_CALLS,calls)
 	return contentOfEmptyShader
 
+static func shaderHasBeenDownloaded(shader:ShaderInfo)->bool:
+	return FileAccess.file_exists("res://addons/sprite-shader-mixer/assets/shaders/"+shader.filename)
+
 static func generateShaderCode(selectedShaders:Array[ShaderInfo])->Shader:
 	var functionsCode:String=""
 	for selectedShader in selectedShaders:
-		var contentOfSelectedShader=Util.readFile("res://addons/sprite-shader-mixer/assets/shaders/"+selectedShader.filename)
+		var contentOfSelectedShader=Util.readFile(SHADERS_BASE_PATH+selectedShader.filename)
 		functionsCode=functionsCode+"\n"+contentOfSelectedShader
 		
 	var shadersCode=""

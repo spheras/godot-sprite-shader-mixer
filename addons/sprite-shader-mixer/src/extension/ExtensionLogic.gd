@@ -3,11 +3,18 @@ extends Object
 
 #SIGNALS
 signal onCreateContainerVisible(visible:bool)
+signal onDownloadButtonVisible(visible:bool)
+signal onSyncButtonVisible(visible:bool)
 signal onAddShaderButtonVisible(visible:bool)
 signal onShadersCalculated(shadersInserted:Array[ShaderInfo], shadersNotInserted:Array[ShaderInfo])
 
 #RESOURCES
-const SHADERS_JSON_PATH="res://addons/sprite-shader-mixer/assets/shaders/shaders.json"
+const SHADERS_JSON_LOCAL_PATH="res://addons/sprite-shader-mixer/assets/shaders/shaders.json"
+const SHADERS_JSON_GITHUB_DOMAIN="raw.githubusercontent.com"
+const SHADERS_JSON_GITHUB_PATH="/spheras/godot-sprite-shader-mixer/v1/shaders/shaders.json"
+const SHADERS_GITHUB_DOMAIN="raw.githubusercontent.com"
+const SHADERS_GITHUB_BASE_PATH="/spheras/godot-sprite-shader-mixer/v1/shaders/"
+const SHADERS_LOCAL_BASE_PATH="res://addons/sprite-shader-mixer/assets/shaders/"
 
 #PROPERTIES
 static var NONE_SHADER:String="None"
@@ -27,6 +34,15 @@ func setParentSprite(parent)->void:
 	self.parentSprite=parent;
 	self._checkCreateVisibility()
 
+# find a shader info by its name
+#   shaderName -> the name to search
+#   return -> the ShaderInfo found or null otherwise
+func _findShaderInfo(shaderName:String) -> ShaderInfo:
+	for shader in ALL_SHADERS:
+		if(shader.name.match(shaderName)):
+			return shader
+	return null
+	
 # Function called when a shader is intended to be added
 #    shader -> the shader name to be added
 func onAddShaderPressed(shaderName:String)->void:
@@ -39,11 +55,40 @@ func onAddShaderPressed(shaderName:String)->void:
 			self._calculateShadersInserted()
 			return
 
+# Function called when the user wants to download a shader from github
+#   shaderName -> the name of the shader to download
+func onDownloadShaderPressed(shaderName:String)->void:
+	var shaderInfo=_findShaderInfo(shaderName)
+	if(shaderInfo!=null):
+		print("Downloading Shader... please wait...")
+		var shaderContent=await UtilHTTP.downloadHttps(SHADERS_GITHUB_DOMAIN, SHADERS_GITHUB_BASE_PATH +shaderInfo.filename)
+		Util.saveFile(SHADERS_LOCAL_BASE_PATH+shaderInfo.filename,shaderContent)
+		self.onAddShaderButtonVisible.emit(true)
+		self.onDownloadButtonVisible.emit(false)
+		print("Downloaded Shader, enjoy.")
+		
+
 # Function called when a shader has been selected
 #     shader -> the shader name selected
 func shaderSelected(shaderName:String)->void:
-	self.onAddShaderButtonVisible.emit(!shaderName.match(NONE_SHADER))
+	if(!shaderName.match(NONE_SHADER)):
+		var shaderInfo:ShaderInfo=_findShaderInfo(shaderName)
+		if(shaderInfo!=null):
+			var downloaded=ShaderInfo.shaderHasBeenDownloaded(shaderInfo)
+			self.onAddShaderButtonVisible.emit(downloaded)
+			self.onDownloadButtonVisible.emit(!downloaded)
+			return
+	self.onAddShaderButtonVisible.emit(false)
+	self.onDownloadButtonVisible.emit(false)
+		
 
+func onSyncShaderList()->void:
+	print("Syncing the Shader list from Github... please wait...")
+	var jsonContent=await UtilHTTP.downloadHttps(SHADERS_JSON_GITHUB_DOMAIN, SHADERS_JSON_GITHUB_PATH)
+	Util.saveFile(SHADERS_JSON_LOCAL_PATH,jsonContent)
+	_calculateShadersInserted()
+	print("Sync done, enjoy.")
+	
 func onReorder(shader:ShaderInfo, after:bool)->void:
 	var currentIndex=self.selectedShaders.find(shader)
 	var flagModified:bool=false
@@ -102,8 +147,11 @@ func _checkCreateVisibility()->void:
 # and the list of inserted shaders
 func _calculateShadersInserted()->void:
 	#Reading JSON where are defined all available shaders
+	var jsonContent=Util.readJsonFile(SHADERS_JSON_LOCAL_PATH)
+	if(jsonContent==null):
+		return
 	ALL_SHADERS=[]
-	var allShaders:Array=Util.readJsonFile(SHADERS_JSON_PATH)
+	var allShaders:Array=jsonContent as Array
 	for shaderObj in allShaders:
 		var shaderInfo:ShaderInfo=ShaderInfo.new()
 		shaderInfo.loadShaderInfo(shaderObj)
@@ -113,6 +161,7 @@ func _calculateShadersInserted()->void:
 	self.selectedShaders=ShaderInfo.readCurrentlyActiveShadersFromShaderCode(self.parentSprite.material.shader.code, ALL_SHADERS)
 	self._calculatePendingShaders()
 	self.onShadersCalculated.emit(self.selectedShaders, self.pendingShaders)
+
 
 # Calculates the pending shaders to be added
 # based on the shaders already added

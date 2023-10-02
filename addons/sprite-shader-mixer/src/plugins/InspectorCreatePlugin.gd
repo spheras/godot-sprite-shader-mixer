@@ -1,6 +1,6 @@
 extends EditorInspectorPlugin
 
-var ex_view = preload("res://addons/sprite-shader-mixer/src/extension/extension_view.tscn")
+var ex_view = preload("res://addons/sprite-shader-mixer/src/extension/ExtensionView.tscn")
 
 func _can_handle(object):
 	return (object is Sprite2D) or (object is AnimatedSprite2D)

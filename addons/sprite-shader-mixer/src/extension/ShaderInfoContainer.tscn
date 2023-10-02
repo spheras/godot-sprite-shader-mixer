@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://bqkflotm3qks7"]
 
 [ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/ShaderInfoContainer.gd" id="1_w5epy"]
-[ext_resource type="Texture2D" uid="uid://gsd0hclxgcna" path="res://addons/sprite-shader-mixer/assets/icons/delete.svg" id="2_l16is"]
-[ext_resource type="Texture2D" uid="uid://clodsmhqfp7yx" path="res://addons/sprite-shader-mixer/assets/icons/up.svg" id="2_rqw54"]
-[ext_resource type="Texture2D" uid="uid://i14jxb68u2q2" path="res://addons/sprite-shader-mixer/assets/icons/down.svg" id="3_tuebg"]
+[ext_resource type="Texture2D" uid="uid://d1q2at0btbfff" path="res://addons/sprite-shader-mixer/assets/icons/delete.svg" id="2_l16is"]
+[ext_resource type="Texture2D" uid="uid://dhcitjhpww86f" path="res://addons/sprite-shader-mixer/assets/icons/up.svg" id="2_rqw54"]
+[ext_resource type="Texture2D" uid="uid://3veyq17pvw46" path="res://addons/sprite-shader-mixer/assets/icons/down.svg" id="3_tuebg"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xcbid"]
 color = Color(1, 1, 1, 1)
