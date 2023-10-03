@@ -1,32 +1,95 @@
 [
 	{
 		"name": "Glitch",
-		"group":"General",
+		"group": "General",
 		"description": "Glitch effect",
-		"author":"Unknown",
-		"version":"1.0",
-		"filename":"glitch.gdshader",
-		"activation":"GLITCH_active",
-		"function":"glitch"
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/glitch.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "glitch.gdshader",
+		"activation": "GLITCH_active",
+		"function": "glitch",
+		"parameters": [
+			{
+				"name": "offset",
+				"description": "Distance of the particles"
+			},
+			{
+				"name": "speed",
+				"description": "speed at which the effect runs"
+			},
+			{
+				"name": "size",
+				"description": "Size of the effect particles"
+			},
+			{
+				"name": "amount",
+				"description": "Amount of effect particles"
+			},
+			{
+				"name": "mix",
+				"description": "Color Mix Percent with the previous Shader."
+			}
+		]
 	},
 	{
 		"name": "Greyscale",
 		"group": "General",
 		"description": "Replace colors with a grayscale. Posibility to set the tone.",
-		"author":"Unknown",
-		"version":"1.0",
-		"filename":"greyscale.gdshader",
-		"activation":"GREYSCALE_active",
-		"function":"greyscale"
+		"author": "chatgpt",
+		"link": "https://chat.openai.com/",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "greyscale.gdshader",
+		"activation": "GREYSCALE_active",
+		"function": "greyscale",
+		"parameters": [
+			{
+				"name": "tintColor",
+				"description": "Color to apply to the fx."
+			},
+			{
+				"name": "Luminosity",
+				"description": "Luminosity of the effect."
+			},
+			{
+				"name": "Blend",
+				"description": "Blend color percent with the tint color."
+			}
+		]
 	},
 	{
 		"name": "Rainbow",
 		"group": "General",
-		"description": "Change color tone during the time.",
-		"author":"spheras",
-		"version":"1.0",
-		"filename":"rainbow.gdshader",
-		"activation":"RAINBOW_active",
-		"function":"rainbow"
+		"description": "Fx to change color tone during the time.",
+		"author": "chatgpt",
+		"link": "https://github.com/spheras/godot-sprite-shader-mixer/blob/v1/shaders/rainbow.gdshader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "rainbow.gdshader",
+		"activation": "RAINBOW_active",
+		"function": "rainbow",
+		"parameters": [
+			{
+				"name": "speed",
+				"description": "Speed of the change color effect."
+			},
+			{
+				"name": "redFactor",
+				"description": "Red factor to apply to the color effect during transitions."
+			},
+			{
+				"name": "greenFactor",
+				"description": "Green factor to apply to the color effect during transitions."
+			},
+			{
+				"name": "blueFactor",
+				"description": "Blue factor to apply to the color effect during transitions."
+			}
+		]
 	}
 ]
