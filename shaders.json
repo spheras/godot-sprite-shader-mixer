@@ -1,5 +1,24 @@
 [
 	{
+		"name": "Blur",
+		"group": "General",
+		"description": "Blur effect",
+		"author": "chatgpt",
+		"link": "https://chat.openai.com/",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "blur.gdshader",
+		"activation": "BLUR_active",
+		"function": "blur",
+		"parameters": [
+			{
+				"name": "radius",
+				"description": "Radius of pixels to consider the blur effect"
+			}
+		]
+	},
+	{
 		"name": "Glitch",
 		"group": "General",
 		"description": "Glitch effect",
