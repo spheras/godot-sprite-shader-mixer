@@ -12,10 +12,14 @@ var name:String
 var group:String
 var description:String
 var author:String
+var adaptedBy:String
+var link:String
+var license:String
 var version:String
 var filename:String
 var activation:String
 var function:String
+var parameters:Array[ShaderInfoParameter]
 
 func loadShaderInfo(shaderInfoJsonObject:Dictionary):
 	self.name=shaderInfoJsonObject.name
@@ -26,6 +30,13 @@ func loadShaderInfo(shaderInfoJsonObject:Dictionary):
 	self.filename=shaderInfoJsonObject.filename
 	self.activation=shaderInfoJsonObject.activation
 	self.function=shaderInfoJsonObject.function
+	self.link=shaderInfoJsonObject.link
+	self.adaptedBy=shaderInfoJsonObject.adaptedBy
+	self.license=shaderInfoJsonObject.license
+	for param in shaderInfoJsonObject.parameters:
+		var shaderInfoParameter:ShaderInfoParameter=ShaderInfoParameter.new()
+		shaderInfoParameter.loadParameter(param)
+		self.parameters.push_back(shaderInfoParameter)	
 
 static func readCurrentlyActiveShadersFromShaderCode(selectedShadersCode:String, allShaders:Array[ShaderInfo])->Array[ShaderInfo]:
 	var lines:PackedStringArray=selectedShadersCode.split("\n")
@@ -70,7 +81,7 @@ static func generateShaderCode(selectedShaders:Array[ShaderInfo])->Shader:
 
 	var callsCode=""
 	for selectedShader in selectedShaders:
-		callsCode=callsCode+"\tif("+selectedShader.activation+") "+selectedShader.function+"(UV, TEXTURE, TEXTURE_PIXEL_SIZE, color);\n"
+		callsCode=callsCode+"\tif("+selectedShader.activation+") "+selectedShader.function+"(UV, TEXTURE, size, TEXTURE_PIXEL_SIZE, color);\n"
 
 	var shaderCode=_replaceScriptVariables(shadersCode, functionsCode, callsCode)
 	var shader=Shader.new()

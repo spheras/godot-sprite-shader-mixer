@@ -99,4 +99,5 @@ icon = ExtResource("3_8det7")
 alignment = 0
 
 [node name="shaders_selected_container" type="VBoxContainer" parent="marginContainer/shader_container"]
+visible = false
 layout_mode = 2

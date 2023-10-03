@@ -63,10 +63,14 @@ func onDownloadShaderPressed(shaderName:String)->void:
 		print("Downloading Shader... please wait...")
 		var shaderContent=await UtilHTTP.downloadHttps(SHADERS_GITHUB_DOMAIN, SHADERS_GITHUB_BASE_PATH +shaderInfo.filename)
 		Util.saveFile(SHADERS_LOCAL_BASE_PATH+shaderInfo.filename,shaderContent)
-		self.onAddShaderButtonVisible.emit(true)
 		self.onDownloadButtonVisible.emit(false)
+		self.onAddShaderButtonVisible.emit(true)
 		print("Downloaded Shader, enjoy.")
+		#Adding it
+		self.onAddShaderPressed(shaderName)
 		
+		#Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+
 
 # Function called when a shader has been selected
 #     shader -> the shader name selected
@@ -80,7 +84,7 @@ func shaderSelected(shaderName:String)->void:
 			return
 	self.onAddShaderButtonVisible.emit(false)
 	self.onDownloadButtonVisible.emit(false)
-		
+
 
 func onSyncShaderList()->void:
 	print("Syncing the Shader list from Github... please wait...")
@@ -88,7 +92,7 @@ func onSyncShaderList()->void:
 	Util.saveFile(SHADERS_JSON_LOCAL_PATH,jsonContent)
 	_calculateShadersInserted()
 	print("Sync done, enjoy.")
-	
+
 func onReorder(shader:ShaderInfo, after:bool)->void:
 	var currentIndex=self.selectedShaders.find(shader)
 	var flagModified:bool=false
@@ -152,6 +156,8 @@ func _calculateShadersInserted()->void:
 		return
 	ALL_SHADERS=[]
 	var allShaders:Array=jsonContent as Array
+	allShaders.sort_custom(func (a, b): (a.name as String).nocasecmp_to(b.name))
+	
 	for shaderObj in allShaders:
 		var shaderInfo:ShaderInfo=ShaderInfo.new()
 		shaderInfo.loadShaderInfo(shaderObj)
