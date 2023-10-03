@@ -14,7 +14,7 @@ float rand2(vec2 co, float random_seed)
     float r1 = fract(sin(dot(co.xy * random_seed ,vec2(12.9898, 78.233))) * 43758.5453);
     return fract(sin(dot(vec2(r1 + co.xy * 1.562) ,vec2(12.9898, 78.233))) * 43758.5453);
 }
-void glitch(in vec2 uv, in sampler2D tex, vec2 texturePixelSize, inout vec4 color) {
+void glitch(in vec2 uv, in sampler2D tex, vec2 size, vec2 pixelSize, inout vec4 color) {
 	float seed = floor(TIME * GLITCH_speed) / 20.0;
 	vec2 blockS = floor(uv * vec2 (GLITCH_offset, 50.) * GLITCH_size) * 2.0;
 	vec2  blockL = floor(uv * vec2 (GLITCH_offset, 50.) * GLITCH_size) * 1.3;

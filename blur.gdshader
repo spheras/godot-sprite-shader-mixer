@@ -1,7 +1,7 @@
 //BLUR
-uniform bool  BLUR_active  = false;
+uniform bool  BLUR_active  = true;
 uniform float BLUR_radius : hint_range(1, 10.0) = 2.0;
-void blur(in vec2 uv, in sampler2D tex, in vec2 size, inout vec4 color) {
+void blur(in vec2 uv, in sampler2D tex, in vec2 size, in vec2 pixelSize, inout vec4 color) {
 	vec4 final_color = vec4(0.0);
     float total_weight = 0.0;
 
