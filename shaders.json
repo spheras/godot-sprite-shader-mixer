@@ -1,5 +1,28 @@
 [
 	{
+		"name": "Empty Outline",
+		"group": "General",
+		"description": "Outline wihtout content",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/emptyoutline.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "emptyoutline.gdshader",
+		"activation": "EMPTYOUTLINE_active",
+		"function": "emptyOutline",
+		"parameters": [
+			{
+				"name": "lineColor",
+				"description": "Color of the outline"
+			},
+			{
+				"name": "lineThickness",
+				"description": "thicknes of the outline"
+			}
+		]
+	},
+	{
 		"name": "Outline",
 		"group": "General",
 		"description": "Outline effect",
