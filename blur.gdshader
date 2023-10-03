@@ -1,6 +1,7 @@
 //BLUR
 uniform bool  BLUR_active  = true;
 uniform float BLUR_radius : hint_range(1, 15.0) = 2.0;
+uniform float BLUR_mix : hint_range(0,1.0)=0.3;
 void blur(in vec2 uv, in sampler2D tex, in vec2 size, in vec2 pixelSize, inout vec4 color) {
 	vec4 final_color = vec4(0.0);
     float total_weight = 0.0;
@@ -13,7 +14,7 @@ void blur(in vec2 uv, in sampler2D tex, in vec2 size, in vec2 pixelSize, inout v
             float distance = length(offset);
             float weight = smoothstep(BLUR_radius, BLUR_radius - 1.0, distance);
 
-            final_color += sample * weight;
+            final_color += mix(sample * weight, color,BLUR_mix);
             total_weight += weight;
         }
     }

@@ -1,5 +1,28 @@
 [
 	{
+		"name": "Outline",
+		"group": "General",
+		"description": "Outline effect",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/outline.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "outline.gdshader",
+		"activation": "OUTLINE_active",
+		"function": "outline",
+		"parameters": [
+			{
+				"name": "thickness",
+				"description": "Thickness of the outline border, in pixels"
+			},
+			{
+				"name": "color",
+				"description": "Color of the outline"
+			}
+		]
+	},
+	{
 		"name": "Blur",
 		"group": "General",
 		"description": "Blur effect",
@@ -15,6 +38,10 @@
 			{
 				"name": "radius",
 				"description": "Radius of pixels to consider the blur effect"
+			},
+			{
+				"name": "mix",
+				"description": "Percent of mixing color with the previous Shader"
 			}
 		]
 	},
