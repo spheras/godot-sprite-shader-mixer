@@ -64,7 +64,7 @@ func onAddShaderPressed(shaderName:String)->void:
 
 # Function called when the user wants to download a shader from github
 #   shaderName -> the name of the shader to download
-func onDownloadShaderPressed(shaderName:String)->void:
+func onDownloadShaderPressed(shaderName:String, node:Node)->void:
 	var shaderInfo=_findShaderInfo(shaderName)
 	if(shaderInfo!=null):
 		var shaderGithubPath=SHADERS_GITHUB_BASE_PATH +shaderInfo.filename
@@ -77,6 +77,8 @@ func onDownloadShaderPressed(shaderName:String)->void:
 		print("Saved shader to: ", shaderPath)
 		self.onDownloadButtonVisible.emit(false)
 		self.onAddShaderButtonVisible.emit(true)
+
+		var anyTexturePathToSolveBug:String=""		
 		
 		for param in shaderInfo.parameters:
 			if (!(param as ShaderInfoParameter).textureHasBeenDownloaded()):
@@ -86,10 +88,34 @@ func onDownloadShaderPressed(shaderName:String)->void:
 				print("please wait...")
 				var byteArray:PackedByteArray=await UtilHTTP.httpsDownloadBinary(SHADERS_GITHUB_DOMAIN,textureGithubPath)
 				var texturePath=SHADERS_LOCAL_BASE_PATH+param.texture
-				Util.saveBinaryFile(texturePath,byteArray)
+				#await Util.saveBinaryFile(texturePath,byteArray)
+				var image=Image.new()
+				image.load_png_from_buffer(byteArray)
+				var texture:ImageTexture=ImageTexture.create_from_image(image)
+				ResourceSaver.save(texture,texturePath)
+				texture.take_over_path(texturePath)
+				anyTexturePathToSolveBug=texturePath
+				
 				print("Save texture to: ", texturePath)
 				
 		print("Downloaded Shader, enjoy.")
+
+		#HACK START
+		#ATTENTION: THIS PART, INCLUDED THE OS ALERT (NOT SURE IF THIS HAPPENS IN ALL OS)
+		#SOLVE A PROBLEM WITH GODOT. THE POINT IS THAT IF WE SAVE
+		#THE RESOURCE, GODOT EDITOR DOESN'T READ IT UNTIL THE WINDOW EDITOR LOST THE FOCUS
+		#AND GAIN IT AGAIN. THE ALERT, FORCE THAT.
+		#ON THE OTHER HAND, AFTER THAT, WE NEED TO WAIT TO GODOT TO LOAD CORRECTLY
+		#THE RESOURCE... AND THAT'S ALL NECESSARY TO SET CORRECTLY ALL THE TEXTURES
+		OS.alert("Downloaded Shader, enjoy", 'Import')
+		#AFTER THE ALERT, WE CAN EXPECT GODOT IS LOADING THE RESOURCE, LET'S WAIT
+		var waitingEditorFinished=ResourceLoader.exists(anyTexturePathToSolveBug)
+		while(!waitingEditorFinished):
+			await node.get_tree().create_timer(0.5).timeout
+			waitingEditorFinished=ResourceLoader.exists(anyTexturePathToSolveBug)
+		#OK, NOW EVERYTHING SHOULD BE OK TO CONTINUE			
+		#HACK END
+
 		#Adding it
 		self.onAddShaderPressed(shaderName)
 

@@ -26,7 +26,7 @@ func _ready()->void:
 	self.compButtonAddShader.pressed.connect(self._onAddButtonPressed)
 	self.compCurrentShadersTitle.toggled.connect(self._onShadersButtonToogled)
 	self.compButtonDownload.pressed.connect(self._onDownloadPressed)
-	self.compButtonSync.pressed.connect(self.logic.onSyncShaderList)
+	self.compButtonSync.pressed.connect(self._onSyncShaderList)
 
 	#connecting logic events
 	logic.onCreateContainerVisible.connect(_onCreateContainerVisible)
@@ -47,6 +47,15 @@ func _onShaderComboSelected(selectedShaderIndex:int)->void:
 		var selectedShaderName=self.compOptionShaders.get_item_text(selectedShaderIndex)
 		self.logic.shaderSelected(selectedShaderName)
 
+func _onSyncShaderList()->void:
+	var oldText=self.compButtonSync.text
+	self.compButtonSync.text="Loading..(wait)"
+	await get_tree().process_frame
+	await get_tree().process_frame
+	await get_tree().process_frame
+	self.logic.onSyncShaderList()
+	self.compButtonSync.text=oldText
+
 func _onShadersButtonToogled(toogled:bool)->void:
 	if(toogled):
 		compCurrentShadersTitle.icon=self.iconDown
@@ -56,8 +65,14 @@ func _onShadersButtonToogled(toogled:bool)->void:
 		compContainerSelectedShaders.visible=false
 
 func _onDownloadPressed()->void:
+	var oldText=self.compButtonDownload.text
+	self.compButtonDownload.text="Loading..(wait)"
+	await get_tree().process_frame
+	await get_tree().process_frame
+	await get_tree().process_frame
 	var selectedShaderName=self.compOptionShaders.get_item_text(self.compOptionShaders.get_selected_id())
-	self.logic.onDownloadShaderPressed(selectedShaderName)
+	self.logic.onDownloadShaderPressed(selectedShaderName, self)
+	self.compButtonDownload.text=oldText
 
 # Event produce when the add button is pressed from UI
 func _onAddButtonPressed()->void:
