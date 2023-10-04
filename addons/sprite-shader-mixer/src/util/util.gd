@@ -21,6 +21,14 @@ static func saveFile(filePath:String, content:String):
 	file.store_string(content)
 	file.close()
 
+# Save content binary to a file
+#   filePath -> the aboslute path
+#   content -> the content to store inside
+static func saveBinaryFile(filePath:String, content:PackedByteArray):
+	var file=FileAccess.open(filePath, FileAccess.WRITE)
+	file.store_buffer(content)
+	file.close()
+
 # Read a JSON file and return the conent of it as a Variant
 #  filePath -> the absolute path
 #  return -> the json file content parsed as generic object

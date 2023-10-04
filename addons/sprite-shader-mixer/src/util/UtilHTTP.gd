@@ -1,7 +1,11 @@
 class_name  UtilHTTP
 extends Object
 
-static func downloadHttps(host:String, url:String):
+static func httpsDownloadJson(host:String, url:String)->String:
+		var byteArray = await httpsDownloadBinary(host, url)
+		return byteArray.get_string_from_ascii()
+	
+static func httpsDownloadBinary(host:String, url:String)->PackedByteArray:
 	var err = 0
 	var http = HTTPClient.new() # Create the Client.
 	var tls=TLSOptions.client()
@@ -11,7 +15,7 @@ static func downloadHttps(host:String, url:String):
 	# Wait until resolved and connected.
 	while http.get_status() == HTTPClient.STATUS_CONNECTING or http.get_status() == HTTPClient.STATUS_RESOLVING:
 		http.poll()
-		print("Connecting...")
+		#print("Connecting...")
 		if not OS.has_feature("web"):
 			OS.delay_msec(500)
 		else:
@@ -31,7 +35,7 @@ static func downloadHttps(host:String, url:String):
 	while http.get_status() == HTTPClient.STATUS_REQUESTING:
 		# Keep polling for as long as the request is being processed.
 		http.poll()
-		print("Requesting...")
+		#print("Requesting...")
 		if OS.has_feature("web"):
 			# Synchronous HTTP requests are not supported on the web,
 			# so wait for the next main loop iteration.
@@ -81,7 +85,5 @@ static func downloadHttps(host:String, url:String):
 				rb = rb + chunk # Append to read buffer.
 		# Done!
 
-		#print("bytes got: ", rb.size())
-		var text = rb.get_string_from_ascii()
-		#print("Text: ", text)
-		return text
+		return rb
+	return PackedByteArray()

@@ -7,7 +7,7 @@
 //SHADERS:%SHADERS%
 shader_type canvas_item;
 
-//%FUNCTIONS%
+	//%FUNCTIONS%
 
 void fragment() {
 	vec4 color = texture(TEXTURE, UV);

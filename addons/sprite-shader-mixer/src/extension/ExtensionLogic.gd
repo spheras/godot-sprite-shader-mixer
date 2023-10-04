@@ -52,6 +52,13 @@ func onAddShaderPressed(shaderName:String)->void:
 			self.pendingShaders.erase(shaderToAdd)
 			var newShader:Shader=ShaderInfo.generateShaderCode(self.selectedShaders)
 			(self.parentSprite.material as ShaderMaterial).shader=newShader
+			
+			for param in shaderToAdd.parameters:
+				if(param.texture!=null && param.texture.length()>0):
+					var texturePath=SHADERS_LOCAL_BASE_PATH+param.texture
+					var textureRes:CompressedTexture2D=ResourceLoader.load(texturePath)
+					(self.parentSprite.material as ShaderMaterial).set_shader_parameter(param.name,textureRes)
+			
 			self._calculateShadersInserted()
 			return
 
@@ -60,16 +67,31 @@ func onAddShaderPressed(shaderName:String)->void:
 func onDownloadShaderPressed(shaderName:String)->void:
 	var shaderInfo=_findShaderInfo(shaderName)
 	if(shaderInfo!=null):
-		print("Downloading Shader... please wait...")
-		var shaderContent=await UtilHTTP.downloadHttps(SHADERS_GITHUB_DOMAIN, SHADERS_GITHUB_BASE_PATH +shaderInfo.filename)
-		Util.saveFile(SHADERS_LOCAL_BASE_PATH+shaderInfo.filename,shaderContent)
+		var shaderGithubPath=SHADERS_GITHUB_BASE_PATH +shaderInfo.filename
+		print("Downloading Shader...")
+		print("   %s/%s" % [SHADERS_GITHUB_DOMAIN,shaderGithubPath])
+		print("please wait...")
+		var shaderContent=await UtilHTTP.httpsDownloadJson(SHADERS_GITHUB_DOMAIN, shaderGithubPath)
+		var shaderPath=SHADERS_LOCAL_BASE_PATH+shaderInfo.filename
+		Util.saveFile(shaderPath,shaderContent)
+		print("Saved shader to: ", shaderPath)
 		self.onDownloadButtonVisible.emit(false)
 		self.onAddShaderButtonVisible.emit(true)
+		
+		for param in shaderInfo.parameters:
+			if (!(param as ShaderInfoParameter).textureHasBeenDownloaded()):
+				var textureGithubPath=SHADERS_GITHUB_BASE_PATH + param.texture
+				print("Downloading Texture...")
+				print("   %s/%s" % [SHADERS_GITHUB_DOMAIN,textureGithubPath])
+				print("please wait...")
+				var byteArray:PackedByteArray=await UtilHTTP.httpsDownloadBinary(SHADERS_GITHUB_DOMAIN,textureGithubPath)
+				var texturePath=SHADERS_LOCAL_BASE_PATH+param.texture
+				Util.saveBinaryFile(texturePath,byteArray)
+				print("Save texture to: ", texturePath)
+				
 		print("Downloaded Shader, enjoy.")
 		#Adding it
 		self.onAddShaderPressed(shaderName)
-		
-		#Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 
 # Function called when a shader has been selected
@@ -88,7 +110,7 @@ func shaderSelected(shaderName:String)->void:
 
 func onSyncShaderList()->void:
 	print("Syncing the Shader list from Github... please wait...")
-	var jsonContent=await UtilHTTP.downloadHttps(SHADERS_JSON_GITHUB_DOMAIN, SHADERS_JSON_GITHUB_PATH)
+	var jsonContent=await UtilHTTP.httpsDownloadJson(SHADERS_JSON_GITHUB_DOMAIN, SHADERS_JSON_GITHUB_PATH)
 	Util.saveFile(SHADERS_JSON_LOCAL_PATH,jsonContent)
 	_calculateShadersInserted()
 	print("Sync done, enjoy.")
@@ -145,6 +167,14 @@ func _checkCreateVisibility()->void:
 	if(!createButtonVisible):
 		self._calculateShadersInserted()
 
+# private function to order the shaders by name
+func _orderShadersByName(a, b)->bool:
+	var compare=(a.name as String).nocasecmp_to(b.name)
+	if(compare<0):
+		return true
+	else:
+		return false
+
 # Recopile all the shaders available to be added to the
 # sprite, those which hasn't been added yet, and emit
 # the evento to force the refill of the combo with those shaders
@@ -156,7 +186,7 @@ func _calculateShadersInserted()->void:
 		return
 	ALL_SHADERS=[]
 	var allShaders:Array=jsonContent as Array
-	allShaders.sort_custom(func (a, b): (a.name as String).nocasecmp_to(b.name))
+	allShaders.sort_custom(_orderShadersByName)
 	
 	for shaderObj in allShaders:
 		var shaderInfo:ShaderInfo=ShaderInfo.new()

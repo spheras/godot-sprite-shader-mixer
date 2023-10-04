@@ -46,6 +46,7 @@ text = "Crear Sprite Mixer"
 icon = ExtResource("2_yq7l3")
 
 [node name="shader_container" type="VBoxContainer" parent="marginContainer"]
+visible = false
 layout_mode = 2
 
 [node name="label_selectShader" type="Label" parent="marginContainer/shader_container"]
