@@ -1,7 +1,8 @@
 //METAL
-uniform bool  METAL_active  = false;
+uniform bool  METAL_active  = true;
 uniform float METAL_offset: hint_range(0, 100) = 0;
 uniform float METAL_speed : hint_range(0, 10) = 1;
+uniform float METAL_mix : hint_range(0,1)=1;
 float metal_calc_luminance(vec3 color)
 {
     return dot(color, vec3( 0.299, 0.587, 0.114));
@@ -26,5 +27,5 @@ void metal(in vec2 uv, in sampler2D txt, in vec2 spriteSize, in vec2 pixelSize, 
 	vec4 color = vec4(metal.rgb + (1. - a), 1.0);
 	color.rgb = 0.05 + color.rgb * 0.5 + dot(color.rgb, vec3 (0.2126, 0.2152, 0.1722)) * 0.5;
 	color.a = finalColor.a;
-	finalColor=color;
+	finalColor=mix(color, finalColor, METAL_mix);
 }

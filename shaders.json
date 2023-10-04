@@ -19,6 +19,10 @@
 			{
 				"name": "speed",
 				"description": "speed of the fx during the time. This affect to the brights changes over the time."
+			},
+			{
+				"name": "mix",
+				"description": "mix of the color with the previous shader."
 			}
 		]
 	},
@@ -42,6 +46,10 @@
 			{
 				"name": "speed",
 				"description": "speed of the fx during the time. This affect to the brights changes over the time."
+			},
+			{
+				"name": "mix",
+				"description": "mix of the color with the previous shader."
 			}
 		]
 	},
@@ -65,6 +73,10 @@
 			{
 				"name": "speed",
 				"description": "speed of the fx during the time. This affect to the brights changes over the time."
+			},
+			{
+				"name": "mix",
+				"description": "mix of the color with the previous shader."
 			}
 		]
 	},
