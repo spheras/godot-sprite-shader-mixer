@@ -1,7 +1,34 @@
 [
 	{
+		"name": "Burn",
+		"group": "Dissolve",
+		"description": "The shader apply a burn effect over the texture.",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/dissolve_burn.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "burn.gdshader",
+		"activation": "BURN_active",
+		"function": "burn",
+		"parameters": [
+			{
+				"name": "offset",
+				"description": "position of the effect over the texture"
+			},
+			{
+				"name": "speed",
+				"description": "speed of the fx during the time."
+			},
+			{
+				"name": "burnValue",
+				"description": "mix of the color with the previous shader. 0->No Mix, 1->full mix"
+			}
+		]
+	},
+	{
 		"name": "Gold",
-		"group": "General",
+		"group": "Transform",
 		"description": "The shader apply a gold effects over the texture.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/transform_gold.shader",
