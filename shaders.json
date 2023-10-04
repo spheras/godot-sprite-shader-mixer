@@ -13,16 +13,17 @@
 		"function": "disolveBurn",
 		"parameters": [
 			{
-				"name": "deform",
-				"description": "deformation of the shadow"
+				"name": "noise_tex",
+				"description": "Noise texture to apply during the disolve effect",
+				"texture": "noise/noise2.png"
 			},
 			{
-				"name": "offset",
-				"description": "distance of the shadow to the sprite."
+				"name": "burn_color",
+				"description": "Color to apply during the burn effect."
 			},
 			{
-				"name": "modulate",
-				"description": "modulation of the shadow to make perspective effect"
+				"name": "mix",
+				"description": "mixing color percent of the effect"
 			}
 		]
 	},

@@ -1,5 +1,5 @@
 //DISOLVE BURN
-uniform bool      DISOLVEBURN_active  = false;
+uniform bool      DISOLVEBURN_active  = true;
 uniform sampler2D DISOLVEBURN_noise_tex;
 uniform vec4      DISOLVEBURN_burn_color : source_color = vec4(1.0, 0.3, 0.05, 1.0);
 uniform float     DISOLVEBURN_process_value : hint_range(0, 1) = 0;
