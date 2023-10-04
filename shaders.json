@@ -1,5 +1,63 @@
 [
 	{
+		"name": "Metal",
+		"group": "General",
+		"description": "The shader apply a metal effects over the texture.",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/transform_metal.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "metal.gdshader",
+		"activation": "METAL_active",
+		"function": "metal",
+		"parameters": [
+			{
+				"name": "offset",
+				"description": "position of the effect over the texture"
+			},
+			{
+				"name": "speed",
+				"description": "speed of the fx during the time. This affect to the brights changes over the time."
+			}
+		]
+	},
+	{
+		"name": "Shiny",
+		"group": "General",
+		"description": "This shader adds a shine effect to the texture.",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/emptyoutline.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "shiny.gdshader",
+		"activation": "SHINY_active",
+		"function": "shiny",
+		"parameters": [
+			{
+				"name": "processValue",
+				"description": "position of the bright over the texture"
+			},
+			{
+				"name": "size",
+				"description": "size of the bright band"
+			},
+			{
+				"name": "smoothLight",
+				"description": "smooth of the bright at the borders, concentrating light more or less"
+			},
+			{
+				"name": "intensity",
+				"description": "Intensity of the bright"
+			},
+			{
+				"name": "angle",
+				"description": "Angle of the bright over the sprite"
+			}
+		]
+	},
+	{
 		"name": "Empty Outline",
 		"group": "General",
 		"description": "Outline wihtout content",
