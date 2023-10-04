@@ -2,7 +2,7 @@
 uniform bool  FREEZE_active  = true;
 uniform float FREEZE_offset: hint_range(0, 100) = 0;
 uniform float FREEZE_speed : hint_range(0, 10) = 1;
-uniform float FREEZE_mix : hint_range(0,1)=1;
+uniform float FREEZE_mix : hint_range(0,1)=0;
 float freeze_calc_luminance(vec3 color)
 {
     return dot(color, vec3( 0.299, 0.587, 0.114));
