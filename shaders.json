@@ -1,16 +1,16 @@
 [
 	{
-		"name": "Dissolve Burn",
-		"group": "Dissolve",
-		"description": "Burn effect dissolving the texture.",
+		"name": "Disolve Burn",
+		"group": "Disolve",
+		"description": "Burn effect disolving the texture.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/dissolve_burn.shader",
 		"adaptedBy": "spheras",
 		"license": "MIT",
 		"version": "1.0",
-		"filename": "dissolveburn.gdshader",
-		"activation": "DISSOLVEBURN_active",
-		"function": "dissolveBurn",
+		"filename": "disolveburn.gdshader",
+		"activation": "DISOLVEBURN_active",
+		"function": "disolveBurn",
 		"parameters": [
 			{
 				"name": "deform",
@@ -55,7 +55,7 @@
 	},
 	{
 		"name": "Burn",
-		"group": "Dissolve",
+		"group": "Disolve",
 		"description": "The shader apply a burn effect over the texture.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/dissolve_burn.shader",
