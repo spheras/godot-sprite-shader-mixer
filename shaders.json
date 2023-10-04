@@ -1,5 +1,59 @@
 [
 	{
+		"name": "Dissolve Burn",
+		"group": "Dissolve",
+		"description": "Burn effect dissolving the texture.",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/dissolve_burn.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "dissolveburn.gdshader",
+		"activation": "DISSOLVEBURN_active",
+		"function": "dissolveBurn",
+		"parameters": [
+			{
+				"name": "deform",
+				"description": "deformation of the shadow"
+			},
+			{
+				"name": "offset",
+				"description": "distance of the shadow to the sprite."
+			},
+			{
+				"name": "modulate",
+				"description": "modulation of the shadow to make perspective effect"
+			}
+		]
+	},
+	{
+		"name": "Shadow",
+		"group": "Other",
+		"description": "Add a 2D shadow behind your texture. IMPORTANT: This shader should be the last one in position to be effective.",
+		"author": "deakcor",
+		"link": "https://godotshaders.com/shader/shadow-2d/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "shadow.gdshader",
+		"activation": "SHADOW_active",
+		"function": "shadow",
+		"parameters": [
+			{
+				"name": "deform",
+				"description": "deformation of the shadow"
+			},
+			{
+				"name": "offset",
+				"description": "distance of the shadow to the sprite."
+			},
+			{
+				"name": "modulate",
+				"description": "modulation of the shadow to make perspective effect"
+			}
+		]
+	},
+	{
 		"name": "Burn",
 		"group": "Dissolve",
 		"description": "The shader apply a burn effect over the texture.",
