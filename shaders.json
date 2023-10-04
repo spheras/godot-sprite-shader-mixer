@@ -1,5 +1,51 @@
 [
 	{
+		"name": "Gold",
+		"group": "General",
+		"description": "The shader apply a gold effects over the texture.",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/transform_gold.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "gold.gdshader",
+		"activation": "GOLD_active",
+		"function": "gold",
+		"parameters": [
+			{
+				"name": "offset",
+				"description": "position of the effect over the texture"
+			},
+			{
+				"name": "speed",
+				"description": "speed of the fx during the time. This affect to the brights changes over the time."
+			}
+		]
+	},
+	{
+		"name": "Freeze",
+		"group": "General",
+		"description": "The shader apply a freeze effects over the texture.",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/transform_metal.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "freeze.gdshader",
+		"activation": "FREEZE_active",
+		"function": "freeze",
+		"parameters": [
+			{
+				"name": "offset",
+				"description": "position of the effect over the texture"
+			},
+			{
+				"name": "speed",
+				"description": "speed of the fx during the time. This affect to the brights changes over the time."
+			}
+		]
+	},
+	{
 		"name": "Metal",
 		"group": "General",
 		"description": "The shader apply a metal effects over the texture.",
