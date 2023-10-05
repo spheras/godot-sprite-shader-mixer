@@ -10,18 +10,21 @@ uniform float     MATRIX_number_row_char_texture = 3.0;
 uniform float     MATRIX_number_column_char_texture = 3.0;
 uniform vec4      MATRIX_tint_color : source_color = vec4(0.12, 0.62, 0.92, 1.0);
 uniform float     MATRIX_line_thickness : hint_range(0, 20) = 5.0;
-//MATRIX
+float matrix_rand1(vec2 co, float random_seed)
+{
+    return fract(sin(dot(co.xy * random_seed, vec2(12.,85.5))) * 120.01);
+}
 vec3 matrix_randomColor (int indexColumn) 
 {
 	float f = float(indexColumn);
-	float red = rand1(vec2(f, 1.0), f) * 0.8;
-	float blue = rand1(vec2(f, 1.0), f + 1.0) * 0.5;
-	float green = rand1(vec2(f, 1.0), f + 2.0);
+	float red = matrix_rand1(vec2(f, 1.0), f) * 0.8;
+	float blue = matrix_rand1(vec2(f, 1.0), f + 1.0) * 0.5;
+	float green = matrix_rand1(vec2(f, 1.0), f + 2.0);
 	return vec3(red, blue, green);
 }
-float mmatrix_rand2_with_range(vec2 co, float m, float M, float random_seed)
+float matrix_rand2_with_range(vec2 co, float m, float M, float random_seed)
 {
-	float r1 = rand1(co, random_seed);
+	float r1 = matrix_rand1(co, random_seed);
 	return (M - m) * r1 + r1;
 }
 vec3 matrix_rain(vec2 uv, float _matrix_value, float number_row, float number_column, int di, float time)
@@ -68,7 +71,7 @@ float matrix_text(vec2 uv, float number_row, float number_column, float time)
 
 	return texture(MATRIX_chars_tex, _uv).r;
 }
-void matrix(in vec2 uv, in vec2 pixelSize, sampler2D sampler, inout vec4 color){
+void matrix(in vec2 uv, in sampler2D sampler,in vec2 texSize, vec2 pixelSize, inout vec4 color){
 	vec3 rain = matrix_rain(uv, MATRIX_value, floor(MATRIX_row), floor(MATRIX_column), MATRIX_direction, TIME*MATRIX_velocity);
 	float text = matrix_text(uv, floor(MATRIX_row), floor(MATRIX_column), TIME*MATRIX_velocity);
 	vec3 matrix = text * rain;
