@@ -13,20 +13,20 @@
 		"function": "holographic",
 		"parameters": [
 			{
-				"name": "HOLOGRAM_noiseTex",
+				"name": "HOLOGRAPHIC_noiseTex",
 				"description": "Noise Texture used to perform the hologram shader",
 				"texture": "noise/noise1.png"
 			},
 			{
-				"name": "HOLOGRAM_value",
+				"name": "HOLOGRAPHIC_value",
 				"description": "hologram transition during the time"
 			},
 			{
-				"name": "HOLOGRAM_noiseX",
+				"name": "HOLOGRAPHIC_noiseX",
 				"description": "?"
 			},
 			{
-				"name": "HOLOGRAM_speed",
+				"name": "HOLOGRAPHIC_speed",
 				"description": "speed of the automatic transition during the time. Se 0 to position manually with value"
 			}
 		]
