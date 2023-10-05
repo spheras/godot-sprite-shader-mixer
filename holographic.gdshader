@@ -4,6 +4,7 @@ uniform sampler2D HOLOGRAPHIC_noiseTex;
 uniform float     HOLOGRAPHIC_value : hint_range(0, 1) = 0.75;
 uniform float     HOLOGRAPHIC_noiseX : hint_range(0, 20) = 10;
 uniform float     HOLOGRAPHIC_speed : hint_range(0, 4) = 1.0;
+uniform float     HOLOGRAPHIC_mix : hint_range(0,1) = 1.0;
 float holographic_noise(sampler2D source, vec2 p, float time)
 {
 	float sample = texture(source, vec2(.2, 0.2 * cos(time)) * time * 8. + p * 1.).x;
@@ -47,6 +48,7 @@ void holographic(in vec2 uv, in sampler2D source, vec2 size, vec2 pixelSize, ino
 	
 	float noise2 = texture(HOLOGRAPHIC_noiseTex, _uv).r;
 	holo_txt.a = (holo_txt.a + noise2 * 0.5) * txt.a * 0.8;
-	
-	color= mix(txt, holo_txt, HOLOGRAPHIC_value);
+
+	vec4 newColor= mix(txt, holo_txt, HOLOGRAPHIC_value);
+	color=mix(newColor, color, HOLOGRAPHIC_mix);
 }

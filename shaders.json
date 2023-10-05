@@ -28,13 +28,17 @@
 			{
 				"name": "HOLOGRAPHIC_speed",
 				"description": "speed of the automatic transition during the time. Se 0 to position manually with value"
+			},
+			{
+				"name": "HOLOGRAPHIC_mix",
+				"description": "mix percent with color of the previous shader"
 			}
 		]
 	},
 	{
 		"name": "CorssFade Circle",
 		"group": "Disolve",
-		"description": "Cross Face of the texture using a circle to fade out or fade in.",
+		"description": "Cross Fade of the texture using a circle to fade out or fade in.",
 		"author": "Rpics Studio",
 		"link": "https://godotshaders.com/shader/particle-star/",
 		"adaptedBy": "spheras",
