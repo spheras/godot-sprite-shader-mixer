@@ -13,13 +13,19 @@ static func readFile(filePath:String)->String:
 	file.close()
 	return content
 
+# Delete a file on the filesystem
+#   filePath -> the aboslute path
+static func deleteFile(filePath:String):
+	DirAccess.remove_absolute(filePath)
+
+
 # Save content to a file
 #   filePath -> the aboslute path
 #   content -> the content to store inside
 static func saveFile(filePath:String, content:String):
 	var file=FileAccess.open(filePath, FileAccess.WRITE)
 	file.store_string(content)
-	file.close()
+	file.close()	
 
 # Save content binary to a file
 #   filePath -> the aboslute path

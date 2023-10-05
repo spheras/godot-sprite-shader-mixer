@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqkflotm3qks7"]
+[gd_scene load_steps=11 format=3 uid="uid://bqkflotm3qks7"]
 
 [ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/ShaderInfoContainer.gd" id="1_w5epy"]
+[ext_resource type="Texture2D" uid="uid://dw48djolbkuri" path="res://addons/sprite-shader-mixer/assets/icons/close.svg" id="2_8i1vt"]
 [ext_resource type="Texture2D" uid="uid://d1q2at0btbfff" path="res://addons/sprite-shader-mixer/assets/icons/delete.svg" id="2_l16is"]
 [ext_resource type="Texture2D" uid="uid://dhcitjhpww86f" path="res://addons/sprite-shader-mixer/assets/icons/up.svg" id="2_rqw54"]
 [ext_resource type="Texture2D" uid="uid://3veyq17pvw46" path="res://addons/sprite-shader-mixer/assets/icons/down.svg" id="3_tuebg"]
@@ -32,16 +33,33 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 0
 script = ExtResource("1_w5epy")
 
 [node name="container_name" type="PanelContainer" parent="."]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_xcbid")
 
-[node name="button_delete" type="Button" parent="container_name"]
+[node name="remove_container" type="HBoxContainer" parent="container_name"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="button_quit" type="Button" parent="container_name/remove_container"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+icon = ExtResource("2_8i1vt")
+
+[node name="VSeparator" type="VSeparator" parent="container_name/remove_container"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="button_delete" type="Button" parent="container_name/remove_container"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.305882, 0, 1)
 icon = ExtResource("2_l16is")
 
 [node name="container_title" type="HBoxContainer" parent="container_name"]
@@ -81,7 +99,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = SubResource("FontVariation_lpxya")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 24
 text = "Glitch"
 
 [node name="container_author" type="HBoxContainer" parent="."]
@@ -89,11 +107,13 @@ layout_mode = 2
 
 [node name="label_author" type="Label" parent="container_author"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "author:"
 
 [node name="text_author" type="Label" parent="container_author"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0.270588, 1)
+theme_override_font_sizes/font_size = 12
 text = "spheras"
 
 [node name="container_adaptedby" type="HBoxContainer" parent="."]
@@ -101,11 +121,13 @@ layout_mode = 2
 
 [node name="label_adaptedby" type="Label" parent="container_adaptedby"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "adapted:"
 
 [node name="text_adaptedby" type="Label" parent="container_adaptedby"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0.270588, 1)
+theme_override_font_sizes/font_size = 12
 text = "spheras"
 
 [node name="container_link" type="HBoxContainer" parent="."]
@@ -113,12 +135,14 @@ layout_mode = 2
 
 [node name="label_link" type="Label" parent="container_link"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "link:"
 
 [node name="text_link" type="Label" parent="container_link"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0.270588, 1)
+theme_override_font_sizes/font_size = 12
 text = "http://www.github.com"
 text_overrun_behavior = 4
 max_lines_visible = 1
@@ -129,11 +153,13 @@ layout_mode = 2
 
 [node name="label_license" type="Label" parent="container_license"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "license:"
 
 [node name="text_license" type="Label" parent="container_license"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0.270588, 1)
+theme_override_font_sizes/font_size = 12
 text = "MIT"
 
 [node name="container_version" type="HBoxContainer" parent="."]
@@ -141,11 +167,13 @@ layout_mode = 2
 
 [node name="label_version" type="Label" parent="container_version"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "vesion:"
 
 [node name="text_version" type="Label" parent="container_version"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0.270588, 1)
+theme_override_font_sizes/font_size = 12
 text = "1.0"
 
 [node name="container_description" type="VBoxContainer" parent="."]
@@ -153,11 +181,13 @@ layout_mode = 2
 
 [node name="label_description" type="Label" parent="container_description"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "description:"
 
 [node name="text_description" type="Label" parent="container_description"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0.270588, 1)
+theme_override_font_sizes/font_size = 12
 text = "This shader dlsfkjas ldkfasldfjañlsj fañlsfj añlsfj ñlasfjñlasfjaklfjñafj adsñlf jñalsdfjñlsjfñlasdjfñlasjdkfdlsfkjas ldkfasldfjañlsj fañlsfj añlsfj ñlasfjñlasfjaklfjñafj adsñlf jñalsdfjñlsjfñlasdjfñlasjdkfdlsfkjas ldkfasldfjañlsj fañlsfj añlsfj ñlasfjñlasfjaklfjñafj adsñlf jñalsdfjñlsjfñlasdjfñlasjdkfdlsfkjas ldkfasldfjañlsj fañlsfj añlsfj ñlasfjñlasfjaklfjñafj adsñlf jñalsdfjñlsjfñlasdjfñlasjdkfdlsfkjas ldkfasldfjañlsj fañlsfj añlsfj ñlasfjñlasfjaklfjñafj adsñlf jñalsdfjñlsjfñlasdjfñlasjdkfdlsfkjas ldkfasldfjañlsj fañlsfj añlsfj ñlasfjñlasfjaklfjñafj adsñlf jñalsdfjñlsjfñlasdjfñlasjdkf"
 autowrap_mode = 3
 

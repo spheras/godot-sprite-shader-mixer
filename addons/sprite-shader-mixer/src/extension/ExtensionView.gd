@@ -21,7 +21,7 @@ func setParentSprite(parent)->void:
 
 func _ready()->void:
 	#connecting UI events
-	self.compButtonCreate.pressed.connect(logic.onCreatePressed)
+	self.compButtonCreate.pressed.connect(self.logic.onCreatePressed)
 	self.compOptionShaders.item_selected.connect(self._onShaderComboSelected)
 	self.compButtonAddShader.pressed.connect(self._onAddButtonPressed)
 	self.compCurrentShadersTitle.toggled.connect(self._onShadersButtonToogled)
@@ -97,7 +97,10 @@ func _onShadersCalculated(shadersInserted:Array[ShaderInfo], shadersNotInserted:
 		self.compContainerSelectedShaders.add_child(newInfoComponent)
 		newInfoComponent.loadShaderInfo(shader)
 		newInfoComponent.onDeleteShader.connect(self.logic.onDeleteShader)
+		newInfoComponent.onQuitShader.connect(self.logic.onQuitShader)
 		newInfoComponent.onReorder.connect(self.logic.onReorder)
+	
+	self.compCurrentShadersTitle.text="List of Current Shaders (%s)"%shadersInserted.size()
 
 # Logic Event to determine whether the add shader button must be visible
 #   visible -> whether the button must be visible

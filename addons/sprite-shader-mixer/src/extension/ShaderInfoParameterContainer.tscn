@@ -17,10 +17,12 @@ layout_mode = 2
 [node name="label_parameter" type="Label" parent="."]
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_font_sizes/font_size = 10
 text = "license:"
 
 [node name="label_description" type="Label" parent="."]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.4, 1, 0.270588, 1)
+theme_override_font_sizes/font_size = 10
 text = "MIT"

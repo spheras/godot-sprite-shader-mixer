@@ -3,13 +3,15 @@ extends VBoxContainer
 class_name ShaderInfoContainer
 
 signal onDeleteShader(shaderInfo:ShaderInfo)
+signal onQuitShader(shaderInfo:ShaderInfo)
 signal onReorder(shaderInfo:ShaderInfo,after:bool)
 
 @onready var right_icon = preload("res://addons/sprite-shader-mixer/assets/icons/right.svg")
 @onready var down_icon = preload("res://addons/sprite-shader-mixer/assets/icons/down.svg")
 @onready var shaderInfoParameterContainer = preload("res://addons/sprite-shader-mixer/src/extension/ShaderInfoParameterContainer.tscn")
 @onready var comp_name:Label=$container_name/container_title/container_name_separator/label_name
-@onready var comp_delete:Button=$container_name/button_delete
+@onready var comp_quit:Button=$container_name/remove_container/button_quit
+@onready var comp_delete:Button=$container_name/remove_container/button_delete
 @onready var comp_author:Label=$container_author/text_author
 @onready var comp_link:Label=$container_link/text_link
 @onready var comp_adaptedby:Label=$container_adaptedby/text_adaptedby
@@ -32,6 +34,7 @@ func loadShaderInfo(shaderInfo:ShaderInfo)->void:
 	comp_adaptedby.text=shaderInfo.adaptedBy
 	comp_license.text=shaderInfo.license
 	self.comp_delete.pressed.connect(self._onDeleteButtonPressed)
+	self.comp_quit.pressed.connect(self._onQuitButtonPressed)
 	self.comp_buttonUp.pressed.connect(self._onButtonUp)
 	self.comp_buttonDown.pressed.connect(self._onButtonDown)
 	self.comp_buttonParameters.toggled.connect(self._onParametersButtonToggled)
@@ -55,6 +58,17 @@ func _onButtonUp():
 
 func _onButtonDown():
 	self.onReorder.emit(self.shaderInfo, true)
-		
+
 func _onDeleteButtonPressed():
-	self.onDeleteShader.emit(self.shaderInfo)
+	var confirmation=ConfirmationDialog.new()
+	confirmation.min_size=Vector2(400,100)
+	confirmation.position=Vector2(100,100)
+	confirmation.title="Delete Shader"
+	confirmation.dialog_autowrap=true
+	confirmation.dialog_text="Deletion means that the downloaded shader will be removed from local and from the shader script.  You can download again if necesary, but this will remove the scripts and the textures from your local project."
+	confirmation.get_ok_button().pressed.connect(func (): self.onDeleteShader.emit(self.shaderInfo))	
+	add_child(confirmation)
+	confirmation.show()
+	
+func _onQuitButtonPressed():
+	self.onQuitShader.emit(self.shaderInfo)

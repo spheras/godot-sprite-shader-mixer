@@ -40,6 +40,18 @@ func loadShaderInfo(shaderInfoJsonObject:Dictionary):
 		shaderInfoParameter.loadParameter(param)
 		self.parameters.push_back(shaderInfoParameter)	
 
+# delete this shader phisically and the textures associated
+func delete():
+	if(shaderHasBeenDownloaded(self)):
+		#delete the gdshader script
+		Util.deleteFile(SHADERS_BASE_PATH+self.filename)
+		#delet if necessary the texture images
+		for param in self.parameters:
+			if(param.texture!=null && param.texture.length()>0):
+				var texturePath=SHADERS_BASE_PATH+param.texture
+				Util.deleteFile(texturePath)
+		OS.alert("Shader Removed, you can download again if necessary. See you!")
+
 # static function to read the currently active shaders from the shader script
 #  selectedShadersCode -> the shader code to read
 #  allShaders -> the list of all shaders available
@@ -86,7 +98,7 @@ static func _replaceScriptVariables(shaders:String, functions:String, calls:Stri
 #  shader -> the shader to check
 #  return -> true if the shader has been downloaded, false otherwise
 static func shaderHasBeenDownloaded(shader:ShaderInfo)->bool:
-	return FileAccess.file_exists("res://addons/sprite-shader-mixer/assets/shaders/"+shader.filename)
+	return FileAccess.file_exists(SHADERS_BASE_PATH+shader.filename)
 
 # static function to generate a shader code based on the selected shaders to incorporate.
 #   selectedShaders -> a list of selected shaders to generate the shader code

@@ -108,13 +108,15 @@ func onDownloadShaderPressed(shaderName:String, node:Node)->void:
 		#ON THE OTHER HAND, AFTER THAT, WE NEED TO WAIT TO GODOT TO LOAD CORRECTLY
 		#THE RESOURCE... AND THAT'S ALL NECESSARY TO SET CORRECTLY ALL THE TEXTURES
 		OS.alert("Downloaded Shader, enjoy", 'Import')
-		#AFTER THE ALERT, WE CAN EXPECT GODOT IS LOADING THE RESOURCE, LET'S WAIT
-		var waitingEditorFinished=ResourceLoader.exists(anyTexturePathToSolveBug)
-		while(!waitingEditorFinished):
-			await node.get_tree().create_timer(0.5).timeout
-			waitingEditorFinished=ResourceLoader.exists(anyTexturePathToSolveBug)
-		#OK, NOW EVERYTHING SHOULD BE OK TO CONTINUE			
-		#HACK END
+		if(anyTexturePathToSolveBug.length()>0):
+			#AFTER THE ALERT, WE CAN EXPECT GODOT IS LOADING THE RESOURCE, LET'S WAIT
+			var waitingEditorFinished=ResourceLoader.exists(anyTexturePathToSolveBug)
+			while(!waitingEditorFinished):
+				if(node.is_inside_tree()):
+					await node.get_tree().create_timer(0.5).timeout
+				waitingEditorFinished=ResourceLoader.exists(anyTexturePathToSolveBug)
+			#OK, NOW EVERYTHING SHOULD BE OK TO CONTINUE
+			#HACK END
 
 		#Adding it
 		self.onAddShaderPressed(shaderName)
@@ -157,8 +159,13 @@ func onReorder(shader:ShaderInfo, after:bool)->void:
 		var newShader:Shader=ShaderInfo.generateShaderCode(self.selectedShaders)
 		(self.parentSprite.material as ShaderMaterial).shader=newShader
 		self._calculateShadersInserted()	
-	
+
 func onDeleteShader(shader:ShaderInfo)->void:
+	onQuitShader(shader)
+	shader.delete()
+	pass
+
+func onQuitShader(shader:ShaderInfo)->void:
 	self.selectedShaders.erase(shader)
 	self.pendingShaders.append(shader)
 	var newShader:Shader=ShaderInfo.generateShaderCode(self.selectedShaders)
@@ -176,7 +183,7 @@ func onCreatePressed()->void:
 # Checks if the parent Sprite has a shader already configured
 # return -> true if the parent has a shader alredy, false otherwise
 func _parentSpriteHasShaderAlready()->bool:
-	if(self.parentSprite is Sprite2D):
+	if(self.parentSprite is Sprite2D || self.parentSprite is AnimatedSprite2D):
 		if(self.parentSprite.material != null):
 			if(self.parentSprite.material is ShaderMaterial):
 				if(self.parentSprite.material.shader != null):
