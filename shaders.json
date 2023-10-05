@@ -1,5 +1,68 @@
 [
 	{
+		"name": "Holographic",
+		"group": "Disolve",
+		"description": "Holographic effect.",
+		"author": "",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/holographic.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "holographic.gdshader",
+		"activation": "HOLOGRAPHIC_active",
+		"function": "holographic",
+		"parameters": [
+			{
+				"name": "HOLOGRAM_noiseTex",
+				"description": "Noise Texture used to perform the hologram shader",
+				"texture": "noise/noise1"
+			},
+			{
+				"name": "HOLOGRAM_value",
+				"description": "hologram transition during the time"
+			},
+			{
+				"name": "HOLOGRAM_noiseX",
+				"description": "?"
+			},
+			{
+				"name": "HOLOGRAM_speed",
+				"description": "speed of the automatic transition during the time. Se 0 to position manually with value"
+			}
+		]
+	},
+	{
+		"name": "CorssFade Circle",
+		"group": "Disolve",
+		"description": "Cross Face of the texture using a circle to fade out or fade in.",
+		"author": "Rpics Studio",
+		"link": "https://godotshaders.com/shader/particle-star/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "crossfadecircle.gdshader",
+		"activation": "CROSSFADE_CIRCLE_active",
+		"function": "crossfadeCircle",
+		"parameters": [
+			{
+				"name": "CROSSFADE_CIRCLE_transparency",
+				"description": "transparency of the circle which is the base of the fade"
+			},
+			{
+				"name": "CROSSFADE_CIRCLE_position",
+				"description": "position of the circle over the transparency."
+			},
+			{
+				"name": "CROSSFADE_CIRCLE_dissolveColor",
+				"description": "Disoolve color to perform the transition fade"
+			},
+			{
+				"name": "CROSSFADE_CIRCLE_circleSize",
+				"description": "size of the circle to perform the fade transition"
+			}
+		]
+	},
+	{
 		"name": "Disolve Burn",
 		"group": "Disolve",
 		"description": "Burn effect disolving the texture.",
@@ -18,11 +81,11 @@
 				"texture": "noise/noise2.png"
 			},
 			{
-				"name": "burn_color",
+				"name": "DISOLVEBURN_burn_color",
 				"description": "Color to apply during the burn effect."
 			},
 			{
-				"name": "mix",
+				"name": "DISOLVEBURN_mix",
 				"description": "mixing color percent of the effect"
 			}
 		]
@@ -41,15 +104,15 @@
 		"function": "shadow",
 		"parameters": [
 			{
-				"name": "deform",
+				"name": "SHADOW_deform",
 				"description": "deformation of the shadow"
 			},
 			{
-				"name": "offset",
+				"name": "SHADOW_offset",
 				"description": "distance of the shadow to the sprite."
 			},
 			{
-				"name": "modulate",
+				"name": "SHADOW_modulate",
 				"description": "modulation of the shadow to make perspective effect"
 			}
 		]
@@ -68,15 +131,15 @@
 		"function": "burn",
 		"parameters": [
 			{
-				"name": "offset",
+				"name": "BURN_offset",
 				"description": "position of the effect over the texture"
 			},
 			{
-				"name": "speed",
+				"name": "BURN_speed",
 				"description": "speed of the fx during the time."
 			},
 			{
-				"name": "burnValue",
+				"name": "BURN_burnValue",
 				"description": "mix of the color with the previous shader. 0->No Mix, 1->full mix"
 			}
 		]
@@ -95,15 +158,15 @@
 		"function": "gold",
 		"parameters": [
 			{
-				"name": "offset",
+				"name": "GOLD_offset",
 				"description": "position of the effect over the texture"
 			},
 			{
-				"name": "speed",
+				"name": "GOLD_speed",
 				"description": "speed of the fx during the time. This affect to the brights changes over the time."
 			},
 			{
-				"name": "mix",
+				"name": "GOLD_mix",
 				"description": "mix of the color with the previous shader. 0->No Mix, 1->full mix"
 			}
 		]
@@ -122,15 +185,15 @@
 		"function": "freeze",
 		"parameters": [
 			{
-				"name": "offset",
+				"name": "FREEZE_offset",
 				"description": "position of the effect over the texture"
 			},
 			{
-				"name": "speed",
+				"name": "FREEZE_speed",
 				"description": "speed of the fx during the time. This affect to the brights changes over the time."
 			},
 			{
-				"name": "mix",
+				"name": "FREEZE_mix",
 				"description": "mix of the color with the previous shader. 0->No Mix, 1->full mix"
 			}
 		]
@@ -149,15 +212,15 @@
 		"function": "metal",
 		"parameters": [
 			{
-				"name": "offset",
+				"name": "METAL_offset",
 				"description": "position of the effect over the texture"
 			},
 			{
-				"name": "speed",
+				"name": "METAL_speed",
 				"description": "speed of the fx during the time. This affect to the brights changes over the time."
 			},
 			{
-				"name": "mix",
+				"name": "METAL_mix",
 				"description": "mix of the color with the previous shader."
 			}
 		]
@@ -176,23 +239,23 @@
 		"function": "shiny",
 		"parameters": [
 			{
-				"name": "processValue",
+				"name": "SHINY_processValue",
 				"description": "position of the bright over the texture"
 			},
 			{
-				"name": "size",
+				"name": "SHINY_size",
 				"description": "size of the bright band"
 			},
 			{
-				"name": "smoothLight",
+				"name": "SHINY_smoothLight",
 				"description": "smooth of the bright at the borders, concentrating light more or less"
 			},
 			{
-				"name": "intensity",
+				"name": "SHINY_intensity",
 				"description": "Intensity of the bright"
 			},
 			{
-				"name": "angle",
+				"name": "SHINY_angle",
 				"description": "Angle of the bright over the sprite"
 			}
 		]
@@ -211,11 +274,11 @@
 		"function": "emptyOutline",
 		"parameters": [
 			{
-				"name": "lineColor",
+				"name": "EMPTYOUTLINE_lineColor",
 				"description": "Color of the outline"
 			},
 			{
-				"name": "lineThickness",
+				"name": "EMPTYOUTLINE_lineThickness",
 				"description": "thicknes of the outline"
 			}
 		]
@@ -234,11 +297,11 @@
 		"function": "outline",
 		"parameters": [
 			{
-				"name": "thickness",
+				"name": "OUTLINE_thickness",
 				"description": "Thickness of the outline border, in pixels"
 			},
 			{
-				"name": "color",
+				"name": "OUTLINE_color",
 				"description": "Color of the outline"
 			}
 		]
@@ -257,11 +320,11 @@
 		"function": "blur",
 		"parameters": [
 			{
-				"name": "radius",
+				"name": "BLUR_radius",
 				"description": "Radius of pixels to consider the blur effect"
 			},
 			{
-				"name": "mix",
+				"name": "BLUR_mix",
 				"description": "Percent of mixing color with the previous Shader. 0->No Mix, 1->full mix"
 			}
 		]
@@ -280,23 +343,23 @@
 		"function": "glitch",
 		"parameters": [
 			{
-				"name": "offset",
+				"name": "GLITCH_offset",
 				"description": "Distance of the particles"
 			},
 			{
-				"name": "speed",
+				"name": "GLITCH_speed",
 				"description": "speed at which the effect runs"
 			},
 			{
-				"name": "size",
+				"name": "GLITCH_size",
 				"description": "Size of the effect particles"
 			},
 			{
-				"name": "amount",
+				"name": "GLITCH_amount",
 				"description": "Amount of effect particles"
 			},
 			{
-				"name": "mix",
+				"name": "GLITCH_mix",
 				"description": "Color Mix Percent with the previous Shader.. 0->No Mix, 1->full mix"
 			}
 		]
@@ -315,15 +378,15 @@
 		"function": "greyscale",
 		"parameters": [
 			{
-				"name": "tintColor",
+				"name": "GREYSCALE_tintColor",
 				"description": "Color to apply to the fx."
 			},
 			{
-				"name": "Luminosity",
+				"name": "GREYSCALE_Luminosity",
 				"description": "Luminosity of the effect."
 			},
 			{
-				"name": "Blend",
+				"name": "GREYSCALE_Blend",
 				"description": "Blend color percent with the tint color."
 			}
 		]
@@ -342,19 +405,19 @@
 		"function": "rainbow",
 		"parameters": [
 			{
-				"name": "speed",
+				"name": "RAINBOW_speed",
 				"description": "Speed of the change color effect."
 			},
 			{
-				"name": "redFactor",
+				"name": "RAINBOW_redFactor",
 				"description": "Red factor to apply to the color effect during transitions."
 			},
 			{
-				"name": "greenFactor",
+				"name": "RAINBOW_greenFactor",
 				"description": "Green factor to apply to the color effect during transitions."
 			},
 			{
-				"name": "blueFactor",
+				"name": "RAINBOW_blueFactor",
 				"description": "Blue factor to apply to the color effect during transitions."
 			}
 		]
