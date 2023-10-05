@@ -25,6 +25,9 @@ To use this plugin, follow these steps:
 2. Enable the plugin in your project's settings.
 3. Open the "Plugins" window in Godot and configure the options as needed.
 
+![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/2a6bb11e-89e8-41b1-ad89-7a2a265df5f8)
+ 
+
 ## Usage
 
 1. Add a Sprite2D or AnimationSprite2D node to your scene with a texture or animation.
