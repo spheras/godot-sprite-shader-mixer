@@ -1,0 +1,98 @@
+//MATRIX
+uniform bool      MATRIX_active  = true;
+uniform int       MATRIX_direction = 0;
+uniform float     MATRIX_velocity : hint_range(0, 4) = 0.5;
+uniform float     MATRIX_row : hint_range(1.0, 100.0) = 12.0;
+uniform float     MATRIX_column : hint_range(1.0, 100.0) = 12.0;
+uniform float     MATRIX_value : hint_range(1, 25) = 20;
+uniform sampler2D MATRIX_chars_tex;
+uniform float     MATRIX_number_row_char_texture = 3.0;
+uniform float     MATRIX_number_column_char_texture = 3.0;
+uniform vec4      MATRIX_tint_color : source_color = vec4(0.12, 0.62, 0.92, 1.0);
+uniform float     MATRIX_line_thickness : hint_range(0, 20) = 5.0;
+//MATRIX
+vec3 matrix_randomColor (int indexColumn) 
+{
+	float f = float(indexColumn);
+	float red = rand1(vec2(f, 1.0), f) * 0.8;
+	float blue = rand1(vec2(f, 1.0), f + 1.0) * 0.5;
+	float green = rand1(vec2(f, 1.0), f + 2.0);
+	return vec3(red, blue, green);
+}
+float mmatrix_rand2_with_range(vec2 co, float m, float M, float random_seed)
+{
+	float r1 = rand1(co, random_seed);
+	return (M - m) * r1 + r1;
+}
+vec3 matrix_rain(vec2 uv, float _matrix_value, float number_row, float number_column, int di, float time)
+{
+	float column_size = 1.0 / number_column;
+	float row_size = 1.0 / number_row;
+	
+	float x = uv.x - mod(uv.x, column_size);
+	float offset = sin(x * 15.0);
+	float speed = cos(x * 3.0) * 0.3 + 0.7;
+	
+	float y =  uv.y - mod(uv.y, row_size);
+	y = (di > 0) ? fract(y + time * speed + offset) : fract(1.0 - y + time * speed + offset);
+	float alpha = 1.0 / ((26.0 - _matrix_value) * y);
+	
+	vec3 color = MATRIX_tint_color.rgb;
+	color *= alpha;
+	return color;
+}
+vec2 matrix_randomIndexChar(vec2 char_size, vec2 blockID, float time)
+{
+	vec2 indexChar = vec2(0, 0);
+	float t = time - mod(time, 0.1);
+	float r1 = matrix_rand2_with_range(blockID / char_size + t, 1, char_size.x, 1);
+	indexChar.x = blockID.x + char_size.x * r1;
+	indexChar.y = blockID.y + char_size.y * r1;
+	
+	indexChar = mod(floor(indexChar), char_size);
+	return indexChar;
+}
+float matrix_text(vec2 uv, float number_row, float number_column, float time)
+{
+	float column_size = 1.0 / number_column;
+	float row_size = 1.0 / number_row;
+	vec2 block_size = vec2(column_size, row_size);
+
+	vec2 blockID = floor(uv / block_size);
+	vec2 _uv = mod(uv.xy, block_size) / block_size;
+
+	vec2 char_texture_size = vec2(MATRIX_number_row_char_texture, MATRIX_number_column_char_texture);
+	vec2 index_char = matrix_randomIndexChar(char_texture_size, blockID, time);
+	_uv.y = 1.0 - _uv.y;
+	_uv = (index_char + _uv) / char_texture_size;
+
+	return texture(MATRIX_chars_tex, _uv).r;
+}
+void matrix(in vec2 uv, in vec2 pixelSize, sampler2D sampler, inout vec4 color){
+	vec3 rain = matrix_rain(uv, MATRIX_value, floor(MATRIX_row), floor(MATRIX_column), MATRIX_direction, TIME*MATRIX_velocity);
+	float text = matrix_text(uv, floor(MATRIX_row), floor(MATRIX_column), TIME*MATRIX_velocity);
+	vec3 matrix = text * rain;
+	vec4 txt = texture(sampler, uv);
+	
+	vec2 size = pixelSize * MATRIX_line_thickness;
+	float _outline = texture(sampler, uv + vec2(0, -size.y)).a;
+	_outline += texture(sampler, uv + vec2(0, -size.y * 2.0)).a;
+	_outline += texture(sampler, uv + vec2(0, -size.y * 3.0)).a;
+	_outline += texture(sampler, uv + vec2(0, -size.y * 4.0)).a;
+	_outline += texture(sampler, uv + vec2(0, -size.y * 5.0)).a;
+	_outline += texture(sampler, uv + vec2(size.x, 0)).a;
+	_outline += texture(sampler, uv + vec2(-size.x, 0)).a;
+	_outline= min(1.0, _outline) - txt.a;
+	
+	float v = matrix.r + matrix.g + matrix.b;
+	if (v > 1.0)
+	{
+		float have_char = min(1.0, v);
+		vec4 outline_matrix = vec4(matrix, 1.0 * text);
+		txt = mix(txt, outline_matrix, _outline);
+		txt.rgb = mix(txt.rgb, matrix, have_char);
+	}
+	
+	vec4 output_color = txt;
+	color = output_color;
+}

@@ -1,9 +1,97 @@
 [
 	{
+		"name": "Matrix",
+		"group": "Transfomr",
+		"description": "Some kind of matrix effect, but if you replace the noise, you can find cool effects",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/matrix.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "matrix.gdshader",
+		"activation": "MATRIX_active",
+		"function": "matrix",
+		"parameters": [
+			{
+				"name": "MATRIX_direction",
+				"description": "Direction of the effect, top - down, down-top"
+			},
+			{
+				"name": "MATRIX_velocity",
+				"description": "Velocity of the effect"
+			},
+			{
+				"name": "MATRIX_ROW",
+				"description": "Number of rows of the texture to subdivide"
+			},
+			{
+				"name": "MATRIX_value",
+				"description": "value transition in time to control the effect"
+			},
+			{
+				"name": "MATRIX_chars_tex",
+				"description": "Texture to apply to the effect. Fun with this.",
+				"texture": "noise/chars_texture3x3.png"
+			},
+			{
+				"name": "MATRIX_number_row_char_texture",
+				"description": "number of rows of the char texture to subdivide"
+			},
+			{
+				"name": "MATRIX_number_column_char_texture",
+				"description": "number of columns of the char texture to subdivide"
+			},
+			{
+				"name": "MATRIX_tint_color",
+				"description": "tint color of the effect"
+			},
+			{
+				"name": "MATRIX_line_thickness",
+				"description": "thickness of eache column/row?"
+			}
+		]
+	},
+	{
+		"name": "Holowave",
+		"group": "Disolve",
+		"description": "Holographic Wave effect.",
+		"author": "duongvituan",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/holowave.shader",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "holowave.gdshader",
+		"activation": "HOLOWAVE_active",
+		"function": "holowave",
+		"parameters": [
+			{
+				"name": "HOLOGRAPHIC_noiseTex",
+				"description": "Noise Texture used to perform the hologram shader",
+				"texture": "noise/noise1.png"
+			},
+			{
+				"name": "HOLOGRAPHIC_value",
+				"description": "hologram transition during the time"
+			},
+			{
+				"name": "HOLOGRAPHIC_noiseX",
+				"description": "?"
+			},
+			{
+				"name": "HOLOGRAPHIC_speed",
+				"description": "speed of the automatic transition during the time. Se 0 to position manually with value"
+			},
+			{
+				"name": "HOLOGRAPHIC_mix",
+				"description": "mix percent with color of the previous shader"
+			}
+		]
+	},
+	{
 		"name": "Holographic",
 		"group": "Disolve",
 		"description": "Holographic effect.",
-		"author": "",
+		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/holographic.shader",
 		"adaptedBy": "spheras",
 		"license": "MIT",
