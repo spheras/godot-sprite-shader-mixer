@@ -10,6 +10,7 @@ uniform float     MATRIX_number_row_char_texture = 3.0;
 uniform float     MATRIX_number_column_char_texture = 3.0;
 uniform vec4      MATRIX_tint_color : source_color = vec4(0.12, 0.62, 0.92, 1.0);
 uniform float     MATRIX_line_thickness : hint_range(0, 20) = 5.0;
+uniform float     MATRIX_mix : hint_range(0, 1) = 0;
 float matrix_rand1(vec2 co, float random_seed)
 {
     return fract(sin(dot(co.xy * random_seed, vec2(12.,85.5))) * 120.01);
@@ -97,5 +98,5 @@ void matrix(in vec2 uv, in sampler2D sampler,in vec2 texSize, vec2 pixelSize, in
 	}
 	
 	vec4 output_color = txt;
-	color = output_color;
+	color = mix(output_color,color,MATRIX_mix);
 }
