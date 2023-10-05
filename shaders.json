@@ -15,7 +15,7 @@
 			{
 				"name": "HOLOGRAM_noiseTex",
 				"description": "Noise Texture used to perform the hologram shader",
-				"texture": "noise/noise1"
+				"texture": "noise/noise1.png"
 			},
 			{
 				"name": "HOLOGRAM_value",
