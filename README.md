@@ -55,18 +55,19 @@ To use this plugin, follow these steps:
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/2a5e68cc-8e49-419d-b931-0732c9425dee)
 
 8. You can adjust all the parameters of the shader going directly to the shader params, at the material->shader inspector. It works like any shader, nothing special. The interesting part is that the plugin created that shader for you. But that's not all.
-9. 
+
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/d01ac058-baea-4917-bb93-4ee762f4e8ec)
 
 10. Go again and select a different shader, now you can mix them. The plugin will download, and create a new shader blending both shaders!
-11. 
+
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/dec25c2b-7f7c-409b-ba6f-1b86a8b4c1f6)
 
 12. By the way, you can see info about the shader if you press the "List of Current Shaders" button
-13. 
+
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/dbd107cf-19e0-4caf-9507-7038bb90da09)
 
 14. You can reorder the shaders, it affects the way they are mixed. You can quit a shader from your shader code. You can also remove the downloaded shader (you can download again later). Be free and experiment with it!
+
 
 15. The point is that the plugin creates a shader script for your texture with the shaders you select. The collection will grow, it is open to incorporate new shaders easily, just making a pull request over the shaders branch. So, consider sync the shader list to see if there are new shaders available. (explained later)
 
@@ -83,7 +84,7 @@ If you wish to improve this project, please:
 3. Make sure to follow the contribution guidelines and code of conduct.
 
 ## HEY! I want to add a new Shader for this incredible tool!
-Great! that's the idea, increase the collection of shaders.  One of the positive things about this plugin is that it doesn't have the plugins inside, it downloads them from this page when the user wants to apply the shader and mix with others. Therefore, we can grow with new shaders, without affecting them.
+Great! that's the idea, increase the collection of shaders.  One of the positive things about this plugin is that it doesn't have the shaders inside, it downloads them from this page when the user wants to apply the shader and mix with others. Therefore, we can grow with new shaders, without affecting them.
 
 First of all, all the shaders are in a separate branch of this project:
 https://github.com/spheras/godot-sprite-shader-mixer/tree/v1/shaders
