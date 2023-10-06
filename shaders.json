@@ -1,5 +1,36 @@
 [
 	{
+		"name": "Pulse",
+		"group": "Disolve",
+		"description": "With this shader you can apply a pulse effect.",
+		"author": "alberto",
+		"link": "https://godotshaders.com/shader/pulse-effect-godot-4/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "pulse.gdshader",
+		"activation": "PULSE_active",
+		"function": "pulse",
+		"parameters": [
+			{
+				"name": "PULSE_shine_color",
+				"description": "Shine color to apply to the Texture"
+			},
+			{
+				"name": "PULSE_alpha_limit",
+				"description": "Only apply the shine if the pixel alpha color is equals or greater than this value. (Usefull if you won’t to apply the shine to shadows for example)"
+			},
+			{
+				"name": "PULSE_cycle_speed",
+				"description": "The speed of the pulse to apply the shine"
+			},
+			{
+				"name": "PULSE_full_pulse_cycle",
+				"description": "If true, the pulse is continuosly, otherwise, it makes a pause in each cycle"
+			}
+		]
+	},
+	{
 		"name": "Matrix",
 		"group": "Transfomr",
 		"description": "Some kind of matrix effect, but if you replace the noise, you can find cool effects",
