@@ -1,3 +1,4 @@
+uniform bool  COLORSWAP_active = true;
 uniform float COLORSWAP_mix:hint_range(0,1,0.1) = 0;
 uniform int   COLORSWAP_max_colors:hint_range(1, 8, 1) = 8;
 uniform bool  COLORSWAP_show_stripes = true;
