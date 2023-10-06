@@ -1,5 +1,52 @@
 [
 	{
+		"name": "Hologram",
+		"group": "Disolve",
+		"description": "Makes the sprites look like a hologram",
+		"author": "Vaquers",
+		"link": "https://godotshaders.com/shader/hologram-simple-canvasitem-shader/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "hologram.gdshader",
+		"activation": "HOLOGRAM_active",
+		"function": "hologram",
+		"parameters": [
+			{
+				"name": "HOLOGRAM_mix",
+				"description": "mix color with previous shader"
+			},
+			{
+				"name": "HOLOGRAM_lines",
+				"description": "Number of lines produced by the effect."
+			},
+			{
+				"name": "HOLOGRAM_color1",
+				"description": "First color band of the hologram"
+			},
+			{
+				"name": "HOLOGRAM_color2",
+				"description": "Second color band of the hologram"
+			},
+			{
+				"name": "HOLOGRAM_speed",
+				"description": "Speed of the effect"
+			},
+			{
+				"name": "HOLOGRAM_alpha",
+				"description": "Transparency percent of the effect"
+			},
+			{
+				"name": "HOLOGRAM_noise_amount",
+				"description": "Noise effect percent of the hologram"
+			},
+			{
+				"name": "HOLOGRAM_effect_factor",
+				"description": "Hologram effect amount"
+			}
+		]
+	},
+	{
 		"name": "Wipe",
 		"group": "Disolve",
 		"description": "Wipe an image horizontally or vertically using a custom alpha. Supports wiping sprites that have multiple frames.",
@@ -171,12 +218,12 @@
 		"parameters": [
 			{
 				"name": "HOLOGRAPHIC_noiseTex",
-				"description": "Noise Texture used to perform the hologram shader",
+				"description": "Noise Texture used to perform the holographic shader",
 				"texture": "noise/noise1.png"
 			},
 			{
 				"name": "HOLOGRAPHIC_value",
-				"description": "hologram transition during the time"
+				"description": "holographic transition during the time"
 			},
 			{
 				"name": "HOLOGRAPHIC_noiseX",
@@ -207,12 +254,12 @@
 		"parameters": [
 			{
 				"name": "HOLOGRAPHIC_noiseTex",
-				"description": "Noise Texture used to perform the hologram shader",
+				"description": "Noise Texture used to perform the holographic shader",
 				"texture": "noise/noise1.png"
 			},
 			{
 				"name": "HOLOGRAPHIC_value",
-				"description": "hologram transition during the time"
+				"description": "holographic transition during the time"
 			},
 			{
 				"name": "HOLOGRAPHIC_noiseX",
