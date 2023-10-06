@@ -1,5 +1,44 @@
 [
 	{
+		"name": "Color Swap",
+		"group": "Transform",
+		"description": "8 Color ColorSwap that shows grayscaled strips on unswapped colors.",
+		"author": "nullMolotov",
+		"link": "https://godotshaders.com/shader/8-color-colorswap/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "colorswap.gdshader",
+		"activation": "COLORSWAP_active",
+		"function": "colorswap",
+		"parameters": [
+			{
+				"name": "COLORSWAP_mix",
+				"description": "Mix percent of the shader color with previous one"
+			},
+			{
+				"name": "COLORSWAP_max_colors",
+				"description": "Max number of colors to evaluate. Set this value to the max number of color the shader must evaluate to optimize the shader"
+			},
+			{
+				"name": "COLORSWAP_show_stripes",
+				"description": "Whether to show stripes with colors not replaced"
+			},
+			{
+				"name": "COLORSWAP_tolerance",
+				"description": "tolerance with colors to be matched"
+			},
+			{
+				"name": "COLORSWAP_input_colorX",
+				"description": "This is a sample of any color number. color x to search. This color will be replaced"
+			},
+			{
+				"name": "COLORSWAP_output_colorX",
+				"description": "This is a sample of any color number. Color X to replace with"
+			}
+		]
+	},
+	{
 		"name": "Pulse",
 		"group": "Disolve",
 		"description": "With this shader you can apply a pulse effect.",
