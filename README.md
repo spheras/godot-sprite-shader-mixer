@@ -4,6 +4,8 @@ Ok, here we are.
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/YourUsername/YourRepository/LICENSE)
 [![Godot](https://img.shields.io/badge/Godot-4.1.1%2B-blueviolet)](https://godotengine.org/)
 
+![supergodot](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/2171350c-8f08-41d3-99b3-10ddce6d41d9)
+
 This project is inspired by [godot-sprite-shader](https://github.com/duongvituan/godot-sprite-shader) by duongvituan. I want to express my sincere gratitude for the inspiration it provided.
 
 ## Description
