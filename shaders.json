@@ -1,5 +1,40 @@
 [
 	{
+		"name": "Wipe",
+		"group": "Disolve",
+		"description": "Wipe an image horizontally or vertically using a custom alpha. Supports wiping sprites that have multiple frames.",
+		"author": "Zibetnu",
+		"link": "https://godotshaders.com/shader/multi-frame-wipe/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "wipe.gdshader",
+		"activation": "WIPE_active",
+		"function": "wipe",
+		"parameters": [
+			{
+				"name": "WIPE_percentage",
+				"description": "wipe percentaje"
+			},
+			{
+				"name": "WIPE_hidden_alpha",
+				"description": "alpha of the hidden texture."
+			},
+			{
+				"name": "WIPE_flip",
+				"description": "Whether to flip the wipe or not"
+			},
+			{
+				"name": "WIPE_horizontal",
+				"description": "Horizontal or Vertical wipe"
+			},
+			{
+				"name": "WIPE_frames",
+				"description": "Number of Frames of the effect"
+			}
+		]
+	},
+	{
 		"name": "Color Swap",
 		"group": "Transform",
 		"description": "8 Color ColorSwap that shows grayscaled strips on unswapped colors.",
