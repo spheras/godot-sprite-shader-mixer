@@ -1,5 +1,64 @@
 [
 	{
+		"name": "Circular Waves",
+		"group": "Transform",
+		"description": "Based on Circular Waves 2D around your texture (original author Erich_L), but modified a bit to produce more psicodelic results.",
+		"author": "Erich_L",
+		"link": "https://godotshaders.com/shader/circular-waves-2d/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "circularwaves.gdshader",
+		"activation": "CIRCULARWAVES_active",
+		"function": "circularWaves",
+		"parameters": [
+			{
+				"name": "CIRCULARWAVES_amplitude",
+				"description": "amplitude of the circle"
+			},
+			{
+				"name": "CIRCULARWAVES_frequency",
+				"description": "frequency of the circle."
+			},
+			{
+				"name": "CIRCULARWAVES_rippleRate",
+				"description": "?"
+			},
+			{
+				"name": "CIRCULARWAVES_speed",
+				"description": "Speed of the effect during the time"
+			},
+			{
+				"name": "CIRCULARWAVES_waveDeformation",
+				"description": "Deformation of the wave"
+			},
+			{
+				"name": "CIRCULARWAVES_waveAmplitude",
+				"description": "Amplitude of the Wave"
+			},
+			{
+				"name": "CIRCULARWAVES_waveFrequency",
+				"description": "Frequency of the Wave"
+			},
+			{
+				"name": "CIRCULARWAVES_blendingAmount",
+				"description": "Blending percent color of the waves"
+			},
+			{
+				"name": "CIRCULARWAVES_waveColor1",
+				"description": "Color1 of the Wave"
+			},
+			{
+				"name": "CIRCULARWAVES_waveColor2",
+				"description": "Color 2 of the Wave"
+			},
+			{
+				"name": "CIRCULARWAVES_mode1, 2 and 3",
+				"description": "Thre different modes operation of the shader. Experiment mixing modes."
+			}
+		]
+	},
+	{
 		"name": "Color Swap Hue",
 		"group": "Transform",
 		"description": "This shader will convert a color to another with a margin of tolerance while trying to account for the slights variations in hue and saturations artists use when adding shades/highlights.",
