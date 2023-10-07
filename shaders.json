@@ -1,5 +1,44 @@
 [
 	{
+		"name": "Shield",
+		"group": "Transform",
+		"description": "Shield Fx over the texture",
+		"author": "Erich_L",
+		"link": "https://godotshaders.com/shader/unit-selected-oscillating-circle/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "shield.gdshader",
+		"activation": "SHIELD_active",
+		"function": "shield",
+		"parameters": [
+			{
+				"name": "SHIELD_ring_radius",
+				"description": "Radius of the shield circle around the texture."
+			},
+			{
+				"name": "SHIELD_thickness_scalar",
+				"description": "Thickness of the circle."
+			},
+			{
+				"name": "SHIELD_oscillation_scalar",
+				"description": "?"
+			},
+			{
+				"name": "SHIELD_speed",
+				"description": "speed of the effect during the time"
+			},
+			{
+				"name": "SHIELD_main_color",
+				"description": "main color of the shield. Shield goes from one color to other."
+			},
+			{
+				"name": "SHIELD_lerp_color",
+				"description": "final color of the shield. Shield goes from one color to other."
+			}
+		]
+	},
+	{
 		"name": "Plasma Waves",
 		"group": "Transform",
 		"description": "Plasma Waves adapted to texture",
