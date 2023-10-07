@@ -1,5 +1,36 @@
 [
 	{
+		"name": "RippleGradient",
+		"group": "Transfomr",
+		"description": "This is as simple ripple gradient shader. Similar to Rainbow.",
+		"author": "Miisannn",
+		"link": "https://godotshaders.com/shader/ripple-gradient-shader/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "ripplegradient.gdshader",
+		"activation": "RIPPLEGRADIENT_active",
+		"function": "rippleGradient",
+		"parameters": [
+			{
+				"name": "RIPPLEGRADIENT_speed",
+				"description": "speed of the efect during the time"
+			},
+			{
+				"name": "RIPPLEGRADIENT_frequency",
+				"description": "frequency of the sin waves."
+			},
+			{
+				"name": "RIPPLEGRADIENT_amplitude",
+				"description": "Amplitude of the frequency waves"
+			},
+			{
+				"name": "RIPPLEGRADIENT_pastelColors",
+				"description": "Check to use pastel colors"
+			}
+		]
+	},
+	{
 		"name": "Hologram",
 		"group": "Disolve",
 		"description": "Makes the sprites look like a hologram",
