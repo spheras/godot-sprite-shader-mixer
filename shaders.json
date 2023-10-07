@@ -1,5 +1,32 @@
 [
 	{
+		"name": "Line Art",
+		"group": "Transform",
+		"description": "simple line art effect, change threshold to modify detail.",
+		"author": "Ayano",
+		"link": "https://godotshaders.com/shader/line-art/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "lineart.gdshader",
+		"activation": "LINEART_active",
+		"function": "lineart",
+		"parameters": [
+			{
+				"name": "LINEART_threshold",
+				"description": "threshold to define borders over the texture"
+			},
+			{
+				"name": "LINEART_color",
+				"description": "Color of the lineart."
+			},
+			{
+				"name": "LINEART_mix",
+				"description": "Mix of the result color with the previous shader"
+			}
+		]
+	},
+	{
 		"name": "RippleGradient",
 		"group": "Transfomr",
 		"description": "This is as simple ripple gradient shader. Similar to Rainbow.",
@@ -27,6 +54,10 @@
 			{
 				"name": "RIPPLEGRADIENT_pastelColors",
 				"description": "Check to use pastel colors"
+			},
+			{
+				"name": "RIPPLEGRADIENT_mix",
+				"description": "Mix of the effect with previous shader"
 			}
 		]
 	},
