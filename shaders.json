@@ -1,5 +1,51 @@
 [
 	{
+		"name": "Circle Pixel",
+		"group": "Transform",
+		"description": "Pixelate the texture to circle pixels with curstom radius",
+		"author": "jijiji",
+		"link": "https://godotshaders.com/shader/circle-pixel/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "circlepixel.gdshader",
+		"activation": "CIRCLEPIXEL_active",
+		"function": "pixelDisolve",
+		"parameters": [
+			{
+				"name": "CIRCLEPIXEL_amount_x",
+				"description": "Amount of pixels in the X axis."
+			},
+			{
+				"name": "CIRCLEPIXEL_amount_y",
+				"description": "Amount of pixels in the Y axis."
+			}
+		]
+	},
+	{
+		"name": "Pixel Disolve",
+		"group": "Disolve",
+		"description": "Disolve the texture by pixels, and custom resolution of pixels",
+		"author": "cak3_lover",
+		"link": "https://godotshaders.com/shader/pixelate-into-view-custom-resolution/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "pixeldisolve.gdshader",
+		"activation": "PIXELDISOLVE_active",
+		"function": "pixelDisolve",
+		"parameters": [
+			{
+				"name": "PIXELDISOLVE_time",
+				"description": "To control the time to disolve the texture."
+			},
+			{
+				"name": "PIXELDISOLVE_custom_resolution",
+				"description": "Resolution of pixels to disolve."
+			}
+		]
+	},
+	{
 		"name": "Shield",
 		"group": "Transform",
 		"description": "Shield Fx over the texture",
