@@ -1,5 +1,57 @@
 [
 	{
+		"name": "Speed Lines",
+		"group": "Transform",
+		"description": "based on a speedlines shader by axilirate, this one is more psicodelic and like super saiyan power.",
+		"author": "axilirate",
+		"link": "https://godotshaders.com/shader/speed-lines-shader-for-godot-4/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "speedlines.gdshader",
+		"activation": "SPEEDLINES_active",
+		"function": "speedlines",
+		"parameters": [
+			{
+				"name": "SPEEDLINES_noise",
+				"description": "noise applied to the shader",
+				"texture": "noise/noise1.png"
+			},
+			{
+				"name": "SPEEDLINES_line_color",
+				"description": "line color for the speedlines."
+			},
+			{
+				"name": "SPEEDLINES_line_count",
+				"description": "Number of lines"
+			},
+			{
+				"name": "SPEEDLINES_line_density",
+				"description": "Density of lines"
+			},
+			{
+				"name": "SPEEDLINES_line_faloff",
+				"description": "Fallof of lines over the time"
+			},
+			{
+				"name": "SPEEDLINES_mask_size",
+				"description": "Size of the masks"
+			},
+			{
+				"name": "SPEEDLINES_mask_edge",
+				"description": ""
+			},
+			{
+				"name": "SPEEDLINES_animation_speed",
+				"description": "speed of the animation"
+			},
+			{
+				"name": "SPEEDLINES_flash",
+				"description": "Whether to enable the flash with the texture or not"
+			}
+		]
+	},
+	{
 		"name": "Circular Waves",
 		"group": "Transform",
 		"description": "Based on Circular Waves 2D around your texture (original author Erich_L), but modified a bit to produce more psicodelic results.",
