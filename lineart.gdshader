@@ -1,3 +1,4 @@
+uniform bool LINEART_active = true;
 uniform float LINEART_threshold : hint_range(0.0, 10.0, 0.01) = 0.01;
 uniform vec4 LINEART_color : source_color;
 uniform float LINEART_mix : hint_range(0.0, 1.0, 0.1) = 0;
