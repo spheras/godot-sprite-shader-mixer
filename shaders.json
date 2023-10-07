@@ -1,5 +1,25 @@
 [
 	{
+		"name": "Plasma Waves",
+		"group": "Transform",
+		"description": "Plasma Waves adapted to texture",
+		"author": "kcfresh53 -> scarletshark",
+		"link": "https://godotshaders.com/shader/plasma-waves/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "plasmawaves.gdshader",
+		"activation": "PLASMAWAVES_active",
+		"function": "plasmaWaves",
+		"customCall": "UV, TEXTURE, size, TEXTURE_PIXEL_SIZE, color,FRAGCOORD,SCREEN_PIXEL_SIZE",
+		"parameters": [
+			{
+				"name": "....",
+				"description": "There are a lot! make fun."
+			}
+		]
+	},
+	{
 		"name": "Speed Lines",
 		"group": "Transform",
 		"description": "based on a speedlines shader by axilirate, this one is more psicodelic and like super saiyan power.",
