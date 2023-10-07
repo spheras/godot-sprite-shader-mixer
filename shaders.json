@@ -1,5 +1,32 @@
 [
 	{
+		"name": "Color Swap Hue",
+		"group": "Transform",
+		"description": "This shader will convert a color to another with a margin of tolerance while trying to account for the slights variations in hue and saturations artists use when adding shades/highlights.",
+		"author": "Noidexe",
+		"link": "https://godotshaders.com/shader/color-swap-with-hue-variation-preservation/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "colorswaphue.gdshader",
+		"activation": "COLORSWAPHUE_active",
+		"function": "colorSwapHue",
+		"parameters": [
+			{
+				"name": "COLORSWAPHUE_from",
+				"description": "Color to be replace"
+			},
+			{
+				"name": "COLORSWAPHUE_to",
+				"description": "Color Replacement."
+			},
+			{
+				"name": "COLORSWAPHUE_tolerance",
+				"description": "Tolerance from the color selected to be replaced"
+			}
+		]
+	},
+	{
 		"name": "Line Art",
 		"group": "Transform",
 		"description": "simple line art effect, change threshold to modify detail.",
