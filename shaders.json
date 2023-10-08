@@ -1,5 +1,36 @@
 [
 	{
+		"name": "Teleport",
+		"group": "Disolve",
+		"description": "Make an object dissapear in a bright glow, like it is being teleported away. See the effect in action in the animation below.",
+		"author": "pend00",
+		"link": "https://godotshaders.com/shader/teleport-effect/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "teleport.gdshader",
+		"activation": "TELEPORT_active",
+		"function": "teleport",
+		"parameters": [
+			{
+				"name": "TELEPORT_progress",
+				"description": "progress of the disapear effect"
+			},
+			{
+				"name": "TELEPORT_noise_desnity",
+				"description": "Density of the generated noise?"
+			},
+			{
+				"name": "TELEPORT_beam_size",
+				"description": "noise beam size"
+			},
+			{
+				"name": "TELEPORT_color",
+				"description": "Color of the noise generated"
+			},
+		]
+	},
+	{
 		"name": "Color Manipulator",
 		"group": "General",
 		"description": "This is a simple color manipulator, it support brightness, contrast, saturation, tint and more.",
