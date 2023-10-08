@@ -19,6 +19,7 @@ var version:String #version of the adaptation
 var filename:String #filename where is located the shader
 var activation:String #activation uniform variable name
 var function:String #main function of the shader to be called
+var customCall:String #Optional, custom call from fragment, list of parameters
 var parameters:Array[ShaderInfoParameter] #List of parameters of the shader
 
 # Load a shader info values from a json dictionary
@@ -32,6 +33,9 @@ func loadShaderInfo(shaderInfoJsonObject:Dictionary):
 	self.filename=shaderInfoJsonObject.filename
 	self.activation=shaderInfoJsonObject.activation
 	self.function=shaderInfoJsonObject.function
+	if(shaderInfoJsonObject.has("customCall")):
+		if(shaderInfoJsonObject.customCall.length()>0):
+			self.customCall=shaderInfoJsonObject.customCall
 	self.link=shaderInfoJsonObject.link
 	self.adaptedBy=shaderInfoJsonObject.adaptedBy
 	self.license=shaderInfoJsonObject.license
@@ -115,7 +119,10 @@ static func generateShaderCode(selectedShaders:Array[ShaderInfo])->Shader:
 
 	var callsCode=""
 	for selectedShader in selectedShaders:
-		callsCode=callsCode+"\tif("+selectedShader.activation+") "+selectedShader.function+"(UV, TEXTURE, size, TEXTURE_PIXEL_SIZE, color);\n"
+		var parameters="UV, TEXTURE, size, TEXTURE_PIXEL_SIZE, color";
+		if(selectedShader.customCall!=null && selectedShader.customCall.length()>0):
+			parameters=selectedShader.customCall;
+		callsCode=callsCode+"\tif("+selectedShader.activation+") "+selectedShader.function+"("+parameters+");\n"
 
 	var shaderCode=_replaceScriptVariables(shadersCode, functionsCode, callsCode)
 	var shader=Shader.new()

@@ -42,7 +42,7 @@ offset_right = 74.5
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Crear Sprite Mixer"
+text = "Create Shader Mixer"
 icon = ExtResource("2_yq7l3")
 
 [node name="shader_container" type="VBoxContainer" parent="marginContainer"]
