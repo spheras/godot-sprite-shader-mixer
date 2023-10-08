@@ -16,5 +16,9 @@ void circlePixel(in vec2 uv, in sampler2D sampler, vec2 size, vec2 pixelSize, in
 	float dist = distance(pos, vec2(0.5));
 
 	vec4 c = texture(sampler, cellpos);
-	color = c * step(0.0, (0.5* c.a) - dist);
+	if(c.a==0.){
+		c=c+color;
+	}
+	vec4 newColor = c * step(0.0, (0.5* c.a) - dist);
+	color = newColor;//mix(newColor, color, 0.5);
 }

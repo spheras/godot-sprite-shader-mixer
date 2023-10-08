@@ -1,5 +1,48 @@
 [
 	{
+		"name": "Chromatic Aberration",
+		"group": "Transform",
+		"description": "Chromatic Aberration effect. This shader only affect to the sprite.",
+		"author": "chatgpt",
+		"link": "",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "cromaticaberration.gdshader",
+		"activation": "CHROMATICABERRATION_active",
+		"function": "chromaticAberration",
+		"parameters": [
+			{
+				"name": "CHROMATICABERRATION_red_displacement",
+				"description": "Displacement of the red channel."
+			},
+			{
+				"name": "CHROMATICABERRATION_green_displacement",
+				"description": "Displacement of the green channel."
+			},
+			{
+				"name": "CHROMATICABERRATION_blue_displacement",
+				"description": "Displacement of the blue channel."
+			},
+			{
+				"name": "CHROMATICABERRATION_red_vertical",
+				"description": "If the displacement of the channel is vertical or horizontal."
+			},
+			{
+				"name": "CHROMATICABERRATION_green_vertical",
+				"description": "If the displacement of the channel is vertical or horizontal."
+			},
+			{
+				"name": "CHROMATICABERRATION_blue_vertical",
+				"description": "If the displacement of the channel is vertical or horizontal."
+			},
+			{
+				"name": "CHROMATICABERRATION_scale",
+				"description": "Scale to apply to the displacement. Use this to allow high separation of channels."
+			}
+		]
+	},
+	{
 		"name": "Circle Pixel",
 		"group": "Transform",
 		"description": "Pixelate the texture to circle pixels with curstom radius",
@@ -10,7 +53,7 @@
 		"version": "1.0",
 		"filename": "circlepixel.gdshader",
 		"activation": "CIRCLEPIXEL_active",
-		"function": "pixelDisolve",
+		"function": "circlePixel",
 		"parameters": [
 			{
 				"name": "CIRCLEPIXEL_amount_x",
