@@ -8,7 +8,7 @@
 		"adaptedBy": "spheras",
 		"license": "CC0",
 		"version": "1.0",
-		"filename": "cromaticaberration.gdshader",
+		"filename": "chromaticaberration.gdshader",
 		"activation": "CHROMATICABERRATION_active",
 		"function": "chromaticAberration",
 		"parameters": [
