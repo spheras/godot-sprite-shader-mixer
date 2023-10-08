@@ -1,5 +1,5 @@
 uniform bool WIPE_active = true;	
-uniform float WIPE_percentage: hint_range(0, 1) = 1;
+uniform float WIPE_percentage: hint_range(0, 1) = 0.5;
 uniform float WIPE_hidden_alpha: hint_range(0, 1) = 0;
 uniform bool WIPE_flip = false;
 uniform bool WIPE_horizontal = false;

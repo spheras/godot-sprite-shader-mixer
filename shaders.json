@@ -1,5 +1,24 @@
 [
 	{
+		"name": "Border Noise",
+		"group": "Transform",
+		"description": "Border with gradient and Noise effect, seems like mana of your sprite. Some minor tweaks done to adapt.",
+		"author": "9exa",
+		"link": "https://godotshaders.com/shader/animated-and-gradient-outlines/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "bordernoise.gdshader",
+		"activation": "BORDERNOISE_active",
+		"function": "borderNoise",
+		"parameters": [
+			{
+				"name": "...",
+				"description": "..."
+			}
+		]
+	},
+	{
 		"name": "Chromatic Aberration",
 		"group": "Transform",
 		"description": "Chromatic Aberration effect. This shader only affect to the sprite.",
