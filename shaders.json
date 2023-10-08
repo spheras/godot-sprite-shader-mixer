@@ -14,8 +14,12 @@
 		"customCall": "UV, SCREEN_UV, TEXTURE, size, TEXTURE_PIXEL_SIZE, color, FRAGCOORD",
 		"parameters": [
 			{
-				"name": "...",
-				"description": "..."
+				"name": "ALMOSTINVISIBLE_alpha",
+				"description": "alpha, ranging from 0 (no cloaked) to 1 (fully cloaked)"
+			},
+			{
+				"name": "ALMOSTINVISIBLE_dist",
+				"description": "dist, specifying the offset of the background in pixels"
 			}
 		]
 	},
