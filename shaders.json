@@ -1,5 +1,25 @@
 [
 	{
+		"name": "Almost Invisible",
+		"group": "General",
+		"description": "Given a sprite, this shader gives it the ability to become invisible and fade into the background. But the ability is not flawless and the background is slightly deformed by the invisibility cloaking.",
+		"author": "CasualGarageCoder",
+		"link": "https://godotshaders.com/shader/almost-invisible-character/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "almostInvisible.gdshader",
+		"activation": "ALMOSTINVISIBLE_active",
+		"function": "almostInvisible",
+		"customCall": "UV, SCREEN_UV, TEXTURE, size, TEXTURE_PIXEL_SIZE, color, FRAGCOORD",
+		"parameters": [
+			{
+				"name": "...",
+				"description": "..."
+			}
+		]
+	},
+	{
 		"name": "Border Noise",
 		"group": "Transform",
 		"description": "Border with gradient and Noise effect, seems like mana of your sprite. Some minor tweaks done to adapt.",
