@@ -4,9 +4,15 @@ Ok, here we are.
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/YourUsername/YourRepository/LICENSE)
 [![Godot](https://img.shields.io/badge/Godot-4.1.1%2B-blueviolet)](https://godotengine.org/)
 
+Some examples of what this addon can do:
 ![supergodot](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/2171350c-8f08-41d3-99b3-10ddce6d41d9)
 
-This project is inspired by [godot-sprite-shader](https://github.com/duongvituan/godot-sprite-shader) by duongvituan. I want to express my sincere gratitude for the inspiration it provided.
+![supergodot2](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/c430fb4d-1375-442f-a1c9-65f3050e329f)
+
+![supergodot3](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/ed1e3375-3396-4bb9-bc18-f3b28bfa80a9)
+
+
+Disclaimer: This project is inspired by [godot-sprite-shader](https://github.com/duongvituan/godot-sprite-shader) by duongvituan. Initially I've got and adapted a lot of shaders from there, and also from the great web page https://godotshaders.com/. I want to express my sincere gratitude for the inspiration them provided.
 
 ## Description
 
