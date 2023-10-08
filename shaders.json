@@ -1,5 +1,24 @@
 [
 	{
+		"name": "Color Manipulator",
+		"group": "General",
+		"description": "This is a simple color manipulator, it support brightness, contrast, saturation, tint and more.",
+		"author": "randomDam",
+		"link": "https://godotshaders.com/shader/color-manipulator/",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "colormanipulator.gdshader",
+		"activation": "COLORMANIPULATOR_active",
+		"function": "colorManipulator",
+		"parameters": [
+			{
+				"name": "...",
+				"description": "..."
+			}
+		]
+	},
+	{
 		"name": "Almost Invisible",
 		"group": "General",
 		"description": "Given a sprite, this shader gives it the ability to become invisible and fade into the background. But the ability is not flawless and the background is slightly deformed by the invisibility cloaking.",
