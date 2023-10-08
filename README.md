@@ -4,6 +4,8 @@ Ok, here we are.
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/YourUsername/YourRepository/LICENSE)
 [![Godot](https://img.shields.io/badge/Godot-4.1.1%2B-blueviolet)](https://godotengine.org/)
 
+![supergodot](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/2171350c-8f08-41d3-99b3-10ddce6d41d9)
+
 This project is inspired by [godot-sprite-shader](https://github.com/duongvituan/godot-sprite-shader) by duongvituan. I want to express my sincere gratitude for the inspiration it provided.
 
 ## Description
@@ -24,6 +26,9 @@ To use this plugin, follow these steps:
 1. Download the repository or clone it into your Godot project.
 2. Enable the plugin in your project's settings.
 3. Open the "Plugins" window in Godot and configure the options as needed.
+
+![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/2a6bb11e-89e8-41b1-ad89-7a2a265df5f8)
+ 
 
 ## Usage
 
@@ -52,17 +57,21 @@ To use this plugin, follow these steps:
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/2a5e68cc-8e49-419d-b931-0732c9425dee)
 
 8. You can adjust all the parameters of the shader going directly to the shader params, at the material->shader inspector. It works like any shader, nothing special. The interesting part is that the plugin created that shader for you. But that's not all.
+
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/d01ac058-baea-4917-bb93-4ee762f4e8ec)
 
 10. Go again and select a different shader, now you can mix them. The plugin will download, and create a new shader blending both shaders!
+
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/dec25c2b-7f7c-409b-ba6f-1b86a8b4c1f6)
 
-11. By the way, you can see info about the shader if you press the "List of Current Shaders" button
+12. By the way, you can see info about the shader if you press the "List of Current Shaders" button
+
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/dbd107cf-19e0-4caf-9507-7038bb90da09)
 
-12. You can reorder the shaders, it affects the way they are mixed. You can quit a shader from your shader code. You can also remove the downloaded shader (you can download again later). Be free and experiment with it!
+14. You can reorder the shaders, it affects the way they are mixed. You can quit a shader from your shader code. You can also remove the downloaded shader (you can download again later). Be free and experiment with it!
 
-13. The point is that the plugin creates a shader script for your texture with the shaders you select. The collection will grow, it is open to incorporate new shaders easily, just making a pull request over the shaders branch. So, consider sync the shader list to see if there are new shaders available. (explained later)
+
+15. The point is that the plugin creates a shader script for your texture with the shaders you select. The collection will grow, it is open to incorporate new shaders easily, just making a pull request over the shaders branch. So, consider sync the shader list to see if there are new shaders available. (explained later)
 
     
 ## Contribution
@@ -77,7 +86,7 @@ If you wish to improve this project, please:
 3. Make sure to follow the contribution guidelines and code of conduct.
 
 ## HEY! I want to add a new Shader for this incredible tool!
-Great! that's the idea, increase the collection of shaders.  One of the positive things about this plugin is that it doesn't have the plugins inside, it downloads them from this page when the user wants to apply the shader and mix with others. Therefore, we can grow with new shaders, without affecting them.
+Great! that's the idea, increase the collection of shaders.  One of the positive things about this plugin is that it doesn't have the shaders inside, it downloads them from this page when the user wants to apply the shader and mix with others. Therefore, we can grow with new shaders, without affecting them.
 
 First of all, all the shaders are in a separate branch of this project:
 https://github.com/spheras/godot-sprite-shader-mixer/tree/v1/shaders
