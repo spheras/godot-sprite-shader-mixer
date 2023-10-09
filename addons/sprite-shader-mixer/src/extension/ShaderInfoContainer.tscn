@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://bqkflotm3qks7"]
 
 [ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/ShaderInfoContainer.gd" id="1_w5epy"]
-[ext_resource type="Texture2D" uid="uid://dw48djolbkuri" path="res://addons/sprite-shader-mixer/assets/icons/close.svg" id="2_8i1vt"]
-[ext_resource type="Texture2D" uid="uid://d1q2at0btbfff" path="res://addons/sprite-shader-mixer/assets/icons/delete.svg" id="2_l16is"]
-[ext_resource type="Texture2D" uid="uid://dhcitjhpww86f" path="res://addons/sprite-shader-mixer/assets/icons/up.svg" id="2_rqw54"]
-[ext_resource type="Texture2D" uid="uid://3veyq17pvw46" path="res://addons/sprite-shader-mixer/assets/icons/down.svg" id="3_tuebg"]
-[ext_resource type="Texture2D" uid="uid://bri4fa3qhl7ia" path="res://addons/sprite-shader-mixer/assets/icons/right.svg" id="5_226fn"]
+[ext_resource type="Texture2D" uid="uid://bh3ternlmjqxo" path="res://addons/sprite-shader-mixer/assets/icons/close.svg" id="2_8i1vt"]
+[ext_resource type="Texture2D" uid="uid://blwvphk004alx" path="res://addons/sprite-shader-mixer/assets/icons/delete.svg" id="2_l16is"]
+[ext_resource type="Texture2D" uid="uid://dcf5gngxrgfkl" path="res://addons/sprite-shader-mixer/assets/icons/up.svg" id="2_rqw54"]
+[ext_resource type="Texture2D" uid="uid://cpxfo28hww3v5" path="res://addons/sprite-shader-mixer/assets/icons/down.svg" id="3_tuebg"]
+[ext_resource type="Texture2D" uid="uid://nsea1n1hugod" path="res://addons/sprite-shader-mixer/assets/icons/right.svg" id="5_226fn"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xcbid"]
 color = Color(1, 1, 1, 1)
