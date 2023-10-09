@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Godot Sprite Shader Mixer"
 config/description="addon project to allow easily the addition of shaders to a Sprite2D and AnimatedSprite2D"
-run/main_scene="res://demo/Demo.tscn"
+run/main_scene="res://demo/demo.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
