@@ -1,5 +1,25 @@
 [
 	{
+		"name": "Pseudo3D",
+		"group": "Vertex",
+		"description": "Simulation of 3D.",
+		"author": "Hei",
+		"link": "https://simonhartcher.com/3d-look-rotations-in-2d-with-godot-4",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "pseudo3d.gdshader",
+		"activation": "PSEUDO3D_active",
+		"function": "pseudo3d",
+		"vertexCallCode": "pseudo3d_vertex.gdshader",
+		"parameters": [
+			{
+				"name": "TODO",
+				"description": "..."
+			},
+		]
+	},
+	{
 		"name": "Teleport",
 		"group": "Disolve",
 		"description": "Make an object dissapear in a bright glow, like it is being teleported away. See the effect in action in the animation below.",

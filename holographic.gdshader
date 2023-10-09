@@ -4,7 +4,7 @@ uniform sampler2D HOLOGRAPHIC_noiseTex;
 uniform float     HOLOGRAPHIC_value : hint_range(0, 1) = 0.75;
 uniform float     HOLOGRAPHIC_noiseX : hint_range(0, 20) = 10;
 uniform float     HOLOGRAPHIC_speed : hint_range(0, 4) = 1.0;
-uniform float     HOLOGRAPHIC_mix : hint_range(0,1) = 1.0;
+uniform float     HOLOGRAPHIC_mix : hint_range(0,1) = 0;
 float holographic_noise(sampler2D source, vec2 p, float time)
 {
 	float sample = texture(source, vec2(.2, 0.2 * cos(time)) * time * 8. + p * 1.).x;
