@@ -154,10 +154,6 @@ func onSyncShaderList()->void:
 	print("Sync done, enjoy.")
 
 func onReorder(shader:ShaderInfo, after:bool)->void:
-	if(shader.vertex):
-		OS.alert("VERTEX can't be reordered. Need to be first shaders to work properly :(")
-		return
-		
 	var currentIndex=self.selectedShaders.find(shader)
 	var flagModified:bool=false
 	if(!after && currentIndex>0):
