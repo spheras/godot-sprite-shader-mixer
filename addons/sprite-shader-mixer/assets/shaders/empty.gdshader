@@ -12,8 +12,14 @@ shader_type canvas_item;
 void fragment() {
 	vec4 color = texture(TEXTURE, UV);
 	vec2 size = vec2(textureSize(TEXTURE, 0));
+	vec2 uv = UV;
+	vec2 screen_uv = SCREEN_UV;
 
 //%CALLS%
 
 	COLOR=color;
-}	
+}
+
+void vertex() {
+	//%VERTEX_CALLS%
+}

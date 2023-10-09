@@ -48,7 +48,10 @@ func _findShaderInfo(shaderName:String) -> ShaderInfo:
 func onAddShaderPressed(shaderName:String)->void:
 	for shaderToAdd in pendingShaders:
 		if(shaderToAdd.name.match(shaderName)):
-			self.selectedShaders.append(shaderToAdd)
+			if(shaderToAdd.vertex):
+				self.selectedShaders.insert(0,shaderToAdd)
+			else:
+				self.selectedShaders.append(shaderToAdd)
 			self.pendingShaders.erase(shaderToAdd)
 			var newShader:Shader=ShaderInfo.generateShaderCode(self.selectedShaders)
 			(self.parentSprite.material as ShaderMaterial).shader=newShader
@@ -78,8 +81,15 @@ func onDownloadShaderPressed(shaderName:String, node:Node)->void:
 		self.onDownloadButtonVisible.emit(false)
 		self.onAddShaderButtonVisible.emit(true)
 
-		var anyTexturePathToSolveBug:String=""		
-		
+		#Download vertex code if neceesary
+		if(shaderInfo.vertex):
+			var vertexGithubPath=SHADERS_GITHUB_BASE_PATH +shaderInfo.vertexCallCode
+			var vertexContent=await UtilHTTP.httpsDownloadJson(SHADERS_GITHUB_DOMAIN, vertexGithubPath)
+			var vertexPath=SHADERS_LOCAL_BASE_PATH+shaderInfo.vertexCallCode
+			Util.saveFile(vertexPath,vertexContent)
+			print("Saved vertex to: ", vertexPath)
+
+		var anyTexturePathToSolveBug:String=""
 		for param in shaderInfo.parameters:
 			if (!(param as ShaderInfoParameter).textureHasBeenDownloaded()):
 				var textureGithubPath=SHADERS_GITHUB_BASE_PATH + param.texture
@@ -144,6 +154,10 @@ func onSyncShaderList()->void:
 	print("Sync done, enjoy.")
 
 func onReorder(shader:ShaderInfo, after:bool)->void:
+	if(shader.vertex):
+		OS.alert("VERTEX can't be reordered. Need to be first shaders to work properly :(")
+		return
+		
 	var currentIndex=self.selectedShaders.find(shader)
 	var flagModified:bool=false
 	if(!after && currentIndex>0):
