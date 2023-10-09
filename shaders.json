@@ -82,7 +82,7 @@
 		"filename": "almostInvisible.gdshader",
 		"activation": "ALMOSTINVISIBLE_active",
 		"function": "almostInvisible",
-		"customCall": "UV, SCREEN_UV, TEXTURE, size, TEXTURE_PIXEL_SIZE, color, FRAGCOORD",
+		"customCall": "uv, screen_uv, TEXTURE, size, TEXTURE_PIXEL_SIZE, color, FRAGCOORD",
 		"parameters": [
 			{
 				"name": "ALMOSTINVISIBLE_alpha",

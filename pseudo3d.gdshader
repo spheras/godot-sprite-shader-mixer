@@ -40,8 +40,9 @@ void pseudo3d_vertex(in vec2 uv, inout vec3 p, inout vec2 o, inout vec2 vertex, 
 
 	vertex += (uv - 0.5) / pixelSize * t * (1.0 - PSEUDO3D_inset);
 }
-void pseudo3d(in vec2 uv, in sampler2D txt, vec2 size, vec2 pixelSize, inout vec4 color) {
+void pseudo3d(inout vec2 uv, in sampler2D txt, vec2 size, vec2 pixelSize, inout vec4 color) {
 		vec2 newUV = (PSEUDO3D_p.xy / PSEUDO3D_p.z).xy - PSEUDO3D_o;
+        uv=newUV;
 	    color = texture(txt, newUV + 0.5);
 		color.a *= step(max(abs(newUV.x), abs(newUV.y)), 0.5);
 }
