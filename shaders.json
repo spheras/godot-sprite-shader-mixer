@@ -11,6 +11,7 @@
 		"filename": "pseudo3d.gdshader",
 		"activation": "PSEUDO3D_active",
 		"function": "pseudo3d",
+		"vertex": true,
 		"vertexCallCode": "pseudo3d_vertex.gdshader",
 		"parameters": [
 			{
