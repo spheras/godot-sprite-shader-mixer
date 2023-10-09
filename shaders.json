@@ -1,5 +1,26 @@
 [
 	{
+		"name": "Water2D",
+		"group": "Vertex",
+		"description": "Simulation of Water.",
+		"author": "TODO",
+		"link": "TODO",
+		"adaptedBy": "spheras",
+		"license": "CC0",
+		"version": "1.0",
+		"filename": "windwaker2dwater.gdshader",
+		"activation": "WINDWAKER2DWATER_active",
+		"function": "windWaker2DWater",
+		"vertex": true,
+		"vertexCallCode": "windwaker2dwater_vertex.gdshader",
+		"parameters": [
+			{
+				"name": "TODO",
+				"description": "..."
+			},
+		]
+	},
+	{
 		"name": "Pseudo3D",
 		"group": "Vertex",
 		"description": "Simulation of 3D.",
