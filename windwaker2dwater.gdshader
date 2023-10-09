@@ -1,4 +1,4 @@
-#WINDWAKER2DWATER
+//WINDWAKER2DWATER
 uniform bool WINDWAKER2DWATER_active = true;
 uniform vec4 WINDWAKER2DWATER_WATER_COL : source_color =  vec4(0.176471, 0.635294, 0.85098, 1.0);
 uniform vec4 WINDWAKER2DWATER_WATER2_COL : source_color =  vec4(0.0588235, 0.529412, 0.776471, 1.0);
