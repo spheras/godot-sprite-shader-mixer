@@ -4,7 +4,7 @@ extends VBoxContainer
 
 @onready var iconDown=preload("res://addons/sprite-shader-mixer/assets/icons/down.svg")
 @onready var iconRight=preload("res://addons/sprite-shader-mixer/assets/icons/right.svg")
-@onready var shaderInfoContainer = preload("res://addons/sprite-shader-mixer/src/extension/ShaderInfoContainer.tscn")
+@onready var shaderInfoContainer = preload("res://addons/sprite-shader-mixer/src/extension/shaderinfo/ShaderInfoContainer.tscn")
 @onready var compOptionShaders:OptionButton=$marginContainer/shader_container/HBoxContainer/option_shaders
 @onready var compButtonCreate:Button=$marginContainer/create_container/button_create
 @onready var compButtonAddShader:Button=$marginContainer/shader_container/HBoxContainer/button_addShader

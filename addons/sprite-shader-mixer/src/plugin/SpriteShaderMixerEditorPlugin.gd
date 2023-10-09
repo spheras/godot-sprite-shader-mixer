@@ -1,8 +1,8 @@
 @tool
-class_name Plugin
+class_name PluginSpriteShaderMixerEditorPlugin
 extends EditorPlugin
 
-var tool_create_plugin = preload("res://addons/sprite-shader-mixer/src/plugins/InspectorCreatePlugin.gd")
+var tool_create_plugin = preload("res://addons/sprite-shader-mixer/src/plugin/SpriteShaderMixerEditorInspectorPlugin.gd")
 
 func _enter_tree():
 	tool_create_plugin = tool_create_plugin.new()

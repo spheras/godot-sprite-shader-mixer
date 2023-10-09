@@ -1,6 +1,7 @@
 @tool
-extends VBoxContainer
 class_name ShaderInfoContainer
+extends VBoxContainer
+
 
 signal onDeleteShader(shaderInfo:ShaderInfo)
 signal onQuitShader(shaderInfo:ShaderInfo)
@@ -8,7 +9,7 @@ signal onReorder(shaderInfo:ShaderInfo,after:bool)
 
 @onready var right_icon = preload("res://addons/sprite-shader-mixer/assets/icons/right.svg")
 @onready var down_icon = preload("res://addons/sprite-shader-mixer/assets/icons/down.svg")
-@onready var shaderInfoParameterContainer = preload("res://addons/sprite-shader-mixer/src/extension/ShaderInfoParameterContainer.tscn")
+@onready var shaderInfoParameterContainer = preload("res://addons/sprite-shader-mixer/src/extension/shaderinfo/parameter/ShaderInfoParameterContainer.tscn")
 @onready var comp_name:Label=$container_name/container_title/container_name_separator/label_name
 @onready var comp_quit:Button=$container_name/remove_container/button_quit
 @onready var comp_delete:Button=$container_name/remove_container/button_delete

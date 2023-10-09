@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b8ls4hebrqab0"]
 
-[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/ShaderInfoParameterContainer.gd" id="1_6csjd"]
+[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/shaderinfo/parameter/ShaderInfoParameterContainer.gd" id="1_6csjd"]
 
 [node name="main" type="HBoxContainer"]
 anchors_preset = 15

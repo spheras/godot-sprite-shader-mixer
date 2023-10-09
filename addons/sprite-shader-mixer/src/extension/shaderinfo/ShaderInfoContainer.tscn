@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bqkflotm3qks7"]
 
-[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/ShaderInfoContainer.gd" id="1_w5epy"]
+[ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/shaderinfo/ShaderInfoContainer.gd" id="1_w5epy"]
 [ext_resource type="Texture2D" uid="uid://bh3ternlmjqxo" path="res://addons/sprite-shader-mixer/assets/icons/close.svg" id="2_8i1vt"]
 [ext_resource type="Texture2D" uid="uid://blwvphk004alx" path="res://addons/sprite-shader-mixer/assets/icons/delete.svg" id="2_l16is"]
 [ext_resource type="Texture2D" uid="uid://dcf5gngxrgfkl" path="res://addons/sprite-shader-mixer/assets/icons/up.svg" id="2_rqw54"]
@@ -52,7 +52,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 icon = ExtResource("2_8i1vt")
 
 [node name="VSeparator" type="VSeparator" parent="container_name/remove_container"]
-custom_minimum_size = Vector2(50, 0)
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
 [node name="button_delete" type="Button" parent="container_name/remove_container"]
