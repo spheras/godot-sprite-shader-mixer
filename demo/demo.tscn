@@ -1,43 +1,203 @@
-[gd_scene load_steps=25 format=3 uid="uid://btvorthsuc7d1"]
+[gd_scene load_steps=14 format=3 uid="uid://btvorthsuc7d1"]
 
-[ext_resource type="Texture2D" uid="uid://df3ytg0qn46tl" path="res://demo/assets/supergodot/supergodot-0001.png" id="2_e06wh"]
-[ext_resource type="Texture2D" uid="uid://bwsh5ic42ptu0" path="res://demo/assets/supergodot/supergodot-0002.png" id="3_2mmwv"]
-[ext_resource type="Texture2D" uid="uid://c07t2gtcgivu3" path="res://demo/assets/supergodot/supergodot-0000.png" id="3_t3lb8"]
-[ext_resource type="Texture2D" uid="uid://c71u2dch58md2" path="res://demo/assets/supergodot/supergodot-0003.png" id="4_cc5mr"]
-[ext_resource type="Texture2D" uid="uid://d1ig54udlb1xy" path="res://demo/assets/supergodot/supergodot-0004.png" id="5_y64ey"]
-[ext_resource type="Texture2D" uid="uid://hxrxd7sc6vt2" path="res://demo/assets/supergodot/supergodot-0005.png" id="6_vu1iv"]
-[ext_resource type="Texture2D" uid="uid://dbd2ppfmye2vc" path="res://demo/assets/supergodot/supergodot-0006.png" id="7_p2sjx"]
-[ext_resource type="Texture2D" uid="uid://ct0uynnpl6w3n" path="res://demo/assets/supergodot/supergodot-0007.png" id="8_8slbi"]
-[ext_resource type="Texture2D" uid="uid://bqxjdlhxgfruy" path="res://demo/assets/supergodot/supergodot-0008.png" id="9_ueai0"]
-[ext_resource type="Texture2D" uid="uid://dwqt7vn0sdpgq" path="res://demo/assets/supergodot/supergodot-0009.png" id="10_temj0"]
-[ext_resource type="Texture2D" uid="uid://ckfo4xndw32q1" path="res://demo/assets/supergodot/supergodot-0010.png" id="11_gwae1"]
-[ext_resource type="Texture2D" uid="uid://dyqlp0ddwvqrf" path="res://demo/assets/supergodot/supergodot-0011.png" id="12_mn5fg"]
-[ext_resource type="Texture2D" uid="uid://hyalqq3u0ox4" path="res://demo/assets/supergodot/supergodot-0012.png" id="13_5jmwu"]
-[ext_resource type="Texture2D" uid="uid://p24ueaupc2sx" path="res://demo/assets/supergodot/supergodot-0013.png" id="14_pvbc4"]
-[ext_resource type="Texture2D" uid="uid://dslkly12nx7kp" path="res://demo/assets/supergodot/supergodot-0014.png" id="15_vorph"]
-[ext_resource type="Texture2D" uid="uid://bbxv86hom4lcw" path="res://demo/assets/supergodot/supergodot-0015.png" id="16_b7r4p"]
-[ext_resource type="Texture2D" uid="uid://bi5u1xm7pr2ma" path="res://demo/assets/supergodot/supergodot-0016.png" id="17_h4rrq"]
-[ext_resource type="Texture2D" uid="uid://lgt4s5glokxo" path="res://demo/assets/supergodot/supergodot-0017.png" id="18_qsqos"]
-[ext_resource type="Texture2D" uid="uid://d2h57p4ntjlwp" path="res://demo/assets/supergodot/supergodot-0018.png" id="19_jqinh"]
-[ext_resource type="Texture2D" uid="uid://jstb3t5fl3k8" path="res://demo/assets/supergodot/supergodot-0019.png" id="20_jykhe"]
+[ext_resource type="Texture2D" uid="uid://d2xrvklvm45mw" path="res://demo/assets/shaders/chars_texture3x3.png" id="2_3ee8b"]
+[ext_resource type="Shader" path="res://demo/assets/shaders/example3.gdshader" id="2_40eie"]
+[ext_resource type="SpriteFrames" uid="uid://vk46lrviw2t3" path="res://demo/assets/supergodot/animation.tres" id="3_061al"]
+[ext_resource type="Shader" path="res://demo/assets/shaders/example2.gdshader" id="5_qmydy"]
+[ext_resource type="Shader" path="res://demo/assets/shaders/example1.gdshader" id="6_8kop3"]
 [ext_resource type="Texture2D" uid="uid://dg1bar8amfygq" path="res://demo/assets/godot-text.png" id="21_0xoix"]
 
-[sub_resource type="Shader" id="Shader_qlsqf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1g2ki"]
+shader = ExtResource("2_40eie")
+shader_parameter/MATRIX_active = true
+shader_parameter/MATRIX_direction = 3
+shader_parameter/MATRIX_velocity = 0.582
+shader_parameter/MATRIX_row = 24.205
+shader_parameter/MATRIX_column = 28.952
+shader_parameter/MATRIX_value = 24.932
+shader_parameter/MATRIX_number_row_char_texture = 3.0
+shader_parameter/MATRIX_number_column_char_texture = 3.0
+shader_parameter/MATRIX_tint_color = Color(1, 0.694118, 1, 1)
+shader_parameter/MATRIX_line_thickness = 15.548
+shader_parameter/MATRIX_mix = 0.678
+shader_parameter/COLORSWAP_active = true
+shader_parameter/COLORSWAP_mix = 0.0
+shader_parameter/COLORSWAP_max_colors = 8
+shader_parameter/COLORSWAP_show_stripes = true
+shader_parameter/COLORSWAP_tolerance = 0.5
+shader_parameter/COLORSWAP_input_color1 = Color(0, 0.482353, 1, 1)
+shader_parameter/COLORSWAP_output_color1 = Color(0, 0.815686, 0.258824, 1)
+shader_parameter/COLORSWAP_input_color2 = null
+shader_parameter/COLORSWAP_output_color2 = null
+shader_parameter/COLORSWAP_input_color3 = null
+shader_parameter/COLORSWAP_output_color3 = null
+shader_parameter/COLORSWAP_input_color4 = null
+shader_parameter/COLORSWAP_output_color4 = null
+shader_parameter/COLORSWAP_input_color5 = null
+shader_parameter/COLORSWAP_output_color5 = null
+shader_parameter/COLORSWAP_input_color6 = null
+shader_parameter/COLORSWAP_output_color6 = null
+shader_parameter/COLORSWAP_input_color7 = null
+shader_parameter/COLORSWAP_output_color7 = null
+shader_parameter/COLORSWAP_input_color8 = null
+shader_parameter/COLORSWAP_output_color8 = null
+shader_parameter/BORDERNOISE_active = true
+shader_parameter/BORDERNOISE_max_line_width = 20.8
+shader_parameter/BORDERNOISE_min_line_width = 93.6
+shader_parameter/BORDERNOISE_freq = 0.9
+shader_parameter/BORDERNOISE_block_size = 17.5
+shader_parameter/BORDERNOISE_starting_colour = Color(1, 1, 0, 1)
+shader_parameter/BORDERNOISE_ending_colour = Color(0, 1, 0.360784, 1)
+shader_parameter/MATRIX_chars_tex = ExtResource("2_3ee8b")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h17j3"]
+shader = ExtResource("5_qmydy")
+shader_parameter/GOLD_active = true
+shader_parameter/GOLD_offset = 0.0
+shader_parameter/GOLD_speed = 0.494
+shader_parameter/GOLD_mix = 0.0
+shader_parameter/TELEPORT_active = true
+shader_parameter/TELEPORT_progress = 0.0
+shader_parameter/TELEPORT_noise_desnity = 500.0
+shader_parameter/TELEPORT_beam_size = 0.15
+shader_parameter/TELEPORT_color = Color(0.976471, 0.384314, 0, 1)
+shader_parameter/SHADOW_active = true
+shader_parameter/SHADOW_deform = Vector2(0, 0)
+shader_parameter/SHADOW_offset = Vector2(0, 0)
+shader_parameter/SHADOW_modulate = Color(0, 0, 0, 1)
+shader_parameter/SHADOW_mix = 0.0
+
+[sub_resource type="Animation" id="Animation_m6agy"]
+resource_name = "teleport"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/TELEPORT_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1.18921, 1.07177),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_byhr4"]
+_data = {
+"teleport": SubResource("Animation_m6agy")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4qsww"]
+shader = ExtResource("6_8kop3")
+shader_parameter/SHIELD_active = true
+shader_parameter/SHIELD_ring_radius = 0.25
+shader_parameter/SHIELD_thickness_scalar = 0.25
+shader_parameter/SHIELD_oscillation_scalar = 0.025
+shader_parameter/SHIELD_speed = 2.3
+shader_parameter/SHIELD_main_color = Color(0, 0.501961, 1, 0.654902)
+shader_parameter/SHIELD_lerp_color = Color(0, 1, 1, 0.513726)
+shader_parameter/HOLOGRAM_active = true
+shader_parameter/HOLOGRAM_mix = 1.0
+shader_parameter/HOLOGRAM_lines = 100
+shader_parameter/HOLOGRAM_color1 = Color(0, 0, 1, 0.576471)
+shader_parameter/HOLOGRAM_color2 = Color(1, 0, 0, 1)
+shader_parameter/HOLOGRAM_speed = 0.59
+shader_parameter/HOLOGRAM_alpha = 1.0
+shader_parameter/HOLOGRAM_noise_amount = 0.25
+shader_parameter/HOLOGRAM_effect_factor = 0.08
+shader_parameter/PULSE_active = true
+shader_parameter/PULSE_shine_color = Color(1, 0.0117647, 0, 1)
+shader_parameter/PULSE_alpha_limit = 0.8
+shader_parameter/PULSE_cycle_speed = 5.8
+shader_parameter/PULSE_full_pulse_cycle = false
+
+[sub_resource type="Shader" id="Shader_yhvx2"]
 code = "//ATTENTION:
 //  THIS IS SHADE AUTOGENERATED BY
 //  THE ADDON SPRITE-SHADER-MIXER
 //  ANY MANUAL CHANGES WILL BE REMOVED WHEN THE ADDON
 //  UPDATES THIS SHADER.
 //  ANYWAY, YOU CAN SAVE THE CURRENT VERSION AS A RESOURCE FILE.
-//SHADERS:
+//SHADERS:Holowave,Outline,Shadow,
 shader_type canvas_item;
 
 	
+//HOLOWAVE
+uniform bool  HOLOWAVE_active  = true;
+uniform float HOLOWAVE_offset: hint_range(0, 100) = 0;
+uniform float HOLOWAVE_speed : hint_range(-10, 10) = 1;
+uniform float HOLOWAVE_waveHeight : hint_range(0, 1) = 0.12;
+uniform float HOLOWAVE_waveSpeed: hint_range(0, 20) = 3;
+uniform float HOLOWAVE_waveFreq: hint_range(0, 100) = 30.0;
+uniform float HOLOWAVE_waveWidth: hint_range(0, 10) = 1.0;
+uniform float HOLOWAVE_mix: hint_range(0,1) = 0;
+float mark(vec2 uv, float height, float time)
+{
+	float value = mod(uv.y - time * 0.5, 2.0);
+	return (value < height) ? 1.0 : 0.0;
+}
+void holowave(in vec2 uv, in sampler2D sampler, vec2 size, vec2 pixelSize, inout vec4 color)
+{
+	float time = HOLOWAVE_offset + TIME * HOLOWAVE_speed;
+	vec2 wave_uv_offset = vec2(0, 0);
+	wave_uv_offset.x = sin(time * HOLOWAVE_waveSpeed + uv.y * HOLOWAVE_waveFreq * 2.0) * uv.y * uv.y * HOLOWAVE_waveWidth * 0.1;
+	float mark_value = mark(uv, HOLOWAVE_waveHeight, time);
+	uv = (mark_value > 0.0) ? uv + wave_uv_offset : uv;
+	color = mix(texture(sampler, uv), color, HOLOWAVE_mix);
+}
+//OUTLINE
+uniform bool  OUTLINE_active  = true;
+uniform float OUTLINE_thickness : hint_range(0, 30) = 3.0;
+uniform vec4  OUTLINE_color : source_color;
+void outline(in vec2 uv, in sampler2D tex, in vec2 spriteSize, in vec2 pixelSize, inout vec4 color) {
+    vec2 size = vec2(OUTLINE_thickness) / spriteSize;
+	   
+    float alpha = color.a;
+    alpha += texture(tex, uv + vec2(0.0, -size.y)).a;
+    alpha += texture(tex, uv + vec2(size.x, -size.y)).a;
+    alpha += texture(tex, uv + vec2(size.x, 0.0)).a;
+    alpha += texture(tex, uv + vec2(size.x, size.y)).a;
+    alpha += texture(tex, uv + vec2(0.0, size.y)).a;
+    alpha += texture(tex, uv + vec2(-size.x, size.y)).a;
+    alpha += texture(tex, uv + vec2(-size.x, 0.0)).a;
+    alpha += texture(tex, uv + vec2(-size.x, -size.y)).a;
+   
+    vec3 final_color = mix(OUTLINE_color.rgb, color.rgb, color.a);
+    color = vec4(final_color, clamp(alpha, 0.0, 1.0));
+}
+//SHADOW
+uniform bool  SHADOW_active  = true;
+uniform vec2  SHADOW_deform = vec2(0.0, 0.0);
+uniform vec2  SHADOW_offset = vec2(20.0, 20.0);
+uniform vec4  SHADOW_modulate : source_color;
+uniform float SHADOW_mix : hint_range(0,1) = 0;
+void shadow(in vec2 uv, in sampler2D txt, in vec2 size, in vec2 texturePixelSize, inout vec4 color) {
+	float sizex = float(textureSize(txt,int(texturePixelSize.x)).x); //comment for GLES2
+	float sizey = float(textureSize(txt,int(texturePixelSize.y)).y); //comment for GLES2
+	//float sizex = texture_size.x; //uncomment for GLES2
+	//float sizey = texture_size.y; //uncomment for GLES2
+	uv.y+=SHADOW_offset.y*texturePixelSize.y;
+	uv.x+=SHADOW_offset.x*texturePixelSize.x;
+	float decalx=((uv.y-texturePixelSize.x*sizex)*SHADOW_deform.x);
+	float decaly=((uv.y-texturePixelSize.y*sizey)*SHADOW_deform.y);
+	uv.x += decalx;
+	uv.y += decaly;
+	vec4 shadow = vec4(SHADOW_modulate.rgb, texture(txt, uv).a * SHADOW_modulate.a * 0.5);
+	color =mix(mix(shadow, color, color.a), color, SHADOW_mix);
+}
+
 
 void fragment() {
 	vec4 color = texture(TEXTURE, UV);
 	vec2 size = vec2(textureSize(TEXTURE, 0));
+	vec2 uv = UV;
+	vec2 screen_uv = SCREEN_UV;
 
+	if(HOLOWAVE_active) holowave(uv, TEXTURE, size, TEXTURE_PIXEL_SIZE, color);
+	if(OUTLINE_active) outline(uv, TEXTURE, size, TEXTURE_PIXEL_SIZE, color);
+	if(SHADOW_active) shadow(uv, TEXTURE, size, TEXTURE_PIXEL_SIZE, color);
 
 
 	COLOR=color;
@@ -49,96 +209,67 @@ void vertex() {
 "
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_st2lq"]
-shader = SubResource("Shader_qlsqf")
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_oay1k"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_t3lb8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_e06wh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_2mmwv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_cc5mr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_y64ey")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_vu1iv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_p2sjx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_8slbi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_ueai0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_temj0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_gwae1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_mn5fg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_5jmwu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_pvbc4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_vorph")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_b7r4p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_h4rrq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_qsqos")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_jqinh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_jykhe")
-}],
-"loop": true,
-"name": &"default",
-"speed": 25.0
-}]
+shader = SubResource("Shader_yhvx2")
+shader_parameter/HOLOWAVE_active = true
+shader_parameter/HOLOWAVE_offset = 24.79
+shader_parameter/HOLOWAVE_speed = 3.689
+shader_parameter/HOLOWAVE_waveHeight = 0.322
+shader_parameter/HOLOWAVE_waveSpeed = 5.689
+shader_parameter/HOLOWAVE_waveFreq = 66.555
+shader_parameter/HOLOWAVE_waveWidth = 2.596
+shader_parameter/HOLOWAVE_mix = 0.0
+shader_parameter/OUTLINE_active = true
+shader_parameter/OUTLINE_thickness = 7.033
+shader_parameter/OUTLINE_color = Color(0.223529, 0.223529, 0.223529, 1)
+shader_parameter/SHADOW_active = true
+shader_parameter/SHADOW_deform = Vector2(0, 0.17)
+shader_parameter/SHADOW_offset = Vector2(4, -5)
+shader_parameter/SHADOW_modulate = Color(0, 0, 0, 1)
+shader_parameter/SHADOW_mix = 0.0
 
 [node name="Demo" type="Node2D"]
-position = Vector2(-62, 17)
+position = Vector2(-30, 50)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 35.0
 offset_top = -41.0
-offset_right = 1285.0
-offset_bottom = 634.0
-color = Color(0, 0, 0.0352941, 1)
+offset_right = 1315.0
+offset_bottom = 661.0
+color = Color(0.247059, 0.235294, 0.439216, 1)
+
+[node name="super-right" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_1g2ki")
+position = Vector2(1079, 372)
+scale = Vector2(0.486572, 0.486572)
+sprite_frames = ExtResource("3_061al")
+autoplay = "default"
+frame_progress = 0.948825
+
+[node name="super-left" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_h17j3")
+position = Vector2(260, 363)
+scale = Vector2(0.53125, 0.53125)
+sprite_frames = ExtResource("3_061al")
+autoplay = "default"
+frame_progress = 0.315742
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="super-left"]
+autoplay = "teleport"
+libraries = {
+"": SubResource("AnimationLibrary_byhr4")
+}
+
+[node name="super-middle" type="AnimatedSprite2D" parent="."]
+light_mask = 8193
+material = SubResource("ShaderMaterial_4qsww")
+position = Vector2(641, 245)
+scale = Vector2(0.505859, 0.499812)
+sprite_frames = ExtResource("3_061al")
+autoplay = "default"
+frame_progress = 0.287625
 
 [node name="Godot-text" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_st2lq")
-position = Vector2(642, 528)
-scale = Vector2(0.456332, 0.456332)
+position = Vector2(660, 560)
+scale = Vector2(0.708515, 0.708515)
 texture = ExtResource("21_0xoix")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-light_mask = 8193
-position = Vector2(638, 262)
-scale = Vector2(0.387939, 0.383301)
-sprite_frames = SubResource("SpriteFrames_oay1k")
-autoplay = "default"
-frame_progress = 0.0471021
