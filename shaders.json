@@ -274,7 +274,7 @@
 		"filename": "plasmawaves.gdshader",
 		"activation": "PLASMAWAVES_active",
 		"function": "plasmaWaves",
-		"customCall": "UV, TEXTURE, size, TEXTURE_PIXEL_SIZE, color,FRAGCOORD,SCREEN_PIXEL_SIZE",
+		"customCall": "uv, TEXTURE, size, TEXTURE_PIXEL_SIZE, color,FRAGCOORD,SCREEN_PIXEL_SIZE",
 		"parameters": [
 			{
 				"name": "....",
