@@ -6,7 +6,7 @@ Ok, here we are.
 
 Some examples of what this addon can do:
 
-![supergodot5_resized](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/986aa841-e446-44ff-923a-78180ea10f19)
+![supergodot5v2](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/b373fda9-38d8-4389-babb-ffe6e8d69cd1)
 
 ![supergodot](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/2171350c-8f08-41d3-99b3-10ddce6d41d9)
 
