@@ -21,7 +21,7 @@ Disclaimer: This project is inspired by [godot-sprite-shader](https://github.com
 
 ## Description
 
-The Godot Sprite Shader Blender is a plugin for Godot that allows Sprite2D and AnimationSprite2D nodes to blend shaders from a list of available shaders. Users can select and add shaders to sprites dynamically, automatically downloading them from GitHub as needed. The plugin handles shader generation and blending, resulting in a texture that combines all selected shaders.
+The Godot Sprite Shader Mixer is a plugin for Godot that allows Sprite2D and AnimationSprite2D nodes to blend shaders from a list of available shaders. Users can select and add shaders to sprites dynamically, automatically downloading them from GitHub as needed. The plugin handles shader generation and blending, resulting in a texture that combines all selected shaders.
 
 ## Features
 
