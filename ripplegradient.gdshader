@@ -3,7 +3,7 @@ uniform float RIPPLEGRADIENT_speed = 1.0;
 uniform float RIPPLEGRADIENT_frequency = 10.0;
 uniform float RIPPLEGRADIENT_amplitude = 0.1;
 uniform bool RIPPLEGRADIENT_pastelColors = false;
-uniform float RIPPLEGRADIENT_mix : hint_range(0, 1, 0.1) = .9
+uniform float RIPPLEGRADIENT_mix : hint_range(0, 1, 0.1) = .9;
 void rippleGradient(in vec2 uv, in sampler2D txt, in vec2 size, in vec2 pixelSize, inout vec4 color){
     float time = TIME * RIPPLEGRADIENT_speed;
 
