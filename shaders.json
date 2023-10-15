@@ -36,7 +36,6 @@
 				"name": "LIGHTNING_ratio",
 				"description": "?"
 			},
-			,
 			{
 				"name": "LIGHTNING_time_shift",
 				"description": "because we use the sine function as a random, the same `TIME` will produce the same bolt, so if we create different bolts, we need to shift the time a little bit"
@@ -82,7 +81,7 @@
 			{
 				"name": "TODO",
 				"description": "..."
-			},
+			}
 		]
 	},
 	{
@@ -113,7 +112,7 @@
 			{
 				"name": "TELEPORT_color",
 				"description": "Color of the noise generated"
-			},
+			}
 		]
 	},
 	{
