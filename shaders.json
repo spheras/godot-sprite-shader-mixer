@@ -1,5 +1,32 @@
 [
 	{
+		"name": "Zoom And Rotation",
+		"group": "zoom",
+		"description": "Zoom and Rotate the texture",
+		"author": "-",
+		"link": "https://godotshaders.com/shader/2d-lightning/",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "zoomandrotate.gdshader",
+		"activation": "ZOOMANDROTATION_active",
+		"function": "zoomAndRotation",
+		"parameters": [
+			{
+				"name": "ZOOMANDROTATION_pivot",
+				"description": "pivot point to perform zoom and rotation"
+			},
+			{
+				"name": "ZOOMANDROTATION_zoom",
+				"description": "zoom amount"
+			},
+			{
+				"name": "ZOOMANDROTATION_rotate",
+				"description": "rotation amount"
+			}
+		]
+	},
+	{
 		"name": "Lightning",
 		"group": "light",
 		"description": "This shader creates a lightning effect in the middle of the sprite. (Low down the resolution then you will have pixel art lightning effect).  A bit modified from the original to produce the effect inside the sprite",
