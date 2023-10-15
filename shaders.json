@@ -1,5 +1,49 @@
 [
 	{
+		"name": "Lightning",
+		"group": "light",
+		"description": "This shader creates a lightning effect in the middle of the sprite. (Low down the resolution then you will have pixel art lightning effect).  A bit modified from the original to produce the effect inside the sprite",
+		"author": "vanviethieuanh",
+		"link": "https://godotshaders.com/shader/2d-lightning/",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "lightning.gdshader",
+		"activation": "LIGHTNING_active",
+		"function": "lightning",
+		"parameters": [
+			{
+				"name": "LIGHTNING_lightningColor",
+				"description": "specify color"
+			},
+			{
+				"name": "LIGHTNING_size",
+				"description": "how thick bolt line should be"
+			},
+			{
+				"name": "LIGHTNING_width",
+				"description": "how long the range of the bolt should be"
+			},
+			{
+				"name": "LIGHTNING_speed",
+				"description": "how fast the lightning should change"
+			},
+			{
+				"name": "LIGHTNING_cycle",
+				"description": "how many cycles the zigzag should be"
+			},
+			{
+				"name": "LIGHTNING_ratio",
+				"description": "?"
+			},
+			,
+			{
+				"name": "LIGHTNING_time_shift",
+				"description": "because we use the sine function as a random, the same `TIME` will produce the same bolt, so if we create different bolts, we need to shift the time a little bit"
+			}
+		]
+	},
+	{
 		"name": "Water2D",
 		"group": "Vertex",
 		"description": "Simulation of Water.",
@@ -17,7 +61,7 @@
 			{
 				"name": "TODO",
 				"description": "..."
-			},
+			}
 		]
 	},
 	{
