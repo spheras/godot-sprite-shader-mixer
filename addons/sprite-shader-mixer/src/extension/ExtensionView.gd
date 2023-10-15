@@ -2,6 +2,7 @@
 class_name ExtensionView
 extends VBoxContainer
 
+@onready var managerWindow=preload("res://addons/sprite-shader-mixer/src/extension/searchform/searchform.tscn")
 @onready var iconDown=preload("res://addons/sprite-shader-mixer/assets/icons/down.svg")
 @onready var iconRight=preload("res://addons/sprite-shader-mixer/assets/icons/right.svg")
 @onready var shaderInfoContainer = preload("res://addons/sprite-shader-mixer/src/extension/shaderinfo/ShaderInfoContainer.tscn")
@@ -14,6 +15,8 @@ extends VBoxContainer
 @onready var compCurrentShadersTitle:Button=$marginContainer/shader_container/currentShadersTitle
 @onready var compButtonDownload:Button=$marginContainer/shader_container/HBoxContainer/button_download
 @onready var compButtonSync:Button=$marginContainer/shader_container/HBoxContainer/button_sync
+@onready var compButtonManager:Button=$marginContainer/shader_container/HBoxContainer/button_manager
+
 var logic:ExtensionLogic=ExtensionLogic.new()
 
 func setParentSprite(parent)->void:
@@ -27,6 +30,7 @@ func _ready()->void:
 	self.compCurrentShadersTitle.toggled.connect(self._onShadersButtonToogled)
 	self.compButtonDownload.pressed.connect(self._onDownloadPressed)
 	self.compButtonSync.pressed.connect(self._onSyncShaderList)
+	self.compButtonManager.pressed.connect(self._onShowManager)
 
 	#connecting logic events
 	logic.onCreateContainerVisible.connect(_onCreateContainerVisible)
@@ -40,6 +44,31 @@ func _ready()->void:
 #-------------------------------------------------------------------
 # UI EVENTS
 #-------------------------------------------------------------------
+var manager:Window
+
+func _onShowManager():
+	if(self.manager!=null):
+		self.manager.queue_free()
+		
+	self.manager=self.managerWindow.instantiate()
+	self.add_child(manager)
+	manager.close_requested.connect(_onCloseManager);
+	manager.setShaders(self.logic.pendingShaders)
+	manager.shaderSelected.connect(_onManagerShaderSelected)
+
+func _onManagerShaderSelected(shader:ShaderInfo):
+	for  i in range(self.logic.pendingShaders.size()):
+		var iShader=self.logic.pendingShaders[i]
+		if(iShader.name==shader.name):
+			self.compOptionShaders.select(i+1)
+			self._onShaderComboSelected(i+1)
+	manager.queue_free()
+	self.manager=null
+
+func _onCloseManager():
+	manager.queue_free()
+	manager=null
+
 # Event produced when a Shader is selected from UI
 #   selectedShader -> the selected shader
 func _onShaderComboSelected(selectedShaderIndex:int)->void:
