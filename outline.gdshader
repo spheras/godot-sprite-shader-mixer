@@ -1,7 +1,7 @@
 //OUTLINE
 uniform bool  OUTLINE_active  = true;
-uniform float OUTLINE_thickness : hint_range(0, 30) = 3.0;
-uniform vec4  OUTLINE_color : source_color;
+uniform float OUTLINE_thickness : hint_range(0, 30) = 20.0;
+uniform vec4  OUTLINE_color : source_color = vec4(1,0,0,1);
 void outline(in vec2 uv, in sampler2D tex, in vec2 spriteSize, in vec2 pixelSize, inout vec4 color) {
     vec2 size = vec2(OUTLINE_thickness) / spriteSize;
 	   

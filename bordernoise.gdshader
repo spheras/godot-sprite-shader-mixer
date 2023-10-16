@@ -1,10 +1,10 @@
 uniform bool BORDERNOISE_active = true;
 uniform float BORDERNOISE_max_line_width:hint_range(0.0, 50.0, 0.1) = 10.0;
-uniform float BORDERNOISE_min_line_width:hint_range(0.0, 1000.0, 0.1) = 5.0;
+uniform float BORDERNOISE_min_line_width:hint_range(0.0, 1000.0, 0.1) = 88.0;
 uniform float BORDERNOISE_freq:hint_range(0.0, 12.0, 0.1) = 1.0;
 uniform float BORDERNOISE_block_size:hint_range(0.0, 100.0, 0.1) = 20.0;
 uniform vec4 BORDERNOISE_starting_colour : source_color= vec4(0,0,0,1);
-uniform vec4 BORDERNOISE_ending_colour: source_color = vec4(1);
+uniform vec4 BORDERNOISE_ending_colour: source_color = vec4(1,0,0,1);
 const float BORDERNOISE_pi = 3.1415;
 const int BORDERNOISE_ang_res = 16;
 const int BORDERNOISE_grad_res = 8;
