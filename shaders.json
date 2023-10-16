@@ -71,7 +71,7 @@
 	},
 	{
 		"name": "Water2D",
-		"group": "Vertex",
+		"group": "vertex",
 		"description": "Simulation of Water.",
 		"author": "TODO",
 		"link": "TODO",
@@ -92,7 +92,7 @@
 	},
 	{
 		"name": "Pseudo3D",
-		"group": "Vertex",
+		"group": "vertex",
 		"description": "Simulation of 3D.",
 		"author": "Hei",
 		"link": "https://simonhartcher.com/3d-look-rotations-in-2d-with-godot-4",
