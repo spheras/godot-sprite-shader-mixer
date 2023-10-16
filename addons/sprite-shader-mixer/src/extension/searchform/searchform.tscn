@@ -1,9 +1,109 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4nepe0a70ju5"]
+[gd_scene load_steps=27 format=3 uid="uid://d4nepe0a70ju5"]
 
 [ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/searchform/searchform.gd" id="1_ovoip"]
+[ext_resource type="Texture2D" uid="uid://b1rygy2x8jbew" path="res://addons/sprite-shader-mixer/assets/icons/download.svg" id="2_b17sv"]
+[ext_resource type="Texture2D" uid="uid://bkmtfe42ptooh" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0000.png" id="3_n6bfe"]
+[ext_resource type="Texture2D" uid="uid://b1o4oqvqpb1qy" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0001.png" id="4_lby8e"]
+[ext_resource type="Texture2D" uid="uid://bs33nr7syqox7" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0002.png" id="5_c5oyc"]
+[ext_resource type="Texture2D" uid="uid://8wimrai50mn1" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0003.png" id="6_l3623"]
+[ext_resource type="Texture2D" uid="uid://dwpufhhaw82ug" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0004.png" id="7_eykmg"]
+[ext_resource type="Texture2D" uid="uid://cihrw6565y3r1" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0005.png" id="8_sfuok"]
+[ext_resource type="Texture2D" uid="uid://cblgnfg5ui8df" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0006.png" id="9_fur0y"]
+[ext_resource type="Texture2D" uid="uid://xols7iqcmm6u" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0007.png" id="10_i3aty"]
+[ext_resource type="Texture2D" uid="uid://cv1ig6gansjqn" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0008.png" id="11_0k3mr"]
+[ext_resource type="Texture2D" uid="uid://0e7h0nbb5uxg" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0009.png" id="12_i7uuo"]
+[ext_resource type="Texture2D" uid="uid://bglwd2chn700u" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0010.png" id="13_pofvg"]
+[ext_resource type="Texture2D" uid="uid://c145wbhfimwne" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0011.png" id="14_1mijx"]
+[ext_resource type="Texture2D" uid="uid://dj4d28tivbgb0" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0012.png" id="15_t7mnh"]
+[ext_resource type="Texture2D" uid="uid://7pagyvbmsoey" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0013.png" id="16_vx01d"]
+[ext_resource type="Texture2D" uid="uid://coqntke8nkel5" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0014.png" id="17_labou"]
+[ext_resource type="Texture2D" uid="uid://bdoqc7jitaivj" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0015.png" id="18_er0m5"]
+[ext_resource type="Texture2D" uid="uid://mwcarsfwblj" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0016.png" id="19_wdj5v"]
+[ext_resource type="Texture2D" uid="uid://d2dubli5df5va" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0017.png" id="20_q40o3"]
+[ext_resource type="Texture2D" uid="uid://dqv5ugl4038aj" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0018.png" id="21_f5032"]
+[ext_resource type="Texture2D" uid="uid://dn2tu0peutt2u" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0019.png" id="22_xwcvw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7166x"]
 bg_color = Color(0.210938, 0.238281, 0.289063, 1)
+
+[sub_resource type="Shader" id="Shader_qu8vv"]
+code = "shader_type canvas_item;
+
+void fragment() {
+	// Place fragment code here.
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cb3l7"]
+shader = SubResource("Shader_qu8vv")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jinux"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_n6bfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lby8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c5oyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l3623")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eykmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sfuok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fur0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i3aty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0k3mr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_i7uuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pofvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1mijx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_t7mnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vx01d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_labou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_er0m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wdj5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_q40o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_f5032")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xwcvw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
 
 [node name="Window" type="Window"]
 title = "Shader Search"
@@ -47,11 +147,9 @@ placeholder_text = "search"
 
 [node name="option_group" type="OptionButton" parent="panel_background/margin/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-item_count = 1
 selected = 0
-popup/item_0/text = "All"
-popup/item_0/id = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="panel_background/margin/VBoxContainer"]
 layout_mode = 2
@@ -88,6 +186,7 @@ tab_1/title = "Example"
 
 [node name="panel_info" type="ScrollContainer" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(310, 250)
 layout_mode = 2
 
@@ -191,8 +290,37 @@ autowrap_mode = 3
 
 [node name="panel_example" type="Panel" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(310, 0)
+custom_minimum_size = Vector2(310, 245)
 layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="button_download" type="Button" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer/panel_example"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.5
+offset_top = -27.0
+offset_right = 143.5
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Download Shader 
+to Visualize Demo"
+icon = ExtResource("2_b17sv")
+expand_icon = true
+
+[node name="supergodot" type="AnimatedSprite2D" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer/panel_example"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_cb3l7")
+position = Vector2(150, 125)
+scale = Vector2(0.275, 0.275)
+sprite_frames = SubResource("SpriteFrames_jinux")
+autoplay = "default"
+frame_progress = 0.685731
 
 [node name="VBoxContainer" type="HBoxContainer" parent="panel_background/margin/VBoxContainer"]
 layout_mode = 2
@@ -200,4 +328,5 @@ layout_mode = 2
 [node name="button_select" type="Button" parent="panel_background/margin/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+disabled = true
 text = "Select Shader"

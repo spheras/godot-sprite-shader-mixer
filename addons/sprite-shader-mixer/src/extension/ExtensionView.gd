@@ -53,7 +53,7 @@ func _onShowManager():
 	self.manager=self.managerWindow.instantiate()
 	self.add_child(manager)
 	manager.close_requested.connect(_onCloseManager);
-	manager.setShaders(self.logic.pendingShaders)
+	manager.setShaders(self.logic.pendingShaders, self.logic)
 	manager.shaderSelected.connect(_onManagerShaderSelected)
 
 func _onManagerShaderSelected(shader:ShaderInfo):

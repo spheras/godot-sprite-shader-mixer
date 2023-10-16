@@ -67,7 +67,9 @@ func onAddShaderPressed(shaderName:String)->void:
 
 # Function called when the user wants to download a shader from github
 #   shaderName -> the name of the shader to download
-func onDownloadShaderPressed(shaderName:String, node:Node)->void:
+#   node -> the parent node, just for hack purposes
+#   text -> if the download is for testing the shader (true) or we want to really download and run the texture
+func onDownloadShaderPressed(shaderName:String, node:Node, test:bool=false)->void:
 	var shaderInfo=_findShaderInfo(shaderName)
 	if(shaderInfo!=null):
 		var shaderGithubPath=SHADERS_GITHUB_BASE_PATH +shaderInfo.filename
@@ -78,8 +80,9 @@ func onDownloadShaderPressed(shaderName:String, node:Node)->void:
 		var shaderPath=SHADERS_LOCAL_BASE_PATH+shaderInfo.filename
 		Util.saveFile(shaderPath,shaderContent)
 		print("Saved shader to: ", shaderPath)
-		self.onDownloadButtonVisible.emit(false)
-		self.onAddShaderButtonVisible.emit(true)
+		if(!test):
+			self.onDownloadButtonVisible.emit(false)
+			self.onAddShaderButtonVisible.emit(true)
 
 		#Download vertex code if neceesary
 		if(shaderInfo.vertex):
@@ -129,7 +132,8 @@ func onDownloadShaderPressed(shaderName:String, node:Node)->void:
 			#HACK END
 
 		#Adding it
-		self.onAddShaderPressed(shaderName)
+		if(!test):
+			self.onAddShaderPressed(shaderName)
 
 
 # Function called when a shader has been selected
