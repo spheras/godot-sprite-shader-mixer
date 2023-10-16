@@ -2,7 +2,7 @@
 uniform bool      DISOLVEBURN_active  = true;
 uniform sampler2D DISOLVEBURN_noise_tex;
 uniform vec4      DISOLVEBURN_burn_color : source_color = vec4(1.0, 0.3, 0.05, 1.0);
-uniform float     DISOLVEBURN_process_value : hint_range(0, 1) = 0;
+uniform float     DISOLVEBURN_process_value : hint_range(0, 1) = 0.33;
 void disolveBurn(in vec2 uv, in sampler2D tex, in vec2 spriteSize, in vec2 pixelSize, inout vec4 finalColor)
 {
 	float noise = texture(DISOLVEBURN_noise_tex, uv).r;

@@ -1,7 +1,7 @@
 //TELEPORT
 uniform bool TELEPORT_active = true;
-uniform float TELEPORT_progress : hint_range(0.0, 1.0);
-uniform float TELEPORT_noise_desnity:hint_range(0.0, 500.0, 0.1) = 60;
+uniform float TELEPORT_progress : hint_range(0.0, 1.0)=0.24;
+uniform float TELEPORT_noise_desnity:hint_range(0.0, 500.0, 0.1) = 160;
 uniform float TELEPORT_beam_size : hint_range(0.01, 0.15);
 uniform vec4 TELEPORT_color : source_color = vec4(0.0, 1.02, 1.2, 1.0);
 vec2 TELEPORT_random(vec2 uv){
