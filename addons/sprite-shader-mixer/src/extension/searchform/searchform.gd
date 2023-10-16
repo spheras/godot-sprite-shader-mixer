@@ -114,8 +114,16 @@ func _onShaderSelected():
 			shaders.append(shader)
 			var shaderCode:Shader=shader.generateShaderCode(shaders)
 			%supergodot.material.shader=shaderCode
+			
+			for param in shader.parameters:
+				if(param.texture!=null && param.texture.length()>0):
+					var texturePath=logic.SHADERS_LOCAL_BASE_PATH+param.texture
+					var textureRes:CompressedTexture2D=ResourceLoader.load(texturePath)
+					%supergodot.material.set_shader_parameter(param.name,textureRes)
+			
 			%button_download.visible = false
 			%sprites.visible=true
+			(%supergodot as AnimatedSprite2D).play()
 			button_remove.disabled=false
 	else:
 		panel_right.visible=false
@@ -136,11 +144,19 @@ func _onDownloadPressed():
 
 	%sprites.visible=true
 	%button_download.visible=false
+	(%supergodot as AnimatedSprite2D).play()
 	button_remove.disabled=false
 	var shaders:Array[ShaderInfo]=[]
 	shaders.append(shader)
 	var shaderCode:Shader=shader.generateShaderCode(shaders)
 	%supergodot.material.shader=shaderCode
+	
+	for param in shader.parameters:
+		if(param.texture!=null && param.texture.length()>0):
+			var texturePath=logic.SHADERS_LOCAL_BASE_PATH+param.texture
+			var textureRes:CompressedTexture2D=ResourceLoader.load(texturePath)
+			%supergodot.material.set_shader_parameter(param.name,textureRes)
+	
 	
 	self.button_download.text=oldText
 

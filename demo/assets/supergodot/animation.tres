@@ -1,88 +1,88 @@
 [gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://vk46lrviw2t3"]
 
-[ext_resource type="Texture2D" uid="uid://c07t2gtcgivu3" path="res://demo/assets/supergodot/supergodot-0000.png" id="1_tcqcn"]
-[ext_resource type="Texture2D" uid="uid://df3ytg0qn46tl" path="res://demo/assets/supergodot/supergodot-0001.png" id="2_wibfl"]
-[ext_resource type="Texture2D" uid="uid://bwsh5ic42ptu0" path="res://demo/assets/supergodot/supergodot-0002.png" id="3_iu5dv"]
-[ext_resource type="Texture2D" uid="uid://c71u2dch58md2" path="res://demo/assets/supergodot/supergodot-0003.png" id="4_p3wq5"]
-[ext_resource type="Texture2D" uid="uid://d1ig54udlb1xy" path="res://demo/assets/supergodot/supergodot-0004.png" id="5_pd5d6"]
-[ext_resource type="Texture2D" uid="uid://hxrxd7sc6vt2" path="res://demo/assets/supergodot/supergodot-0005.png" id="6_7bf0o"]
-[ext_resource type="Texture2D" uid="uid://dbd2ppfmye2vc" path="res://demo/assets/supergodot/supergodot-0006.png" id="7_prtaq"]
-[ext_resource type="Texture2D" uid="uid://ct0uynnpl6w3n" path="res://demo/assets/supergodot/supergodot-0007.png" id="8_sp4t7"]
-[ext_resource type="Texture2D" uid="uid://bqxjdlhxgfruy" path="res://demo/assets/supergodot/supergodot-0008.png" id="9_55tt2"]
-[ext_resource type="Texture2D" uid="uid://dwqt7vn0sdpgq" path="res://demo/assets/supergodot/supergodot-0009.png" id="10_mspr7"]
-[ext_resource type="Texture2D" uid="uid://ckfo4xndw32q1" path="res://demo/assets/supergodot/supergodot-0010.png" id="11_xxvxp"]
-[ext_resource type="Texture2D" uid="uid://dyqlp0ddwvqrf" path="res://demo/assets/supergodot/supergodot-0011.png" id="12_tpgma"]
-[ext_resource type="Texture2D" uid="uid://hyalqq3u0ox4" path="res://demo/assets/supergodot/supergodot-0012.png" id="13_nbgfq"]
-[ext_resource type="Texture2D" uid="uid://p24ueaupc2sx" path="res://demo/assets/supergodot/supergodot-0013.png" id="14_vk1f2"]
-[ext_resource type="Texture2D" uid="uid://dslkly12nx7kp" path="res://demo/assets/supergodot/supergodot-0014.png" id="15_gbxce"]
-[ext_resource type="Texture2D" uid="uid://bbxv86hom4lcw" path="res://demo/assets/supergodot/supergodot-0015.png" id="16_mhya7"]
-[ext_resource type="Texture2D" uid="uid://bi5u1xm7pr2ma" path="res://demo/assets/supergodot/supergodot-0016.png" id="17_tj4xf"]
-[ext_resource type="Texture2D" uid="uid://lgt4s5glokxo" path="res://demo/assets/supergodot/supergodot-0017.png" id="18_0gpgo"]
-[ext_resource type="Texture2D" uid="uid://d2h57p4ntjlwp" path="res://demo/assets/supergodot/supergodot-0018.png" id="19_8cfnb"]
-[ext_resource type="Texture2D" uid="uid://jstb3t5fl3k8" path="res://demo/assets/supergodot/supergodot-0019.png" id="20_27705"]
+[ext_resource type="Texture2D" uid="uid://bkmtfe42ptooh" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0000.png" id="1_fcmvn"]
+[ext_resource type="Texture2D" uid="uid://b1o4oqvqpb1qy" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0001.png" id="2_oi1dm"]
+[ext_resource type="Texture2D" uid="uid://bs33nr7syqox7" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0002.png" id="3_gt7fe"]
+[ext_resource type="Texture2D" uid="uid://8wimrai50mn1" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0003.png" id="4_fmvbe"]
+[ext_resource type="Texture2D" uid="uid://dwpufhhaw82ug" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0004.png" id="5_ow0m5"]
+[ext_resource type="Texture2D" uid="uid://cihrw6565y3r1" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0005.png" id="6_ai0v8"]
+[ext_resource type="Texture2D" uid="uid://cblgnfg5ui8df" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0006.png" id="7_570lf"]
+[ext_resource type="Texture2D" uid="uid://xols7iqcmm6u" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0007.png" id="8_e7ufp"]
+[ext_resource type="Texture2D" uid="uid://cv1ig6gansjqn" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0008.png" id="9_vh1yh"]
+[ext_resource type="Texture2D" uid="uid://0e7h0nbb5uxg" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0009.png" id="10_ccy8w"]
+[ext_resource type="Texture2D" uid="uid://bglwd2chn700u" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0010.png" id="11_5oyt2"]
+[ext_resource type="Texture2D" uid="uid://c145wbhfimwne" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0011.png" id="12_fcmb5"]
+[ext_resource type="Texture2D" uid="uid://dj4d28tivbgb0" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0012.png" id="13_aulyl"]
+[ext_resource type="Texture2D" uid="uid://7pagyvbmsoey" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0013.png" id="14_hw8vs"]
+[ext_resource type="Texture2D" uid="uid://coqntke8nkel5" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0014.png" id="15_o1u4f"]
+[ext_resource type="Texture2D" uid="uid://bdoqc7jitaivj" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0015.png" id="16_8qk0w"]
+[ext_resource type="Texture2D" uid="uid://mwcarsfwblj" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0016.png" id="17_0ixae"]
+[ext_resource type="Texture2D" uid="uid://d2dubli5df5va" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0017.png" id="18_eqhlp"]
+[ext_resource type="Texture2D" uid="uid://dqv5ugl4038aj" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0018.png" id="19_lt5ig"]
+[ext_resource type="Texture2D" uid="uid://dn2tu0peutt2u" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0019.png" id="20_qdud3"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tcqcn")
+"texture": ExtResource("1_fcmvn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_wibfl")
+"texture": ExtResource("2_oi1dm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_iu5dv")
+"texture": ExtResource("3_gt7fe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_p3wq5")
+"texture": ExtResource("4_fmvbe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_pd5d6")
+"texture": ExtResource("5_ow0m5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_7bf0o")
+"texture": ExtResource("6_ai0v8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_prtaq")
+"texture": ExtResource("7_570lf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_sp4t7")
+"texture": ExtResource("8_e7ufp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_55tt2")
+"texture": ExtResource("9_vh1yh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_mspr7")
+"texture": ExtResource("10_ccy8w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_xxvxp")
+"texture": ExtResource("11_5oyt2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_tpgma")
+"texture": ExtResource("12_fcmb5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_nbgfq")
+"texture": ExtResource("13_aulyl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_vk1f2")
+"texture": ExtResource("14_hw8vs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_gbxce")
+"texture": ExtResource("15_o1u4f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_mhya7")
+"texture": ExtResource("16_8qk0w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_tj4xf")
+"texture": ExtResource("17_0ixae")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_0gpgo")
+"texture": ExtResource("18_eqhlp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_8cfnb")
+"texture": ExtResource("19_lt5ig")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_27705")
+"texture": ExtResource("20_qdud3")
 }],
 "loop": true,
 "name": &"default",

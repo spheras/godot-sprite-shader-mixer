@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d4nepe0a70ju5"]
+[gd_scene load_steps=29 format=3 uid="uid://d4nepe0a70ju5"]
 
 [ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/searchform/searchform.gd" id="1_ovoip"]
 [ext_resource type="Texture2D" uid="uid://b1rygy2x8jbew" path="res://addons/sprite-shader-mixer/assets/icons/download.svg" id="2_b17sv"]
@@ -27,6 +27,25 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7166x"]
 bg_color = Color(0.210938, 0.238281, 0.289063, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pp7k"]
+content_margin_left = 7.0
+content_margin_top = 7.0
+content_margin_right = 7.0
+content_margin_bottom = 7.0
+bg_color = Color(0.25098, 0.258824, 0.27451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+corner_detail = 20
+expand_margin_left = 7.0
+shadow_color = Color(0, 0, 0, 0.894118)
+shadow_size = 1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cb3l7"]
 
@@ -158,6 +177,7 @@ layout_mode = 2
 
 [node name="panel_right" type="MarginContainer" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -178,6 +198,7 @@ tab_1/title = "Example"
 
 [node name="panel_info" type="ScrollContainer" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(310, 250)
 layout_mode = 2
 
@@ -302,14 +323,16 @@ offset_right = 143.5
 offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Download Shader 
-to Visualize Demo"
+theme_override_styles/normal = SubResource("StyleBoxFlat_8pp7k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8pp7k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8pp7k")
+text = "Press to Download Shader 
+and Preview Demo"
 icon = ExtResource("2_b17sv")
 expand_icon = true
 
 [node name="sprites" type="Control" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer/panel_example"]
 unique_name_in_owner = true
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -326,7 +349,7 @@ position = Vector2(150, 125)
 scale = Vector2(0.275, 0.275)
 sprite_frames = SubResource("SpriteFrames_jinux")
 autoplay = "default"
-frame_progress = 0.685731
+frame_progress = 0.61346
 
 [node name="VBoxContainer" type="HBoxContainer" parent="panel_background/margin/VBoxContainer"]
 layout_mode = 2
