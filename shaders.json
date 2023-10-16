@@ -761,7 +761,7 @@
 		"group": "distort",
 		"description": "Holographic Wave effect.",
 		"author": "duongvituan",
-		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/holowave.shader",
+		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/holo_wave.shader",
 		"adaptedBy": "spheras",
 		"license": "MIT",
 		"version": "1.0",
