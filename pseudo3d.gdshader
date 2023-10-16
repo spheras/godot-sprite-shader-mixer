@@ -2,7 +2,7 @@
 // Camera FOV.,- - <MM
 uniform bool PSEUDO3D_active = true;
 uniform float PSEUDO3D_fov : hint_range(1, 179) = 90;
-uniform float PSEUDO3D_y_rot : hint_range(-180, 180) = 0.0;
+uniform float PSEUDO3D_y_rot : hint_range(-180, 180) = 50.0;
 uniform float PSEUDO3D_x_rot : hint_range(-180, 180) = 0.0;
 // At 0, the image retains its size when unrotated.
 // At 1, the image is resized so that it can do a full

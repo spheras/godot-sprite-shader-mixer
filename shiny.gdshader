@@ -1,6 +1,6 @@
 //SHINY
 uniform bool  SHINY_active  = true;
-uniform float SHINY_processValue: hint_range(0, 1) = 0.0;
+uniform float SHINY_processValue: hint_range(0, 1) = 0.5;
 uniform float SHINY_size : hint_range(-1, 1) = -0.1;
 uniform float SHINY_smoothLight : hint_range(0, 1) = 0.25;
 uniform float SHINY_intensity : hint_range(0, 5) = 0.75;

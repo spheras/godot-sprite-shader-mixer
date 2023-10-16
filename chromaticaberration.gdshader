@@ -1,12 +1,12 @@
 //CHROMATICABERRATION
 uniform bool CHROMATICABERRATION_active = true;
-uniform float CHROMATICABERRATION_red_displacement : hint_range(-0.01, 0.01);
+uniform float CHROMATICABERRATION_red_displacement : hint_range(-0.01, 0.01)=0.01;
 uniform bool CHROMATICABERRATION_red_vertical=false;
-uniform float CHROMATICABERRATION_green_displacement : hint_range(-0.01, 0.01);
+uniform float CHROMATICABERRATION_green_displacement : hint_range(-0.01, 0.01)=0;
 uniform bool CHROMATICABERRATION_green_vertical=false;
-uniform float CHROMATICABERRATION_blue_displacement : hint_range(-0.01, 0.01);
+uniform float CHROMATICABERRATION_blue_displacement : hint_range(-0.01, 0.01)=-0.01;
 uniform bool CHROMATICABERRATION_blue_vertical=false;
-uniform float CHROMATICABERRATION_scale: hint_range(-100.0, 100.0, 0.1)=1;
+uniform float CHROMATICABERRATION_scale: hint_range(-100.0, 100.0, 0.1)=3.5;
 void chromaticAberration(in vec2 uv, in sampler2D txt, vec2 size, vec2 pixelSize, inout vec4 color){
     // Displacement of red channel
 	vec2 redDisplacementVector;

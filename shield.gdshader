@@ -1,9 +1,9 @@
 //SHIELD
 uniform bool SHIELD_active = true;
-uniform float SHIELD_ring_radius : hint_range(0.1, 0.5, 0.01) = 0.4;
-uniform float SHIELD_thickness_scalar : hint_range(0.0, 1, 0.05) = 0.7;
-uniform float SHIELD_oscillation_scalar : hint_range(0.0, 0.25, 0.005) = 0.025;
-uniform float SHIELD_speed : hint_range(0.0, 50.0, 0.1) = 2.0;
+uniform float SHIELD_ring_radius : hint_range(0.1, 0.5, 0.01) = 0.2;
+uniform float SHIELD_thickness_scalar : hint_range(0.0, 1, 0.05) = 0.2;
+uniform float SHIELD_oscillation_scalar : hint_range(0.0, 0.25, 0.005) = 0.045;
+uniform float SHIELD_speed : hint_range(0.0, 50.0, 0.1) = 3.0;
 uniform vec4 SHIELD_main_color : source_color = vec4(0.0,0.5,0.0,1.0);
 uniform vec4 SHIELD_lerp_color : source_color = vec4(0.0,1.0,0.0,1.0);
 float SHIELD_range_lerp(float value, float min1, float min2, float max1, float max2){

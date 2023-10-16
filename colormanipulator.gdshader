@@ -1,10 +1,10 @@
 //COLORMANIPULATOR
 uniform bool COLORMANIPULATOR_active = true;
-uniform float COLORMANIPULATOR_brightness : hint_range(-1, 1) = 0;
-uniform float COLORMANIPULATOR_contrast : hint_range(0, 3) = 1.0;
-uniform float COLORMANIPULATOR_saturation : hint_range(0, 3) = 1.0;
+uniform float COLORMANIPULATOR_brightness : hint_range(-1, 1) = -1.0;
+uniform float COLORMANIPULATOR_contrast : hint_range(0, 3) = 3.0;
+uniform float COLORMANIPULATOR_saturation : hint_range(0, 3) = 3.0;
 uniform float COLORMANIPULATOR_redVal : hint_range(0, 1) = 1.0;
-uniform float COLORMANIPULATOR_greenVal : hint_range(0, 1) = 1.0;
+uniform float COLORMANIPULATOR_greenVal : hint_range(0, 1) = 0.5;
 uniform float COLORMANIPULATOR_blueVal : hint_range(0, 1) = 1.0;
 uniform vec4 COLORMANIPULATOR_tint_color : source_color = vec4(1.0, 1.0, 1.0, 1.0);
 uniform float COLORMANIPULATOR_tint_effect_factor : hint_range(0, 1) = 0.0;

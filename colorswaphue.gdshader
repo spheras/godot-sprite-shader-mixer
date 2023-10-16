@@ -1,7 +1,7 @@
 uniform bool COLORSWAPHUE_active = true;
-uniform vec4 COLORSWAPHUE_from : source_color;
-uniform vec4 COLORSWAPHUE_to : source_color;
-uniform float COLORSWAPHUE_tolerance: hint_range(0.0, 1.0);
+uniform vec4 COLORSWAPHUE_from : source_color=vec4(0,0,1,1);
+uniform vec4 COLORSWAPHUE_to : source_color=vec4(1,0,0,1);
+uniform float COLORSWAPHUE_tolerance: hint_range(0.0, 1.0)=1.0;
 vec3 COLORSWAPHUE_rgb2hsv(vec3 c)
 {
     vec4 K = vec4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);

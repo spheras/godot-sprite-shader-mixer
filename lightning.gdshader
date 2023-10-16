@@ -1,11 +1,11 @@
 //LIGHTNING
 uniform bool LIGHTNING_active=true;
-uniform vec4 LIGHTNING_lightningColor: source_color;
-uniform float LIGHTNING_size: hint_range (0.,1.)=0.05;
-uniform float LIGHTNING_width: hint_range (0.,1.)=0.3;
-uniform float LIGHTNING_speed:hint_range(0.0, 15.0, 0.1)=7.6;
-uniform float LIGHTNING_cycle:hint_range(0.0, 15.0, 0.1)=7.;
-uniform float LIGHTNING_ratio:hint_range(0.0, 15.0, 0.1)=2.;
+uniform vec4 LIGHTNING_lightningColor: source_color=vec4(1,1,1,1);
+uniform float LIGHTNING_size: hint_range (0.,1.)=0.3;
+uniform float LIGHTNING_width: hint_range (0.,1.)=1;
+uniform float LIGHTNING_speed:hint_range(0.0, 15.0, 0.1)=4;
+uniform float LIGHTNING_cycle:hint_range(0.0, 15.0, 0.1)=3.5;
+uniform float LIGHTNING_ratio:hint_range(0.0, 15.0, 0.1)=4.6;
 uniform float LIGHTNING_time_shift:hint_range(0.0, 15.0, 0.1)=15;
 float LIGHTNING_rand(float x){
 	return fract(sin(x)*100000.0);
