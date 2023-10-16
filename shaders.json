@@ -170,7 +170,7 @@
 		"adaptedBy": "spheras",
 		"license": "CC0",
 		"version": "1.0",
-		"filename": "almostInvisible.gdshader",
+		"filename": "almostinvisible.gdshader",
 		"activation": "ALMOSTINVISIBLE_active",
 		"function": "almostInvisible",
 		"customCall": "uv, screen_uv, TEXTURE, size, TEXTURE_PIXEL_SIZE, color, FRAGCOORD",
