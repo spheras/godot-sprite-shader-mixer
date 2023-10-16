@@ -1,10 +1,10 @@
 [
 	{
 		"name": "Zoom And Rotation",
-		"group": "zoom",
+		"group": "distort",
 		"description": "Zoom and Rotate the texture",
 		"author": "-",
-		"link": "https://godotshaders.com/shader/2d-lightning/",
+		"link": "-",
 		"adaptedBy": "spheras",
 		"license": "MIT",
 		"version": "1.0",
@@ -28,7 +28,7 @@
 	},
 	{
 		"name": "Lightning",
-		"group": "light",
+		"group": "fx",
 		"description": "This shader creates a lightning effect in the middle of the sprite. (Low down the resolution then you will have pixel art lightning effect).  A bit modified from the original to produce the effect inside the sprite",
 		"author": "vanviethieuanh",
 		"link": "https://godotshaders.com/shader/2d-lightning/",
@@ -113,7 +113,7 @@
 	},
 	{
 		"name": "Teleport",
-		"group": "Disolve",
+		"group": "disolve",
 		"description": "Make an object dissapear in a bright glow, like it is being teleported away. See the effect in action in the animation below.",
 		"author": "pend00",
 		"link": "https://godotshaders.com/shader/teleport-effect/",
@@ -144,7 +144,7 @@
 	},
 	{
 		"name": "Color Manipulator",
-		"group": "General",
+		"group": "color",
 		"description": "This is a simple color manipulator, it support brightness, contrast, saturation, tint and more.",
 		"author": "randomDam",
 		"link": "https://godotshaders.com/shader/color-manipulator/",
@@ -163,7 +163,7 @@
 	},
 	{
 		"name": "Almost Invisible",
-		"group": "General",
+		"group": "disolve",
 		"description": "Given a sprite, this shader gives it the ability to become invisible and fade into the background. But the ability is not flawless and the background is slightly deformed by the invisibility cloaking.",
 		"author": "CasualGarageCoder",
 		"link": "https://godotshaders.com/shader/almost-invisible-character/",
@@ -187,7 +187,7 @@
 	},
 	{
 		"name": "Border Noise",
-		"group": "Transform",
+		"group": "outline",
 		"description": "Border with gradient and Noise effect, seems like mana of your sprite. Some minor tweaks done to adapt.",
 		"author": "9exa",
 		"link": "https://godotshaders.com/shader/animated-and-gradient-outlines/",
@@ -206,7 +206,7 @@
 	},
 	{
 		"name": "Chromatic Aberration",
-		"group": "Transform",
+		"group": "color",
 		"description": "Chromatic Aberration effect. This shader only affect to the sprite.",
 		"author": "chatgpt",
 		"link": "",
@@ -249,7 +249,7 @@
 	},
 	{
 		"name": "Circle Pixel",
-		"group": "Transform",
+		"group": "distort",
 		"description": "Pixelate the texture to circle pixels with curstom radius",
 		"author": "jijiji",
 		"link": "https://godotshaders.com/shader/circle-pixel/",
@@ -272,7 +272,7 @@
 	},
 	{
 		"name": "Pixel Disolve",
-		"group": "Disolve",
+		"group": "disolve",
 		"description": "Disolve the texture by pixels, and custom resolution of pixels",
 		"author": "cak3_lover",
 		"link": "https://godotshaders.com/shader/pixelate-into-view-custom-resolution/",
@@ -295,7 +295,7 @@
 	},
 	{
 		"name": "Shield",
-		"group": "Transform",
+		"group": "outline",
 		"description": "Shield Fx over the texture",
 		"author": "Erich_L",
 		"link": "https://godotshaders.com/shader/unit-selected-oscillating-circle/",
@@ -334,7 +334,7 @@
 	},
 	{
 		"name": "Plasma Waves",
-		"group": "Transform",
+		"group": "distort",
 		"description": "Plasma Waves adapted to texture",
 		"author": "kcfresh53 -> scarletshark",
 		"link": "https://godotshaders.com/shader/plasma-waves/",
@@ -354,7 +354,7 @@
 	},
 	{
 		"name": "Speed Lines",
-		"group": "Transform",
+		"group": "fx",
 		"description": "based on a speedlines shader by axilirate, this one is more psicodelic and like super saiyan power.",
 		"author": "axilirate",
 		"link": "https://godotshaders.com/shader/speed-lines-shader-for-godot-4/",
@@ -406,7 +406,7 @@
 	},
 	{
 		"name": "Circular Waves",
-		"group": "Transform",
+		"group": "fx",
 		"description": "Based on Circular Waves 2D around your texture (original author Erich_L), but modified a bit to produce more psicodelic results.",
 		"author": "Erich_L",
 		"link": "https://godotshaders.com/shader/circular-waves-2d/",
@@ -465,7 +465,7 @@
 	},
 	{
 		"name": "Color Swap Hue",
-		"group": "Transform",
+		"group": "color",
 		"description": "This shader will convert a color to another with a margin of tolerance while trying to account for the slights variations in hue and saturations artists use when adding shades/highlights.",
 		"author": "Noidexe",
 		"link": "https://godotshaders.com/shader/color-swap-with-hue-variation-preservation/",
@@ -492,7 +492,7 @@
 	},
 	{
 		"name": "Line Art",
-		"group": "Transform",
+		"group": "distort",
 		"description": "simple line art effect, change threshold to modify detail.",
 		"author": "Ayano",
 		"link": "https://godotshaders.com/shader/line-art/",
@@ -519,7 +519,7 @@
 	},
 	{
 		"name": "RippleGradient",
-		"group": "Transfomr",
+		"group": "color",
 		"description": "This is as simple ripple gradient shader. Similar to Rainbow.",
 		"author": "Miisannn",
 		"link": "https://godotshaders.com/shader/ripple-gradient-shader/",
@@ -554,7 +554,7 @@
 	},
 	{
 		"name": "Hologram",
-		"group": "Disolve",
+		"group": "fx",
 		"description": "Makes the sprites look like a hologram",
 		"author": "Vaquers",
 		"link": "https://godotshaders.com/shader/hologram-simple-canvasitem-shader/",
@@ -601,7 +601,7 @@
 	},
 	{
 		"name": "Wipe",
-		"group": "Disolve",
+		"group": "disolve",
 		"description": "Wipe an image horizontally or vertically using a custom alpha. Supports wiping sprites that have multiple frames.",
 		"author": "Zibetnu",
 		"link": "https://godotshaders.com/shader/multi-frame-wipe/",
@@ -636,7 +636,7 @@
 	},
 	{
 		"name": "Color Swap",
-		"group": "Transform",
+		"group": "color",
 		"description": "8 Color ColorSwap that shows grayscaled strips on unswapped colors.",
 		"author": "nullMolotov",
 		"link": "https://godotshaders.com/shader/8-color-colorswap/",
@@ -675,7 +675,7 @@
 	},
 	{
 		"name": "Pulse",
-		"group": "Disolve",
+		"group": "color",
 		"description": "With this shader you can apply a pulse effect.",
 		"author": "alberto",
 		"link": "https://godotshaders.com/shader/pulse-effect-godot-4/",
@@ -706,7 +706,7 @@
 	},
 	{
 		"name": "Matrix",
-		"group": "Transfomr",
+		"group": "fx",
 		"description": "Some kind of matrix effect, but if you replace the noise, you can find cool effects",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/matrix.shader",
@@ -758,7 +758,7 @@
 	},
 	{
 		"name": "Holowave",
-		"group": "Disolve",
+		"group": "distort",
 		"description": "Holographic Wave effect.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/holowave.shader",
@@ -794,7 +794,7 @@
 	},
 	{
 		"name": "Holographic",
-		"group": "Disolve",
+		"group": "fx",
 		"description": "Holographic effect.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/holographic.shader",
@@ -830,7 +830,7 @@
 	},
 	{
 		"name": "CorssFade Circle",
-		"group": "Disolve",
+		"group": "disolve",
 		"description": "Cross Fade of the texture using a circle to fade out or fade in.",
 		"author": "Rpics Studio",
 		"link": "https://godotshaders.com/shader/particle-star/",
@@ -861,7 +861,7 @@
 	},
 	{
 		"name": "Disolve Burn",
-		"group": "Disolve",
+		"group": "disolve",
 		"description": "Burn effect disolving the texture.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/dissolve_burn.shader",
@@ -889,7 +889,7 @@
 	},
 	{
 		"name": "Shadow",
-		"group": "Other",
+		"group": "outline",
 		"description": "Add a 2D shadow behind your texture. IMPORTANT: This shader should be the last one in position to be effective.",
 		"author": "deakcor",
 		"link": "https://godotshaders.com/shader/shadow-2d/",
@@ -916,7 +916,7 @@
 	},
 	{
 		"name": "Burn",
-		"group": "Disolve",
+		"group": "disolve",
 		"description": "The shader apply a burn effect over the texture.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/dissolve_burn.shader",
@@ -943,7 +943,7 @@
 	},
 	{
 		"name": "Gold",
-		"group": "Transform",
+		"group": "fx",
 		"description": "The shader apply a gold effects over the texture.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/transform_gold.shader",
@@ -970,7 +970,7 @@
 	},
 	{
 		"name": "Freeze",
-		"group": "General",
+		"group": "fx",
 		"description": "The shader apply a freeze effects over the texture.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/transform_metal.shader",
@@ -997,7 +997,7 @@
 	},
 	{
 		"name": "Metal",
-		"group": "General",
+		"group": "fx",
 		"description": "The shader apply a metal effects over the texture.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/transform_metal.shader",
@@ -1024,7 +1024,7 @@
 	},
 	{
 		"name": "Shiny",
-		"group": "General",
+		"group": "fx",
 		"description": "This shader adds a shine effect to the texture.",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/emptyoutline.shader",
@@ -1059,7 +1059,7 @@
 	},
 	{
 		"name": "Empty Outline",
-		"group": "General",
+		"group": "outline",
 		"description": "Outline wihtout content",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/emptyoutline.shader",
@@ -1082,7 +1082,7 @@
 	},
 	{
 		"name": "Outline",
-		"group": "General",
+		"group": "outline",
 		"description": "Outline effect",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/outline.shader",
@@ -1105,7 +1105,7 @@
 	},
 	{
 		"name": "Blur",
-		"group": "General",
+		"group": "distort",
 		"description": "Blur effect",
 		"author": "chatgpt",
 		"link": "https://chat.openai.com/",
@@ -1128,7 +1128,7 @@
 	},
 	{
 		"name": "Glitch",
-		"group": "General",
+		"group": "distort",
 		"description": "Glitch effect",
 		"author": "duongvituan",
 		"link": "https://github.com/duongvituan/godot-sprite-shader/blob/master/godot/addons/godot_sprite_shader/assets/shader/glitch.shader",
@@ -1163,7 +1163,7 @@
 	},
 	{
 		"name": "Greyscale",
-		"group": "General",
+		"group": "color",
 		"description": "Replace colors with a grayscale. Posibility to set the tone.",
 		"author": "chatgpt",
 		"link": "https://chat.openai.com/",
@@ -1190,7 +1190,7 @@
 	},
 	{
 		"name": "Rainbow",
-		"group": "General",
+		"group": "color",
 		"description": "Fx to change color tone during the time.",
 		"author": "chatgpt",
 		"link": "https://github.com/spheras/godot-sprite-shader-mixer/blob/v1/shaders/rainbow.gdshader",
