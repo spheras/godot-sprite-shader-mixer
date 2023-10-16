@@ -141,7 +141,9 @@ text = "link:"
 [node name="text_link" type="Label" parent="container_link"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0.270588, 1)
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.278431, 0.376471, 1, 1)
 theme_override_font_sizes/font_size = 12
 text = "http://www.github.com"
 text_overrun_behavior = 4

@@ -26,6 +26,15 @@ signal onReorder(shaderInfo:ShaderInfo,after:bool)
 
 var shaderInfo:ShaderInfo
 
+func _ready():
+	(comp_link as Label).gui_input.connect(_onLinkInput)
+
+func _onLinkInput(event:InputEvent):
+	if (event is InputEventMouseButton && 
+		event.pressed && 
+		event.button_index == 1):
+		OS.shell_open(comp_link.text)
+
 func loadShaderInfo(shaderInfo:ShaderInfo)->void:
 	comp_name.text=shaderInfo.name
 	comp_author.text=shaderInfo.author

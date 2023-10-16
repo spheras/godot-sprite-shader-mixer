@@ -16,6 +16,7 @@ signal shaderSelected(shader:ShaderInfo)
 @onready var panel_info = %panel_info
 @onready var panel_example = %panel_example
 @onready var button_select:Button = %button_select
+@onready var button_remove:Button = %button_remove
 @onready var edit_search = %edit_search
 @onready var button_download = %button_download
 
@@ -28,10 +29,25 @@ func _ready():
 	tree.cell_selected.connect(_onShaderSelected)
 	tab.tab_selected.connect(_onTabSelected)
 	button_select.disabled=true
+	button_remove.disabled=true
 	button_select.pressed.connect(_onButtonSelected)
 	edit_search.text_changed.connect(_onSearchTextChanged)
 	option.item_selected.connect(_onOptionSelectionChanged)
 	button_download.pressed.connect(_onDownloadPressed)
+	button_remove.pressed.connect(_onButtonRemovePressed)
+	text_link.gui_input.connect(_onLinkInput)
+	
+func _onLinkInput(event:InputEvent):
+	if (event is InputEventMouseButton && 
+		event.pressed && 
+		event.button_index == 1):
+		OS.shell_open(text_link.text)
+
+func _onButtonRemovePressed():
+	var shaderName=tree.get_selected().get_text(0)
+	var shader:ShaderInfo=_findShaderByName(shaderName)
+	logic.onDeleteShader(shader)
+	self.button_remove.disabled=true
 	
 func _onSearchTextChanged():
 	_filterShaders()
@@ -91,30 +107,43 @@ func _onShaderSelected():
 		var downloaded:bool=ShaderInfo.shaderHasBeenDownloaded(shader)
 		if(!downloaded):
 			%button_download.visible = true
-			%supergodot.visible=false
+			%sprites.visible=false
+			button_remove.disabled=true
 		else:
 			var shaders:Array[ShaderInfo]=[]
 			shaders.append(shader)
 			var shaderCode:Shader=shader.generateShaderCode(shaders)
 			%supergodot.material.shader=shaderCode
 			%button_download.visible = false
-			%supergodot.visible=true
+			%sprites.visible=true
+			button_remove.disabled=false
 	else:
 		panel_right.visible=false
 		button_select.disabled=true
 
 func _onDownloadPressed():
+	var oldText=self.button_download.text
+	self.button_download.text="Downloading..(wait)"
+	await get_tree().process_frame
+	await get_tree().process_frame
+	await get_tree().process_frame
+
+	
 	var treeItem:TreeItem=tree.get_selected()
 	var text=treeItem.get_text(0)
 	var shader:ShaderInfo=_findShaderByName(text)
 	self.logic.onDownloadShaderPressed(shader.name,self,true)
 
-	%supergodot.visible=true
+	%sprites.visible=true
 	%button_download.visible=false
-	var shaders=[]
+	button_remove.disabled=false
+	var shaders:Array[ShaderInfo]=[]
 	shaders.append(shader)
 	var shaderCode:Shader=shader.generateShaderCode(shaders)
 	%supergodot.material.shader=shaderCode
+	
+	self.button_download.text=oldText
+
 
 
 func _fillShaderInfo(shader:ShaderInfo):

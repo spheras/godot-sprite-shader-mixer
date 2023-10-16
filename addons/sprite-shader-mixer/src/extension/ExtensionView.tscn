@@ -46,7 +46,6 @@ text = "Create Shader Mixer"
 icon = ExtResource("2_yq7l3")
 
 [node name="shader_container" type="VBoxContainer" parent="marginContainer"]
-visible = false
 layout_mode = 2
 
 [node name="label_selectShader" type="Label" parent="marginContainer/shader_container"]
@@ -59,6 +58,10 @@ layout_mode = 2
 [node name="option_shaders" type="OptionButton" parent="marginContainer/shader_container/HBoxContainer"]
 custom_minimum_size = Vector2(150, 25)
 layout_mode = 2
+
+[node name="button_manager" type="Button" parent="marginContainer/shader_container/HBoxContainer"]
+layout_mode = 2
+text = "..."
 
 [node name="button_addShader" type="Button" parent="marginContainer/shader_container/HBoxContainer"]
 visible = false
@@ -79,10 +82,6 @@ layout_mode = 2
 theme_override_colors/icon_normal_color = Color(0, 0.764706, 0, 1)
 text = "Sync List"
 icon = ExtResource("5_nwx26")
-
-[node name="button_manager" type="Button" parent="marginContainer/shader_container/HBoxContainer"]
-layout_mode = 2
-text = "..."
 
 [node name="HSeparator" type="HSeparator" parent="marginContainer/shader_container"]
 layout_mode = 2

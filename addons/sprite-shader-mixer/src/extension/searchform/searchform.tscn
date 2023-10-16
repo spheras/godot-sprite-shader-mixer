@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://d4nepe0a70ju5"]
+[gd_scene load_steps=28 format=3 uid="uid://d4nepe0a70ju5"]
 
 [ext_resource type="Script" path="res://addons/sprite-shader-mixer/src/extension/searchform/searchform.gd" id="1_ovoip"]
 [ext_resource type="Texture2D" uid="uid://b1rygy2x8jbew" path="res://addons/sprite-shader-mixer/assets/icons/download.svg" id="2_b17sv"]
 [ext_resource type="Texture2D" uid="uid://bkmtfe42ptooh" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0000.png" id="3_n6bfe"]
+[ext_resource type="Texture2D" uid="uid://bql2ueidhx0gr" path="res://addons/sprite-shader-mixer/assets/background.jpg" id="3_rs3hf"]
 [ext_resource type="Texture2D" uid="uid://b1o4oqvqpb1qy" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0001.png" id="4_lby8e"]
 [ext_resource type="Texture2D" uid="uid://bs33nr7syqox7" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0002.png" id="5_c5oyc"]
 [ext_resource type="Texture2D" uid="uid://8wimrai50mn1" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0003.png" id="6_l3623"]
@@ -22,20 +23,12 @@
 [ext_resource type="Texture2D" uid="uid://d2dubli5df5va" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0017.png" id="20_q40o3"]
 [ext_resource type="Texture2D" uid="uid://dqv5ugl4038aj" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0018.png" id="21_f5032"]
 [ext_resource type="Texture2D" uid="uid://dn2tu0peutt2u" path="res://addons/sprite-shader-mixer/assets/supergodot/supergodot-0019.png" id="22_xwcvw"]
+[ext_resource type="Texture2D" uid="uid://blwvphk004alx" path="res://addons/sprite-shader-mixer/assets/icons/delete.svg" id="25_np67d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7166x"]
 bg_color = Color(0.210938, 0.238281, 0.289063, 1)
 
-[sub_resource type="Shader" id="Shader_qu8vv"]
-code = "shader_type canvas_item;
-
-void fragment() {
-	// Place fragment code here.
-}
-"
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cb3l7"]
-shader = SubResource("Shader_qu8vv")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jinux"]
 animations = [{
@@ -149,7 +142,6 @@ placeholder_text = "search"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-selected = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="panel_background/margin/VBoxContainer"]
 layout_mode = 2
@@ -186,7 +178,6 @@ tab_1/title = "Example"
 
 [node name="panel_info" type="ScrollContainer" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer"]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(310, 250)
 layout_mode = 2
 
@@ -235,7 +226,9 @@ text = "link:"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0.270588, 1)
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.294118, 0.372549, 1, 1)
 theme_override_font_sizes/font_size = 12
 text = "http://www.github.com"
 text_overrun_behavior = 4
@@ -290,6 +283,7 @@ autowrap_mode = 3
 
 [node name="panel_example" type="Panel" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer"]
 unique_name_in_owner = true
+clip_contents = true
 custom_minimum_size = Vector2(310, 245)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -313,7 +307,19 @@ to Visualize Demo"
 icon = ExtResource("2_b17sv")
 expand_icon = true
 
-[node name="supergodot" type="AnimatedSprite2D" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer/panel_example"]
+[node name="sprites" type="Control" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer/panel_example"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="background" type="Sprite2D" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer/panel_example/sprites"]
+position = Vector2(150, 97)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rs3hf")
+
+[node name="supergodot" type="AnimatedSprite2D" parent="panel_background/margin/VBoxContainer/HBoxContainer2/panel/panel_right/VBoxContainer/panel_example/sprites"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_cb3l7")
 position = Vector2(150, 125)
@@ -330,3 +336,10 @@ unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Select Shader"
+
+[node name="button_remove" type="Button" parent="panel_background/margin/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Remove Shader from Local"
+icon = ExtResource("25_np67d")
