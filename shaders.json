@@ -1,5 +1,44 @@
 [
 	{
+		"name": "WindWave",
+		"group": "distort",
+		"description": "The effect gives you control to wave the texture. You can determine limits from wich the texture doesnt move to the maximum wave movement. Can be used as wind effect too.",
+		"author": "spheras",
+		"link": "-",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "windwave.gdshader",
+		"activation": "WINDWAVE_active",
+		"function": "windWave",
+		"parameters": [
+			{
+				"name": "WINDWAVE_speed",
+				"description": "The speed of the wave animation"
+			},
+			{
+				"name": "WINDWAVE_modifier1",
+				"description": "modifier1 of the wave, just fun."
+			},
+			{
+				"name": "WINDWAVE_modifier2",
+				"description": "modifier2 of the wave, just fun."
+			},
+			{
+				"name": "WINDWAVE_maxY",
+				"description": "max Y limit in which the effect start to reduce the movement"
+			},
+			{
+				"name": "WINDWAVE_minY",
+				"description": "min Y limit in which the effect is null, and the texture doesn't move"
+			},
+			{
+				"name": "WINDWAVE_debugLines",
+				"description": "debug flag to show the limits and control the effect correctly."
+			}
+		]
+	},
+	{
 		"name": "Zoom And Rotation",
 		"group": "distort",
 		"description": "Zoom and Rotate the texture",
