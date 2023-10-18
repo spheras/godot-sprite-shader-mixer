@@ -1,12 +1,12 @@
 //AURA
 uniform bool AURA_active=true;
 uniform float AURA_speedX:hint_range(-1.0, 1.0, 0.001)=0;
-uniform float AURA_speedY:hint_range(-1.0, 1.0, 0.001)=0.05;
-uniform float AURA_amount:hint_range(0.0, 10.0, 0.1)=0.4;
-uniform vec4 AURA_auraColor:source_color=vec4(1.0,0,0,1);
-uniform float AURA_distanceSaturation:hint_range(0.0, 1.0, 0.01)=0.6;
-uniform float AURA_redDist:hint_range(0.0, 10.0, 0.1)=7.9;
-uniform float AURA_greenDist:hint_range(0.0, 10.0, 0.1)=0.6;
+uniform float AURA_speedY:hint_range(-1.0, 1.0, 0.001)=0.08;
+uniform float AURA_amount:hint_range(0.0, 10.0, 0.1)=2.7;
+uniform vec4 AURA_auraColor:source_color=vec4(1.0,1.0,0,1);
+uniform float AURA_distanceSaturation:hint_range(0.0, 1.0, 0.01)=1;
+uniform float AURA_redDist:hint_range(0.0, 10.0, 0.1)=7.7;
+uniform float AURA_greenDist:hint_range(0.0, 10.0, 0.1)=7.9;
 uniform float AURA_blueDist:hint_range(0.0, 10.0, 0.1)=0;
 uniform sampler2D AURA_noiseTexture:repeat_enable;
 void aura(inout vec2 uv, in sampler2D tex, in vec2 spriteSize, in vec2 pixelSize, inout vec4 color) {

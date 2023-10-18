@@ -47,7 +47,7 @@
 			{
 				"name": "AURA_noiseTexture",
 				"description": "Noise texture to be the source of the Aura effect. Check with different noises.",
-				"texture": "noise/noise1.png"
+				"texture": "noise/noise3.png"
 			}
 		]
 	},
