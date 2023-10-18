@@ -1,5 +1,57 @@
 [
 	{
+		"name": "Aura",
+		"group": "distort",
+		"description": "The effect gives to the texture an aura effect rounding, based on a noise texture. You can control color, and others.",
+		"author": "spheras",
+		"link": "-",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "aura.gdshader",
+		"activation": "AURA_active",
+		"function": "aura",
+		"parameters": [
+			{
+				"name": "AURA_speedX",
+				"description": "speed on the X axis of the noise movement"
+			},
+			{
+				"name": "AURA_speedY",
+				"description": "speed on the Y axis of the noise movement."
+			},
+			{
+				"name": "AURA_amount",
+				"description": "amount of aura surrounding the texture."
+			},
+			{
+				"name": "AURA_auraColor",
+				"description": "The main color of the aura"
+			},
+			{
+				"name": "AURA_distanceSaturation",
+				"description": "some kind of saturation to give dark colors near to the center. You determine the distance to reach the maximum color."
+			},
+			{
+				"name": "AURA_redDist",
+				"description": "extra red distance of the color to apply."
+			},
+			{
+				"name": "AURA_greenDist",
+				"description": "extra green distance of the color to apply."
+			},
+			{
+				"name": "AURA_blueDist",
+				"description": "extra blue distance of the color to apply."
+			},
+			{
+				"name": "AURA_noiseTexture",
+				"description": "Noise texture to be the source of the Aura effect. Check with different noises.",
+				"texture": "noise/noise1.png"
+			}
+		]
+	},
+	{
 		"name": "WindWave",
 		"group": "distort",
 		"description": "The effect gives you control to wave the texture. You can determine limits from wich the texture doesnt move to the maximum wave movement. Can be used as wind effect too.",
