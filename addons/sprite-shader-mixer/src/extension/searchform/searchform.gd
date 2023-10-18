@@ -140,7 +140,7 @@ func _onDownloadPressed():
 	var treeItem:TreeItem=tree.get_selected()
 	var text=treeItem.get_text(0)
 	var shader:ShaderInfo=_findShaderByName(text)
-	self.logic.onDownloadShaderPressed(shader.name,self,true)
+	await self.logic.onDownloadShaderPressed(shader.name,self,true)
 
 	%sprites.visible=true
 	%button_download.visible=false
