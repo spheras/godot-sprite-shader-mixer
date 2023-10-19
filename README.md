@@ -16,6 +16,7 @@ Some examples of what this addon can do:
 
 ![supergodot4](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/4c76ed2c-ce48-490e-b0b5-28ca8d91e773)
 
+![manager](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/4d43126e-37bf-463d-b7e7-508a6d296e0c)
 
 Disclaimer: This project is inspired by [godot-sprite-shader](https://github.com/duongvituan/godot-sprite-shader) by duongvituan. Initially I've got and adapted a lot of shaders from there, and also from the great web page https://godotshaders.com/. I want to express my sincere gratitude for the inspiration them provided.
 
@@ -29,6 +30,7 @@ The Godot Sprite Shader Mixer is a plugin for Godot that allows Sprite2D and Ani
 - Automatic shader downloading from GitHub.
 - Generation and application of combined shaders.
 - Customization of the intensity of each shader.
+- Search Manager with preview
 
 ## Installation
 
