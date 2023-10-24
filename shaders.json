@@ -1,5 +1,32 @@
 [
 	{
+		"name": "Float",
+		"group": "distort",
+		"description": "the texture moves giving the oportunity to select different movement patterns.",
+		"author": "spheras",
+		"link": "-",
+		"adaptedBy": "spheras",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "float.gdshader",
+		"activation": "FLOATING_active",
+		"function": "floating",
+		"parameters": [
+			{
+				"name": "FLOATING_amount",
+				"description": "The amount of movement"
+			},
+			{
+				"name": "FLOATING_type",
+				"description": "Type of movement pattern."
+			},
+			{
+				"name": "FLOATING_speed",
+				"description": "Speed of the movement."
+			}
+		]
+	},
+	{
 		"name": "Aura",
 		"group": "distort",
 		"description": "The effect gives to the texture an aura effect rounding, based on a noise texture. You can control color, and others.",
