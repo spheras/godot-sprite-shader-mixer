@@ -1,5 +1,5 @@
 uniform bool FLOATING_active=true;
-uniform float FLOATING_amount:hint_range(0.0, 0.5, 0.001);
+uniform float FLOATING_amount:hint_range(0.0, 0.5, 0.001)=0.3;
 uniform int FLOATING_type:hint_range(1,10,1)=1;
 uniform float FLOATING_speed:hint_range(0.0,15.0,0.1)=1;
 void floating(in vec2 uv, in sampler2D txt, in vec2 spriteSize, in vec2 pixelSize, inout vec4 finalColor){
@@ -38,6 +38,5 @@ void floating(in vec2 uv, in sampler2D txt, in vec2 spriteSize, in vec2 pixelSiz
 			break;
 	};
 
-	vec4 color=texture(TEXTURE,uv);
-	COLOR=color;
+	finalColor=texture(txt,uv);
 }
