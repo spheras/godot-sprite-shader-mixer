@@ -1,14 +1,14 @@
 [
 	{
-		"name": "Float",
+		"name": "Floating",
 		"group": "distort",
-		"description": "the texture moves giving the oportunity to select different movement patterns.",
+		"description": "The texture moves giving the oportunity to select different movement patterns.",
 		"author": "spheras",
 		"link": "-",
 		"adaptedBy": "spheras",
 		"license": "MIT",
 		"version": "1.0",
-		"filename": "float.gdshader",
+		"filename": "floating.gdshader",
 		"activation": "FLOATING_active",
 		"function": "floating",
 		"parameters": [
