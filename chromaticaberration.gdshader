@@ -37,5 +37,5 @@ void chromaticAberration(in vec2 uv, in sampler2D txt, vec2 size, vec2 pixelSize
     vec4 blue_color = texture(txt, blue_uv);
 
     // Combinar los canales desplazados
-    color = vec4(red_color.r, green_color.g, blue_color.b, red_color.a+green_color.a+blue_color.a);
+    color = vec4(red_color.r, green_color.g, blue_color.b, clamp(red_color.a+green_color.a+blue_color.a,0.,1.));
 }
