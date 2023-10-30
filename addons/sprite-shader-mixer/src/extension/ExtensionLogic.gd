@@ -30,7 +30,7 @@ func onReady():
 # Set the parent which is owner of the shader to manipulate
 #     parent -> Sprite2D or AnimationSprite2D
 func setParentSprite(parent)->void:
-	assert(parent is Sprite2D || parent is AnimatedSprite2D)
+	assert(parent is Sprite2D || parent is AnimatedSprite2D || parent is Label)
 	self.parentSprite=parent;
 	self._checkCreateVisibility()
 
@@ -197,7 +197,7 @@ func onCreatePressed()->void:
 # Checks if the parent Sprite has a shader already configured
 # return -> true if the parent has a shader alredy, false otherwise
 func _parentSpriteHasShaderAlready()->bool:
-	if(self.parentSprite is Sprite2D || self.parentSprite is AnimatedSprite2D):
+	if(self.parentSprite is Sprite2D || self.parentSprite is AnimatedSprite2D || self.parentSprite is Label):
 		if(self.parentSprite.material != null):
 			if(self.parentSprite.material is ShaderMaterial):
 				if(self.parentSprite.material.shader != null):

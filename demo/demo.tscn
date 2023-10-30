@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://btvorthsuc7d1"]
+[gd_scene load_steps=15 format=3 uid="uid://btvorthsuc7d1"]
 
 [ext_resource type="Texture2D" uid="uid://d2xrvklvm45mw" path="res://demo/assets/shaders/chars_texture3x3.png" id="2_3ee8b"]
 [ext_resource type="Shader" path="res://demo/assets/shaders/example3.gdshader" id="2_40eie"]
@@ -227,6 +227,9 @@ shader_parameter/SHADOW_offset = Vector2(4, -5)
 shader_parameter/SHADOW_modulate = Color(0, 0, 0, 1)
 shader_parameter/SHADOW_mix = 0.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_e5q26"]
+font_size = 49
+
 [node name="Demo" type="Node2D"]
 position = Vector2(-30, 50)
 
@@ -273,3 +276,11 @@ material = SubResource("ShaderMaterial_st2lq")
 position = Vector2(660, 560)
 scale = Vector2(0.708515, 0.708515)
 texture = ExtResource("21_0xoix")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 99.0
+offset_top = 17.0
+offset_right = 342.0
+offset_bottom = 88.0
+text = "Label Text"
+label_settings = SubResource("LabelSettings_e5q26")
