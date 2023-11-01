@@ -22,11 +22,11 @@ Disclaimer: This project is inspired by [godot-sprite-shader](https://github.com
 
 ## Description
 
-The Godot Sprite Shader Mixer is a plugin for Godot that allows Sprite2D and AnimationSprite2D nodes to blend shaders from a list of available shaders. Users can select and add shaders to sprites dynamically, automatically downloading them from GitHub as needed. The plugin handles shader generation and blending, resulting in a texture that combines all selected shaders.
+The Godot Sprite Shader Mixer is a plugin for Godot that allows Sprite2D and AnimationSprite2D (since version 1.2 also Label and ColorRect) nodes to blend shaders from a list of available shaders. Users can select and add shaders to sprites dynamically, automatically downloading them from GitHub as needed. The plugin handles shader generation and blending, resulting in a texture that combines all selected shaders.
 
 ## Features
 
-- Dynamic blending of shaders on Sprite2D and AnimationSprite2D nodes.
+- Dynamic blending of shaders on Sprite2D and AnimationSprite2D nodes (since 1.2 version also Label and ColorRect).
 - Automatic shader downloading from GitHub.
 - Generation and application of combined shaders.
 - Customization of the intensity of each shader.
@@ -45,7 +45,7 @@ To use this plugin, follow these steps:
 
 ## Usage
 
-1. Add a Sprite2D or AnimationSprite2D node to your scene with a texture or animation.
+1. Add a Sprite2D or AnimationSprite2D (since version 1.2 also Label and ColorRect) node to your scene with a texture or animation.
 
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/fd6e12b1-b83b-4bac-b35b-46a5177dfb1c) 
 
@@ -81,7 +81,7 @@ To use this plugin, follow these steps:
 
 ![image](https://github.com/spheras/godot-sprite-shader-mixer/assets/3862933/dbd107cf-19e0-4caf-9507-7038bb90da09)
 
-14. You can reorder the shaders, it affects the way they are mixed. You can quit a shader from your shader code. You can also remove the downloaded shader (you can download again later). Be free and experiment with it!
+14. You can reorder the shaders, it affects the way they are mixed. You can quit a shader from your shader code. You can also remove the downloaded shader (you can download it again later). Be free and experiment with it!
 
 
 15. The point is that the plugin creates a shader script for your texture with the shaders you select. The collection will grow, it is open to incorporate new shaders easily, just making a pull request over the shaders branch. So, consider sync the shader list to see if there are new shaders available. (explained later)
