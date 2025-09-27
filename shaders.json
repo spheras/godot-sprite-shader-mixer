@@ -1,5 +1,36 @@
 [
 	{
+		"name": "Glow",
+		"group": "Fx",
+		"description": "This causes the texture to glow.",
+		"author": "FencerDevLog",
+		"link": "https://www.youtube.com/watch?v=zHWth5vTY-4",
+		"adaptedBy": "moostafa-afk",
+		"license": "MIT",
+		"version": "1.0",
+		"filename": "glow.gdshader",
+		"activation": "GLOW_active",
+		"function": "glow",
+		"parameters": [
+			{
+				"name": "glow_color",
+				"description": "The color of the glow"
+			},
+			{
+				"name": "glow_power",
+				"description": "Power of the glow."
+			},
+			{
+				"name": "glow_shift",
+				"description": "Shift of the glow."
+			},
+			{
+				"name": "glow_radius",
+				"description": "Radius of the glow."
+			}
+		]
+	},
+	{
 		"name": "Floating",
 		"group": "distort",
 		"description": "The texture moves giving the oportunity to select different movement patterns.",
